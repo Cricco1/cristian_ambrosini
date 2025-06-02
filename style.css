@@ -129,12 +129,11 @@ footer {
 }
 .content-section {
   display: none;
-  padding: 2rem;
+  padding: 20px;
 }
 
 .content-section.active {
   display: block;
-  animation: fadeIn 0.5s ease-in-out;
 }
 
 @keyframes fadeIn {
