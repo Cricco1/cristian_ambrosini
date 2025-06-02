@@ -6,8 +6,7 @@ Sono entrato come un ragazzo forse un po' ingenuo, incerto su chi fosse e su cos
 
 Fuori dalla scuola, mi lascio ispirare da tutto ciò che stimola la mia creatività: la palestra, i momenti con gli amici, il mondo dell’arte e del disegno digitale. Sono passioni che mi aiutano a esprimere ciò che a volte le parole non sanno dire. Amo il confronto, le idee che si incrociano, le energie che si sommano. Forse è questo che mi ha insegnato davvero la scuola: che insieme siamo più forti.
 
-Chiudo questo capitolo con gratitudine, con il cuore pieno di ricordi e con la voglia di affrontare ciò che verrà, portando con me tutto quello che questi cinque anni mi hanno insegnato.
-Più che una fine, questa sembra una promessa.`;
+Chiudo questo capitolo con gratitudine, con il cuore pieno di ricordi e con la voglia di affrontare ciò che verrà, portando con me tutto quello che questi cinque anni mi hanno insegnato.`;
 
 const englishText = `My name is Cristian Ambrosini, I’m 19 years old, and today I find myself at the end of a journey that, although it lasted five years, feels like it passed in the blink of an eye. Attending the IT program at IIS "Marconi Pieralisi" in Jesi was a choice born from my passion for technology, video games, and the digital world. But what I couldn’t imagine on that very first day — backpack still stiff, head full of dreams — was how much this school would shape who I am.
 
@@ -17,8 +16,7 @@ I started this journey as a boy who was maybe a little naive, unsure of who he w
 
 Outside of school, I find inspiration in everything that sparks my creativity: going to the gym, hanging out with friends, and my love for art and digital drawing. These are passions that help me express what words sometimes can't. I love sharing ideas, exchanging perspectives — maybe that’s the most valuable thing school has taught me: that together, we are stronger.
 
-I close this chapter with gratitude, my heart full of memories, and the desire to embrace what’s next — carrying with me everything these five years have taught me.
-More than an ending, this feels like a promise.`;
+I close this chapter with gratitude, my heart full of memories, and the desire to embrace what’s next — carrying with me everything these five years have taught me.`;
 
 let isItalian = true;
 
