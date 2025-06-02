@@ -46,9 +46,10 @@ function toggleLanguage() {
   const textElement = document.getElementById("bio-text");
   textElement.textContent = "";
   isEnglish = !isEnglish;
- const text = isEnglish ? bioTextEN : bioTextIT;
+  const text = isEnglish ? bioTextEN : bioTextIT;
   textElement.innerHTML = `<p>${text}</p>`;
 }
+
 
 function animateBiography() {
   const textElement = document.getElementById("bio-text");
@@ -56,11 +57,12 @@ function animateBiography() {
   const speed = 15;
   function typeWriter() {
     if (index < bioTextIT.length) {
-  textElement.innerHTML += bioTextIT.charAt(index);
+      textElement.innerHTML += bioTextIT.charAt(index);
       index++;
       setTimeout(typeWriter, speed);
     }
   }
   typeWriter();
 }
+
 
