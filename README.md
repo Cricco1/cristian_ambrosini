@@ -1,2 +1,2 @@
 # cristian_ambrosini
-sito scolasticoc
+sito scolastico
