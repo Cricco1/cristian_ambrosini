@@ -40,15 +40,26 @@ Outside of school, I find inspiration in everything that sparks my creativity: g
 I close this chapter with gratitude, my heart full of memories, and the desire to embrace what’s next — carrying with me everything these five years have taught me.`;
 
 
-let showingEnglish = false;
+let isEnglish = false;
 
 function toggleLanguage() {
-  const textElement = document.getElementById('bio-text');
-  textElement.textContent = showingEnglish ? bioTextIT : bioTextEN;
-  showingEnglish = !showingEnglish;
+  const textElement = document.getElementById("bio-text");
+  textElement.textContent = "";
+  isEnglish = !isEnglish;
+  const text = isEnglish ? englishText : italianText;
+  textElement.innerHTML = `<p>${text}</p>`;
 }
 
-// Carica il testo in italiano all'avvio
-document.addEventListener("DOMContentLoaded", () => {
-  document.getElementById('bio-text').textContent = bioTextIT;
-});
+function animateBiography() {
+  const textElement = document.getElementById("bio-text");
+  let index = 0;
+  const speed = 15;
+  function typeWriter() {
+    if (index < italianText.length) {
+      textElement.innerHTML += italianText.charAt(index);
+      index++;
+      setTimeout(typeWriter, speed);
+    }
+  }
+  typeWriter();
+}
