@@ -4,22 +4,16 @@ function showSection(sectionId) {
   sections.forEach(section => {
     section.classList.remove('active');
   });
-  
+
   const selectedSection = document.getElementById(sectionId);
   if (selectedSection) {
     selectedSection.classList.add('active');
   }
 }
 
-// Caricamento iniziale della biografia con testo animato
-document.addEventListener("DOMContentLoaded", () => {
-  showSection('biografia');
-  animateBiography();
-});
-
 
 // Biografia - testi italiano e inglese
-const bioTextIT =  `Mi chiamo Cristian Ambrosini, ho 19 anni, e oggi mi ritrovo alla fine di un viaggio che, pur durato cinque anni, sembra essere passato in un battito di ciglia. Frequentare l’indirizzo Informatica all’IIS “Marconi Pieralisi” di Jesi è stata una scelta che nasce dalla mia passione per la tecnologia, i videogiochi e il mondo digitale. Ma quello che non potevo immaginare il primo giorno, seduto su quei banchi con lo zaino ancora rigido e la testa piena di sogni, era quanto questa scuola avrebbe cambiato me.
+const italianText =  `Mi chiamo Cristian Ambrosini, ho 19 anni, e oggi mi ritrovo alla fine di un viaggio che, pur durato cinque anni, sembra essere passato in un battito di ciglia. Frequentare l’indirizzo Informatica all’IIS “Marconi Pieralisi” di Jesi è stata una scelta che nasce dalla mia passione per la tecnologia, i videogiochi e il mondo digitale. Ma quello che non potevo immaginare il primo giorno, seduto su quei banchi con lo zaino ancora rigido e la testa piena di sogni, era quanto questa scuola avrebbe cambiato me.
 
 In questi anni non ho solo imparato a programmare o a capire i sistemi: ho imparato a conoscermi. Ho scoperto il valore delle relazioni, il senso profondo della collaborazione, e quanto possa essere potente il sentirsi parte di qualcosa. Le gite scolastiche, i momenti di condivisione e persino le difficoltà ci hanno unito come classe, trasformandoci da semplici compagni in una famiglia vera e propria. Oggi porto con me legami che sanno di affetto sincero, costruiti giorno dopo giorno, sorriso dopo sorriso.
 
@@ -29,7 +23,7 @@ Fuori dalla scuola, mi lascio ispirare da tutto ciò che stimola la mia creativi
 
 Chiudo questo capitolo con gratitudine, con il cuore pieno di ricordi e con la voglia di affrontare ciò che verrà, portando con me tutto quello che questi cinque anni mi hanno insegnato.`;
 
-const bioTextEN =`My name is Cristian Ambrosini, I’m 19 years old, and today I find myself at the end of a journey that, although it lasted five years, feels like it passed in the blink of an eye. Attending the IT program at IIS "Marconi Pieralisi" in Jesi was a choice born from my passion for technology, video games, and the digital world. But what I couldn’t imagine on that very first day — backpack still stiff, head full of dreams — was how much this school would shape who I am.
+const englishText =`My name is Cristian Ambrosini, I’m 19 years old, and today I find myself at the end of a journey that, although it lasted five years, feels like it passed in the blink of an eye. Attending the IT program at IIS "Marconi Pieralisi" in Jesi was a choice born from my passion for technology, video games, and the digital world. But what I couldn’t imagine on that very first day — backpack still stiff, head full of dreams — was how much this school would shape who I am.
 
 Over these years, I haven’t only learned how to code or understand systems. I’ve learned how to understand myself. I’ve discovered the value of friendship, the deep meaning of teamwork, and how powerful it is to feel truly part of something. School trips, shared laughter, and even the struggles bonded our class — turning us from classmates into a real family. Today, I carry with me sincere bonds built day after day, smile after smile.
 
@@ -46,23 +40,27 @@ function toggleLanguage() {
   const textElement = document.getElementById("bio-text");
   textElement.textContent = "";
   isEnglish = !isEnglish;
-  const text = isEnglish ? bioTextEN : bioTextIT;
+  const text = isEnglish ? englishText : italianText;
   textElement.innerHTML = `<p>${text}</p>`;
 }
-
 
 function animateBiography() {
   const textElement = document.getElementById("bio-text");
   let index = 0;
   const speed = 15;
   function typeWriter() {
-    if (index < bioTextIT.length) {
-      textElement.innerHTML += bioTextIT.charAt(index);
+    if (index < italianText.length) {
+      textElement.innerHTML += italianText.charAt(index);
       index++;
       setTimeout(typeWriter, speed);
     }
   }
   typeWriter();
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+  showSection('biografia');
+  animateBiography();
+});
 
 
