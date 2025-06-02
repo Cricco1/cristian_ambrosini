@@ -46,20 +46,26 @@ function toggleLanguage() {
 function animateBiography() {
   const textElement = document.getElementById("bio-text");
   let index = 0;
-  const speed = 40;
+  const speed = 50; // Velocità aumentata
+
+  textElement.innerHTML = ""; // Svuota il contenuto prima di scrivere
+
   function typeWriter() {
     if (index < italianText.length) {
       textElement.innerHTML += italianText.charAt(index);
       index++;
       setTimeout(typeWriter, speed);
+    } else {
+      // Quando il testo è finito, aggiungi il bottone
+      const button = document.createElement("button");
+      button.textContent = "🌍 Translate to English";
+      button.onclick = toggleLanguage;
+      button.style.marginTop = "20px";
+      textElement.appendChild(document.createElement("br"));
+      textElement.appendChild(button);
     }
   }
+
   typeWriter();
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-  showSection('biografia');
-  animateBiography();
-});
-
 
