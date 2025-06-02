@@ -1,20 +1,14 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  font-family: 'Segoe UI', sans-serif;
-  line-height: 1.6;
-  background: #f4f4f4;
+  margin: 0;
+  font-family: 'Comic Neue', cursive;
+  background-color: #fef8e5;
   color: #333;
 }
 
 header {
-  background: #2c3e50;
+  background-color: #ff6b6b;
   color: white;
-  padding: 1.5rem 0;
+  padding: 2rem 1rem;
   text-align: center;
 }
 
@@ -22,46 +16,71 @@ nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
+  gap: 2rem;
   margin-top: 1rem;
+  padding: 0;
 }
 
-nav ul li {
-  margin: 0 15px;
-}
-
-nav ul li a {
+nav a {
   color: white;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
 }
 
-nav ul li a:hover {
-  color: #18bc9c;
+nav a:hover {
+  text-decoration: underline;
 }
 
 main {
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 1rem;
-  background: white;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.hero-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #ff6b6b;
+}
+
+.materie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.materia-card {
+  background-color: #fff8dc;
   border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  padding: 1rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.2s;
 }
 
-section {
-  margin-bottom: 2rem;
+.materia-card:hover {
+  transform: scale(1.05);
 }
 
-h2 {
-  color: #2c3e50;
+.materia-card img {
+  width: 100%;
+  border-radius: 10px;
   margin-bottom: 1rem;
 }
 
 footer {
+  background-color: #ff6b6b;
+  color: white;
   text-align: center;
   padding: 1rem;
-  background: #2c3e50;
-  color: white;
   margin-top: 2rem;
 }
