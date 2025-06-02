@@ -82,6 +82,9 @@ section h2 {
   font-size: 1.1rem;
   line-height: 1.6;
   color: black;
+  background-color: white;  /* sfondo chiaro */
+  padding: 1rem;
+  border-radius: 10px;
 }
 
 .bio-text button {
