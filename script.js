@@ -46,7 +46,7 @@ function toggleLanguage() {
 function animateBiography() {
   const textElement = document.getElementById("bio-text");
   let index = 0;
-  const speed = 15;
+  const speed = 40;
   function typeWriter() {
     if (index < italianText.length) {
       textElement.innerHTML += italianText.charAt(index);
