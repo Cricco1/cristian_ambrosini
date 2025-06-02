@@ -33,16 +33,21 @@ let isEnglish = false;
 
 function toggleLanguage() {
   isEnglish = !isEnglish;
-document.getElementById('bio-text').innerHTML = `
-  <p>${bioTextIT}</p>
-  <button onclick="toggleLanguage()">🌍 Traduci in Inglese</button>
-`;
+  updateBioText();
+}
+
+function updateBioText() {
+  const text = isEnglish ? bioTextEN : bioTextIT;
+  const buttonText = isEnglish ? "🌍 Translate to Italian" : "🌍 Traduci in Inglese";
+  document.getElementById('bio-text').innerHTML = `
+    <p>${text}</p>
+    <button onclick="toggleLanguage()">${buttonText}</button>
+  `;
 }
 
 // Caricamento iniziale
 document.addEventListener("DOMContentLoaded", () => {
   showSection('biografia');
-  document.getElementById('bio-text').innerHTML = `<p>${bioTextIT}</p>
-  `;
+  updateBioText();
 });
 
