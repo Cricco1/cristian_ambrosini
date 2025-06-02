@@ -46,7 +46,7 @@ function toggleLanguage() {
   const textElement = document.getElementById("bio-text");
   textElement.textContent = "";
   isEnglish = !isEnglish;
-  const text = isEnglish ? englishText : italianText;
+  const text = isEnglish ? bioTextEN : bioTextIT;
   textElement.innerHTML = `<p>${text}</p>`;
 }
 
@@ -55,11 +55,12 @@ function animateBiography() {
   let index = 0;
   const speed = 15;
   function typeWriter() {
-    if (index < italianText.length) {
-      textElement.innerHTML += italianText.charAt(index);
+    if (index < bioTextIT.length) {
+      textElement.innerHTML += bioTextIT.charAt(index);
       index++;
       setTimeout(typeWriter, speed);
     }
   }
   typeWriter();
 }
+
