@@ -1,79 +1,29 @@
 body {
-  margin: 0;
   font-family: 'Comic Neue', cursive;
-  background-color: #fef8e5;
-  color: #333;
+  margin: 0;
+  background-color: #f0f8ff;
+  color: black;
 }
 
-header {
-  background-color: #ff6b6b;
-  color: white;
-  padding: 2rem 1rem;
-  text-align: center;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  margin-top: 1rem;
-  padding: 0;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-main {
-  padding: 2rem;
-  max-width: 1100px;
-  margin: auto;
-}
-
-section h2 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-  color: #ff6b6b;
-}
-
-/* ========== Sezioni a comparsa dinamica ========== */
 .content-section {
   display: none;
-  animation: fadeIn 0.8s ease forwards;
+  padding: 2rem;
 }
 
 .content-section.active {
   display: block;
 }
 
-/* ========== Biografia ========== */
-.hero-section {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  text-align: center;
-}
-
 .bio-container {
   display: flex;
-  align-items: flex-start;
-  gap: 2rem;
   flex-wrap: wrap;
-  justify-content: center;
+  gap: 20px;
+  align-items: center;
 }
 
 .bio-img {
-  width: 220px;
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  max-width: 300px;
+  border-radius: 10px;
 }
 
 .bio-text {
@@ -82,85 +32,42 @@ section h2 {
   font-size: 1.1rem;
   line-height: 1.6;
   color: black;
-  background-color: white;  /* sfondo chiaro */
+  background-color: white;
   padding: 1rem;
   border-radius: 10px;
 }
 
-.bio-text button {
-  margin-top: 1.5rem;
-  padding: 0.6rem 1.2rem;
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  border-radius: 10px;
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  justify-content: center;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
   font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
 }
 
-.bio-text button:hover {
-  background-color: #0059c9;
-}
-
-.fade-in-text {
-  opacity: 0;
-  transition: opacity 0.6s ease-in-out;
-}
-
-.fade-in-text.show {
-  opacity: 1;
-}
-
-/* ========== Materie ========== */
 .materie-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1.5rem;
-  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .materia-card {
-  background-color: #fff8dc;
-  border-radius: 12px;
+  background: #fff;
   padding: 1rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  width: 200px;
   text-align: center;
-  transition: transform 0.2s;
-}
-
-.materia-card:hover {
-  transform: scale(1.05);
 }
 
 .materia-card img {
   width: 100%;
-  border-radius: 10px;
-  margin-bottom: 1rem;
-}
-
-/* ========== PCTO ========== */
-#pcto {
-  background-color: #fff0f5;
-  border-radius: 12px;
-  padding: 1.5rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  max-width: 800px;
-  margin: 2rem auto;
-  line-height: 1.6;
-}
-
-/* ========== Footer ========== */
-footer {
-  background-color: #ff6b6b;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
-
-/* ========== Animazione fadeIn ========== */
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+  height: auto;
+  border-radius: 8px;
 }
