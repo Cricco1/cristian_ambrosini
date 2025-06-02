@@ -21,52 +21,84 @@
 
   <main>
     <!-- Sezione Biografia -->
-   <section id="biografia" class="hero-section content-section active">
-  <h2>Biografia</h2>
-  <div class="bio-container">
-    <img src="img/amici.jpg" alt="Foto di Gruppo" class="bio-img">
-    <div class="bio-text">
-      <p id="bio-text" class="fade-in-text"></p>
-    </div>
-  </div>
-</section>
+    <section id="biografia" class="content-section active">
+      <h2>Biografia</h2>
+      <div class="bio-container">
+        <img src="img/amici.jpg" alt="Foto di Gruppo" class="bio-img">
+        <div class="bio-text" id="bio-text">
+          <!-- Qui verrà caricato il testo automaticamente -->
+        </div>
+        <button onclick="toggleLanguage()">🌍 Traduci in Inglese</button>
+      </div>
+    </section>
 
     <!-- Sezione PCTO -->
-<section id="pcto" class="content-section">
-  <h2>PCTO</h2>
-  <p>
-    Durante il mio percorso PCTO ho svolto un’esperienza formativa presso <strong>Ariston Group</strong>, azienda multinazionale leader nel settore della termotecnica, con sede produttiva ad Arcevia. All’interno dell’ufficio tecnico-informatico, mi è stato affidato un progetto individuale focalizzato sulla realizzazione di un <strong>software per l’analisi automatica di file .mod</strong>, ovvero file di configurazione tecnica utilizzati internamente dall’azienda per la gestione dei parametri delle caldaie.
-  </p>
-  <p>
-    Il mio compito principale è stato sviluppare uno <strong>script in Python</strong> in grado di eseguire il parsing del contenuto di questi file, estrarre le informazioni rilevanti (come codici dei componenti, versioni firmware, valori di settaggio, flag tecnici) e organizzare questi dati in modo ordinato in un <strong>foglio Excel generato automaticamente</strong>, utilizzando la libreria <code>openpyxl</code>.
-  </p>
-  <p>
-    Ho lavorato in piena autonomia, partendo da una fase iniziale di analisi della struttura dei file .mod, che non avevano una documentazione formale, il che ha richiesto un processo di reverse engineering logico e interpretativo. Questo ha coinvolto lo studio delle convenzioni sintattiche ricorrenti, l’uso di <code>espressioni regolari</code> (regex) per l’estrazione automatica dei dati, e la progettazione di una struttura dati coerente per mappare ogni parametro su Excel.
-  </p>
-  <p>
-    In seguito, ho costruito un’interfaccia minima che permettesse all’utente di selezionare uno o più file da elaborare, ed eseguire l’estrazione con un solo clic. L’obiettivo era migliorare la produttività dell’ufficio riducendo il tempo necessario per trascrivere manualmente i dati, oltre ad abbattere il rischio di errori umani.
-  </p>
-  <p>
-    Sebbene abbia portato avanti il progetto in autonomia, ho sentito l'esigenza di un maggiore confronto con colleghi o altri studenti per comprendere meglio il contesto tecnico iniziale e le esigenze dell’azienda. Questo mi ha fatto capire quanto siano importanti la <strong>collaborazione</strong> e la <strong>comunicazione tecnica</strong> nei progetti reali.
-  </p>
-  <p>
-    In conclusione, questa esperienza mi ha permesso di applicare concretamente le mie competenze informatiche in un ambiente lavorativo strutturato, affrontando un problema reale con strumenti professionali. È stata un’occasione preziosa per crescere sia dal punto di vista tecnico che personale, consolidando il mio interesse verso l’ambito della programmazione e dell’automazione dei processi.
-  </p>
-</section>
-
+    <section id="pcto" class="content-section">
+      <h2>PCTO</h2>
+      <p>
+        Durante il mio PCTO presso Ariston Group ad Arcevia, sono stato inserito in un ambiente di ufficio tecnico dove ho lavorato in completa autonomia alla progettazione di un software chiamato ModParser. Dopo un’attenta fase di studio, il mio obiettivo è stato creare un programma in grado di analizzare file contenenti configurazioni tecniche (presumibilmente relativi a moduli delle caldaie) per estrarre automaticamente le informazioni rilevanti e trasferirle in un foglio Excel. Questo strumento doveva aiutare il team a velocizzare e automatizzare un processo che prima era svolto manualmente. Sebbene l’esperienza mi abbia permesso di crescere nella programmazione e nella risoluzione dei problemi, ho sentito la mancanza di un team con cui confrontarmi. Lavorare da solo è stata una sfida che mi ha reso più consapevole delle mie capacità e dei miei limiti.
+      </p>
+    </section>
 
     <!-- Sezione Materie -->
     <section id="materie" class="content-section">
       <h2>Materie</h2>
       <div class="materie-grid">
-        <!-- Inserisci qui le card come hai già fatto -->
-        <!-- Esempio -->
         <div class="materia-card">
           <img src="Materie/italiano.jfif" alt="Italiano">
           <h3>Italiano</h3>
-          <p>Studio della lingua italiana...</p>
+          <p>Lingua, letteratura, scrittura.</p>
         </div>
-        <!-- ...altri... -->
+        <div class="materia-card">
+          <img src="Materie/storia.jfif" alt="Storia">
+          <h3>Storia</h3>
+          <p>Storia antica e moderna.</p>
+        </div>
+        <div class="materia-card">
+          <img src="Materie/matematica.jfif" alt="Matematica">
+          <h3>Matematica</h3>
+          <p>Numeri, funzioni, logica.</p>
+        </div>
+        <div class="materia-card">
+          <img src="Materie/inglese.jfif" alt="Inglese">
+          <h3>Inglese</h3>
+          <p>Lingua e cultura inglese.</p>
+        </div>
+        <div class="materia-card">
+          <img src="Materie/informatica.jpg" alt="Informatica">
+          <h3>Informatica</h3>
+          <p>Programmazione e sistemi.</p>
+        </div>
+        <div class="materia-card">
+          <img src="Materie/sistemi e reti.jfif" alt="Sistemi e Reti">
+          <h3>Sistemi e Reti</h3>
+          <p>Architetture e reti.</p>
+        </div>
+        <div class="materia-card">
+          <img src="Materie/int art.jfif" alt="AI">
+          <h3>Intelligenza Artificiale</h3>
+          <p>Machine Learning e automazione.</p>
+        </div>
+        <div class="materia-card">
+          <img src="Materie/tipsit.jfif" alt="TPSIT">
+          <h3>TPSIT</h3>
+          <p>Sistemi e telecomunicazioni.</p>
+        </div>
+        <div class="materia-card">
+          <img src="Materie/gpoi.jfif" alt="GPOI">
+          <h3>GPOI</h3>
+          <p>Gestione progetti.</p>
+        </div>
+        <div class="materia-card">
+          <img src="Materie/gim.jpg" alt="Scienze Motorie">
+          <h3>Scienze Motorie</h3>
+          <p>Attività fisica e salute.</p>
+        </div>
+        <div class="materia-card">
+          <img src="Materie/civica.jfif" alt="Educazione Civica">
+          <h3>Educazione Civica</h3>
+          <p>Diritti e cittadinanza.</p>
+        </div>
       </div>
     </section>
   </main>
