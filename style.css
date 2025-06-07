@@ -83,23 +83,6 @@ main {
   color: #e6dbff;
 }
 
-.bio-text button {
-  margin-top: 1.2rem;
-  background-color: #6a33b1;
-  color: #fff;
-  border: none;
-  padding: 0.6rem 1.2rem;
-  border-radius: 10px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.bio-text button:hover, .bio-text button:focus {
-  background-color: #7e3dce;
-  outline: none;
-}
-
 /* PCTO */
 #pcto p {
   font-size: 1.1rem;
@@ -204,35 +187,3 @@ footer {
   font-family: 'Poppins', sans-serif;
   line-height: 1.6;
   position: relative;
-}
-
-.close {
-  position: absolute;
-  top: 12px; right: 20px;
-  font-size: 30px;
-  font-weight: 700;
-  color: #ddd;
-  cursor: pointer;
-  transition: color 0.3s ease;
-}
-
-.close:hover, .close:focus {
-  color: #fff;
-  outline: none;
-}
-
-/* Responsive */
-@media (max-width: 720px) {
-  .bio-container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .bio-img {
-    width: 90%;
-  }
-
-  .pcto-images img {
-    width: 90%;
-  }
-}
