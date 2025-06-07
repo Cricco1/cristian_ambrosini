@@ -3,122 +3,114 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Il Mio Sito Scolastico</title>
+  <title>Cristian Ambrosini - Sito scolastico</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <h1>Benvenuto nel mio Sito Scolastico!</h1>
-    <nav>
-      <ul>
-        <li><a href="#" onclick="showSection('biografia')">Biografia</a></li>
-        <li><a href="#" onclick="showSection('pcto')">PCTO</a></li>
-        <li><a href="#" onclick="showSection('materie')">Materie</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <main>
-    <!-- Sezione Biografia -->
-    <section id="biografia" class="content-section active">
-      <h2>Biografia</h2>
-      <div class="bio-container">
-        <img src="img/amici.jpg" alt="Foto di Gruppo" class="bio-img" />
-        <div class="bio-text" id="bio-text">
-          <!-- testo in italiano iniziale -->
-          Mi chiamo Cristian Ambrosini, ho 19 anni, e oggi mi ritrovo alla fine di un viaggio che, pur durato cinque anni, sembra essere passato in un battito di ciglia. Frequentare l’indirizzo Informatica all’IIS “Marconi Pieralisi” di Jesi è stata una scelta che nasce dalla mia passione per la tecnologia, i videogiochi e il mondo digitale. Ma quello che non potevo immaginare il primo giorno, seduto su quei banchi con lo zaino ancora rigido e la testa piena di sogni, era quanto questa scuola mi avrebbe cambiato..
-          <br /><br />
-          In questi anni non ho solo imparato a programmare, ma ho imparato a conoscermi. Ho scoperto il valore delle relazioni, il senso profondo della collaborazione, e quanto possa essere potente il sentirsi parte di qualcosa. Le gite scolastiche, i momenti di condivisione e persino le difficoltà ci hanno unito come classe, trasformandoci da semplici compagni in una famiglia vera e propria. Oggi porto con me legami che sanno di affetto sincero, costruiti giorno dopo giorno, sorriso dopo sorriso.
-          <br /><br />
-          Sono entrato come un ragazzo forse un po' ingenuo, incerto su chi fosse e su cosa volesse diventare. Esco come una persona che ha imparato a credere in sé stessa, che ha imparato ad ascoltare gli altri, a lavorare in gruppo, ad essere più aperta, più empatica, più consapevole dei propri limiti e delle proprie forze.
-          <br /><br />
-          Fuori dalla scuola, mi lascio ispirare da tutto ciò che stimola la mia creatività: la palestra, i momenti con gli amici, il mondo dell’arte e del disegno digitale. Sono passioni che mi aiutano a esprimere ciò che a volte le parole non sanno dire. Amo il confronto, le idee che si incrociano, le energie che si sommano. Forse è questo che mi ha insegnato davvero la scuola: che insieme siamo più forti.
-          <br /><br />
-          Chiudo questo capitolo con gratitudine, con il cuore pieno di ricordi e con la voglia di affrontare ciò che verrà, portando con me tutto quello che questi cinque anni mi hanno insegnato.
-        </div>
-      </div>
-      <div class="bio-button">
-        <button id="translate-btn">🌍 Traduci in Inglese</button>
-      </div>
-    </section>
+<header>
+  <h1>Cristian Ambrosini</h1>
+  <nav>
+    <ul>
+      <li><a href="#biografia" class="nav-link">Biografia</a></li>
+      <li><a href="#pcto" class="nav-link">PCTO</a></li>
+      <li><a href="#materie" class="nav-link">Materie</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <!-- Sezione PCTO -->
-    <section id="pcto" class="content-section">
-      <h2>PCTO</h2>
-      <div class="bio-text">
-        <p>
-          Durante il mio percorso PCTO ho avuto l’opportunità di svolgere l’alternanza scuola-lavoro presso <strong>Ariston Group</strong>, nella sede di <strong>Arcevia</strong>, un’importante realtà industriale che opera nel settore della termotecnica e del comfort ambientale.
-        </p>
+<main>
+  <section id="biografia">
+    <h2>Biografia</h2>
+    <button id="translateBtn">Translate to English</button>
+    <p id="bio-text">
+      Mi chiamo Cristian Ambrosini, ho 19 anni, e oggi mi ritrovo alla fine di un viaggio che, pur durato cinque anni, sembra essere passato in un battito di ciglia. Frequentare l’indirizzo Informatica all’IIS “Marconi Pieralisi” di Jesi è stata una scelta che nasce dalla mia passione per la tecnologia, i videogiochi e il mondo digitale. Ma quello che non potevo immaginare il primo giorno, seduto su quei banchi con lo zaino ancora rigido e la testa piena di sogni, era quanto questa scuola mi avrebbe cambiato..
 
-        <div class="image-center">
-          <img src="img/azienda.jpg" alt="Sede Ariston Group" />
-        </div>
+In questi anni non ho solo imparato a programmare, ma ho imparato a conoscermi. Ho scoperto il valore delle relazioni, il senso profondo della collaborazione, e quanto possa essere potente il sentirsi parte di qualcosa. Le gite scolastiche, i momenti di condivisione e persino le difficoltà ci hanno unito come classe, trasformandoci da semplici compagni in una famiglia vera e propria. Oggi porto con me legami che sanno di affetto sincero, costruiti giorno dopo giorno, sorriso dopo sorriso.
 
-        <h3>🧩 Prima fase: analisi dell'azienda e progettazione</h3>
-        <p>
-          La prima parte del percorso è stata dedicata allo <strong>studio della struttura aziendale</strong>. Ho analizzato il funzionamento dell’ufficio tecnico e dei suoi flussi operativi, osservando l’uso di strumenti per la gestione dei dati e la configurazione dei moduli tecnici. L’ambiente lavorativo era ben organizzato e orientato all’efficienza: ogni reparto aveva un ruolo chiaro e definito.
-        </p>
-        <p>
-          Parallelamente, ho iniziato a lavorare alla <strong>progettazione di un software</strong> chiamato <strong>ModParser</strong>, ideato per leggere file contenenti configurazioni tecniche dei moduli aziendali e trasformarli in dati ordinati, esportabili in formato Excel.
-        </p>
+Sono entrato come un ragazzo forse un po' ingenuo, incerto su chi fosse e su cosa volesse diventare. Esco come una persona che ha imparato a credere in sé stessa, che ha imparato ad ascoltare gli altri, a lavorare in gruppo, ad essere più aperta, più empatica, più consapevole dei propri limiti e delle proprie forze.
 
-        <h3>💻 Seconda fase: sviluppo e presentazione finale</h3>
-        <p>
-          Nel secondo periodo del PCTO ho sviluppato in autonomia <strong>ModParser</strong>, realizzando uno script capace di analizzare i file tecnici e popolare automaticamente <strong>fogli Excel</strong> con i dati estratti. Questo strumento aveva lo scopo di <em>automatizzare e velocizzare</em> un processo che prima richiedeva l’intervento manuale.
-        </p>
-        <p>
-          Il progetto si è concluso con una <strong>presentazione del lavoro in sala conferenze</strong>, davanti al personale tecnico e ai tutor aziendali. Ho spiegato il funzionamento del software, illustrato i vantaggi per il team, e mostrato un esempio pratico di esportazione.
-        </p>
+Fuori dalla scuola, mi lascio ispirare da tutto ciò che stimola la mia creatività: la palestra, i momenti con gli amici, il mondo dell’arte e del disegno digitale. Sono passioni che mi aiutano a esprimere ciò che a volte le parole non sanno dire. Amo il confronto, le idee che si incrociano, le energie che si sommano. Forse è questo che mi ha insegnato davvero la scuola: che insieme siamo più forti.
 
-        <div class="image-center">
-          <img src="img/sala_conferenze.jpg" alt="Sala conferenze presentazione progetto" />
-          <p class="img-caption">Presentazione del progetto finale nella sala conferenze</p>
-        </div>
+Chiudo questo capitolo con gratitudine, con il cuore pieno di ricordi e con la voglia di affrontare ciò che verrà, portando con me tutto quello che questi cinque anni mi hanno insegnato.
+    </p>
+  </section>
 
-        <h3>🧠 Giudizio personale</h3>
-        <p>
-          L’esperienza è stata <strong>formativa e stimolante</strong>, mi ha permesso di mettere in pratica le mie competenze tecniche in un contesto reale, migliorando anche la mia capacità di <em>lavorare in autonomia, risolvere problemi e presentare il mio lavoro in modo chiaro</em>.
-        </p>
-        <p>
-          Tuttavia, ho capito che un ambiente di lavoro così <strong>statico e orientato alla programmazione individuale</strong> non rispecchia appieno le mie aspirazioni. Durante il PCTO ho sentito il bisogno di un maggiore <strong>scambio umano e confronto diretto</strong>, elementi che per me sono fondamentali. In futuro mi piacerebbe svolgere un ruolo che mi consenta di <strong>lavorare a contatto con le persone</strong>, dove possa unire competenze tecniche e relazionali.
-        </p>
-      </div>
-    </section>
+  <section id="pcto">
+    <h2>PCTO</h2>
 
-    <!-- Sezione Materie -->
-    <section id="materie" class="content-section">
-      <h2>Materie</h2>
-      <div class="materie-grid">
-        <div class="materia-card" data-id="italiano">
-          <img src="Materie/italiano.jfif" alt="Italiano" />
-          <h3>Italiano</h3>
-          <p>Lingua, letteratura, scrittura.</p>
-        </div>
-        <div class="materia-card" data-id="sistemi-e-reti">
-          <img src="Materie/sistemi e reti.jfif" alt="Sistemi e Reti" />
-          <h3>Sistemi e Reti</h3>
-          <p>Architetture e reti.</p>
-        </div>
-        <div class="materia-card" data-id="tipsit">
-          <img src="Materie/tipsit.jfif" alt="TPSIT" />
-          <h3>TPSIT</h3>
-          <p>Programmazione, algoritmi, software.</p>
-        </div>
-        <!-- Puoi aggiungere altre materie qui -->
-      </div>
+    <!-- Immagine dell'azienda -->
+    <div class="image-center">
+      <img src="img/azienda.jpg" alt="Sede Ariston Group" />
+    </div>
 
-      <div id="materia-content" class="materia-content">
-        <button id="close-materia">Chiudi</button>
-        <div id="materia-text"></div>
-      </div>
-    </section>
-  </main>
+    <h3>🧩 Prima fase: analisi dell'azienda e progettazione</h3>
+    <p>
+      La prima parte del percorso è stata dedicata allo <strong>studio della struttura aziendale</strong>. Ho analizzato il funzionamento dell’ufficio tecnico e dei suoi flussi operativi, osservando l’uso di strumenti per la gestione dei dati e la configurazione dei moduli tecnici. L’ambiente lavorativo era ben organizzato e orientato all’efficienza: ogni reparto aveva un ruolo chiaro e definito.
+    </p>
+    <p>
+      Parallelamente, ho iniziato a lavorare alla <strong>progettazione di un software</strong> chiamato <strong>ModParser</strong>, ideato per leggere file contenenti configurazioni tecniche dei moduli aziendali e trasformarli in dati ordinati, esportabili in formato Excel.
+    </p>
 
-  <footer>
-    <p>© 2025 Cristian Ambrosini - IIS Marconi Pieralisi Jesi</p>
-  </footer>
+    <h3>💻 Seconda fase: sviluppo e presentazione finale</h3>
+    <p>
+      Nel secondo periodo del PCTO ho sviluppato in autonomia <strong>ModParser</strong>, realizzando uno script capace di analizzare i file tecnici e popolare automaticamente <strong>fogli Excel</strong> con i dati estratti. Questo strumento aveva lo scopo di <em>automatizzare e velocizzare</em> un processo che prima richiedeva l’intervento manuale.
+    </p>
+    <p>
+      Il progetto si è concluso con una <strong>presentazione del lavoro in sala conferenze</strong>, davanti al personale tecnico e ai tutor aziendali. Ho spiegato il funzionamento del software, illustrato i vantaggi per il team, e mostrato un esempio pratico di esportazione.
+    </p>
 
-  <script src="script.js"></script>
+    <!-- Immagine della sala conferenze -->
+    <div class="image-center">
+      <img src="img/sala_conferenze.jpg" alt="Sala conferenze presentazione progetto" />
+      <p class="caption">Presentazione del progetto finale nella sala conferenze</p>
+    </div>
+
+    <h3>🧠 Giudizio personale</h3>
+    <p>
+      L’esperienza è stata <strong>formativa e stimolante</strong>, mi ha permesso di mettere in pratica le mie competenze tecniche in un contesto reale, migliorando anche la mia capacità di <em>lavorare in autonomia, risolvere problemi e presentare il mio lavoro in modo chiaro</em>.
+    </p>
+    <p>
+      Tuttavia, ho capito che un ambiente di lavoro così <strong>statico e orientato alla programmazione individuale</strong> non rispecchia appieno le mie aspirazioni. Durante il PCTO ho sentito il bisogno di un maggiore <strong>scambio umano e confronto diretto</strong>, elementi che per me sono fondamentali. In futuro mi piacerebbe svolgere un ruolo che mi consenta di <strong>lavorare a contatto con le persone</strong>, dove possa unire competenze tecniche e relazionali.
+    </p>
+  </section>
+
+  <section id="materie">
+    <h2>Materie</h2>
+    <div class="materia" tabindex="0">
+      <h3>TIPSIT</h3>
+      <img src="img/tipsit.jpg" alt="TIPSIT" />
+      <p>
+        Argomento: <strong>Reti di Calcolatori</strong><br />
+        Macroargomenti: Concetti base delle reti, protocolli TCP/IP, modelli OSI, sicurezza in rete.<br />
+        Microargomenti: Indirizzamento IP, subnetting, NAT, firewall, crittografia di base.
+      </p>
+    </div>
+    <div class="materia" tabindex="0">
+      <h3>Sistemi e Reti</h3>
+      <img src="img/sistemi_reti.jpg" alt="Sistemi e Reti" />
+      <p>
+        Argomento: <strong>Configurazione e gestione reti aziendali</strong><br />
+        Macroargomenti: Configurazione router e switch, protocolli di routing, VLAN, gestione della sicurezza.<br />
+        Microargomenti: DHCP, DNS, VPN, monitoraggio rete, gestione accessi.
+      </p>
+    </div>
+    <div class="materia" tabindex="0">
+      <h3>Italiano</h3>
+      <img src="img/italiano.jpg" alt="Italiano" />
+      <p>
+        Argomento: <strong>Svevo e D'Annunzio</strong><br />
+        Macroargomenti: Analisi delle opere principali, stile letterario, contesto storico.<br />
+        Microargomenti: "La coscienza di Zeno", "Il piacere", simbolismo, decadentismo.
+      </p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <p>© 2025 Cristian Ambrosini - IIS Marconi Pieralisi Jesi</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
