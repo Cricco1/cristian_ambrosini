@@ -24,14 +24,15 @@
     <section id="biografia" class="content-section active">
       <h2>Biografia</h2>
       <div class="bio-container">
-        <img src="img/amici.jpg" alt="Foto di Gruppo" class="bio-img" />
-        <div class="bio-text" id="bio-text">
-          <p>
-            Sono Cristian Ambrosini, uno studente appassionato di tecnologia e programmazione. Durante il mio percorso scolastico ho sviluppato competenze in diversi ambiti, dalla programmazione software allo studio delle reti informatiche. Sono curioso e motivato a crescere professionalmente, affrontando nuove sfide con entusiasmo.
+        <img src="img/amici.jpg" alt="Foto di Gruppo" class="bio-img">
+        <div class="bio-text">
+          <p id="bio-ita">
+            Ciao! Mi chiamo Cristian Ambrosini e frequento l'Istituto Tecnico Tecnologico. Sono appassionato di informatica, programmazione e nuove tecnologie. Amo lavorare su progetti innovativi e migliorare le mie competenze tecniche. Nel tempo libero pratico sport e leggo libri di fantascienza.
           </p>
-          <div class="bio-button">
-            <button onclick="toggleLanguage()">🌍 Traduci in Inglese</button>
-          </div>
+          <p id="bio-eng" style="display:none;">
+            Hi! My name is Cristian Ambrosini and I attend the Technical Technological Institute. I am passionate about computer science, programming, and new technologies. I love working on innovative projects and improving my technical skills. In my free time, I practice sports and read science fiction books.
+          </p>
+          <button onclick="toggleLanguage()">🌍 Traduci in Inglese</button>
         </div>
       </div>
     </section>
@@ -83,61 +84,56 @@
     <section id="materie" class="content-section">
       <h2>Materie</h2>
       <div class="materie-grid">
-        <div class="materia-card">
-          <img src="Materie/italiano.jfif" alt="Italiano" />
+        <div class="materia-card" onclick="showMateria('italiano')">
+          <img src="Materie/italiano.jfif" alt="Italiano">
           <h3>Italiano</h3>
-          <p>Lingua, letteratura, scrittura.</p>
         </div>
-        <div class="materia-card">
-          <img src="Materie/storia.jfif" alt="Storia" />
+        <div class="materia-card" onclick="showMateria('storia')">
+          <img src="Materie/storia.jfif" alt="Storia">
           <h3>Storia</h3>
-          <p>Storia antica e moderna.</p>
         </div>
-        <div class="materia-card">
-          <img src="Materie/matematica.jfif" alt="Matematica" />
+        <div class="materia-card" onclick="showMateria('matematica')">
+          <img src="Materie/matematica.jfif" alt="Matematica">
           <h3>Matematica</h3>
-          <p>Numeri, funzioni, logica.</p>
         </div>
-        <div class="materia-card">
-          <img src="Materie/inglese.jfif" alt="Inglese" />
+        <div class="materia-card" onclick="showMateria('inglese')">
+          <img src="Materie/inglese.jfif" alt="Inglese">
           <h3>Inglese</h3>
-          <p>Lingua e cultura inglese.</p>
         </div>
-        <div class="materia-card">
-          <img src="Materie/informatica.jpg" alt="Informatica" />
+        <div class="materia-card" onclick="showMateria('informatica')">
+          <img src="Materie/informatica.jpg" alt="Informatica">
           <h3>Informatica</h3>
-          <p>Programmazione e sistemi.</p>
         </div>
-        <div class="materia-card">
-          <img src="Materie/sistemi e reti.jfif" alt="Sistemi e Reti" />
+        <div class="materia-card" onclick="showMateria('sistemi')">
+          <img src="Materie/sistemi e reti.jfif" alt="Sistemi e Reti">
           <h3>Sistemi e Reti</h3>
-          <p>Architetture e reti.</p>
         </div>
-        <div class="materia-card">
-          <img src="Materie/int art.jfif" alt="Intelligenza Artificiale" />
+        <div class="materia-card" onclick="showMateria('intelligenza')">
+          <img src="Materie/int art.jfif" alt="Intelligenza Artificiale">
           <h3>Intelligenza Artificiale</h3>
-          <p>Machine Learning e automazione.</p>
         </div>
-        <div class="materia-card">
-          <img src="Materie/tipsit.jfif" alt="TPSIT" />
+        <div class="materia-card" onclick="showMateria('tipsit')">
+          <img src="Materie/tipsit.jfif" alt="TPSIT">
           <h3>TPSIT</h3>
-          <p>Sistemi e telecomunicazioni.</p>
         </div>
-        <div class="materia-card">
-          <img src="Materie/gpoi.jfif" alt="GPOI" />
+        <div class="materia-card" onclick="showMateria('gpoi')">
+          <img src="Materie/gpoi.jfif" alt="GPOI">
           <h3>GPOI</h3>
-          <p>Gestione progetti.</p>
         </div>
-        <div class="materia-card">
-          <img src="Materie/gim.jpg" alt="Scienze Motorie" />
+        <div class="materia-card" onclick="showMateria('scienze')">
+          <img src="Materie/gim.jpg" alt="Scienze Motorie">
           <h3>Scienze Motorie</h3>
-          <p>Attività fisica e salute.</p>
         </div>
-        <div class="materia-card">
-          <img src="Materie/civica.jfif" alt="Educazione Civica" />
+        <div class="materia-card" onclick="showMateria('civica')">
+          <img src="Materie/civica.jfif" alt="Educazione Civica">
           <h3>Educazione Civica</h3>
-          <p>Diritti e cittadinanza.</p>
         </div>
+      </div>
+
+      <!-- Area testo materia -->
+      <div id="materia-text" style="margin-top: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9; display:none;">
+        <button onclick="closeMateria()" style="float:right; background:#d33; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer;">Chiudi ✖</button>
+        <div id="materia-content"></div>
       </div>
     </section>
   </main>
