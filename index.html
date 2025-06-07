@@ -2,74 +2,148 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cristian Ambrosini - Sito Maturità</title>
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Il Mio Sito Scolastico</title>
   <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <h1>Cristian Ambrosini - IIS Marconi Pieralisi Jesi</h1>
+    <h1>Benvenuto nel mio Sito Scolastico!</h1>
     <nav>
       <ul>
-        <li><a href="#" onclick="showSection('biografia'); return false;">Biografia</a></li>
-        <li><a href="#" onclick="showSection('pcto'); return false;">PCTO</a></li>
-        <li><a href="#" onclick="showSection('materie'); return false;">Materie</a></li>
+        <li><a href="#" onclick="showSection('biografia')">Biografia</a></li>
+        <li><a href="#" onclick="showSection('pcto')">PCTO</a></li>
+        <li><a href="#" onclick="showSection('materie')">Materie</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
+    <!-- Sezione Biografia -->
     <section id="biografia" class="content-section active">
+      <h2>Biografia</h2>
       <div class="bio-container">
-        <img src="img/foto_biografia.jpg" alt="Foto Cristian" class="bio-img" />
-        <div class="bio-text" id="bio-text"></div>
+        <img src="img/amici.jpg" alt="Foto di Gruppo" class="bio-img" />
+        <div class="bio-text" id="bio-text">
+          <p>
+            Sono Cristian Ambrosini, uno studente appassionato di tecnologia e programmazione. Durante il mio percorso scolastico ho sviluppato competenze in diversi ambiti, dalla programmazione software allo studio delle reti informatiche. Sono curioso e motivato a crescere professionalmente, affrontando nuove sfide con entusiasmo.
+          </p>
+          <div class="bio-button">
+            <button onclick="toggleLanguage()">🌍 Traduci in Inglese</button>
+          </div>
+        </div>
       </div>
     </section>
 
+    <!-- Sezione PCTO -->
     <section id="pcto" class="content-section">
       <h2>PCTO</h2>
-      <p>
-        Durante il PCTO ho avuto l'opportunità di immergermi nel mondo lavorativo con due periodi distinti. Nel primo, ho studiato a fondo l’azienda, comprendendone struttura e funzioni, e ho iniziato l'elaborazione del compito affidatomi. Nel secondo periodo, mi sono dedicato alla realizzazione pratica del lavoro, sviluppando un software con esportazione automatica in Excel, che ho presentato con successo in ufficio. 
-      </p>
-      <div class="pcto-images">
-        <img src="img/pcto_attivita.jpg" alt="Attività PCTO" />
-        <img src="img/pcto_sala_conferenze.jpg" alt="Sala conferenze PCTO" />
+      <div class="bio-text">
+        <p>
+          Durante il mio percorso PCTO ho avuto l’opportunità di svolgere l’alternanza scuola-lavoro presso <strong>Ariston Group</strong>, nella sede di <strong>Arcevia</strong>, un’importante realtà industriale che opera nel settore della termotecnica e del comfort ambientale.
+        </p>
+
+        <div style="text-align: center; margin: 20px 0;">
+          <img src="img/azienda.jpg" alt="Sede Ariston Group" style="max-width: 100%; border-radius: 12px;">
+        </div>
+
+        <h3>🧩 Prima fase: analisi dell'azienda e progettazione</h3>
+        <p>
+          La prima parte del percorso è stata dedicata allo <strong>studio della struttura aziendale</strong>. Ho analizzato il funzionamento dell’ufficio tecnico e dei suoi flussi operativi, osservando l’uso di strumenti per la gestione dei dati e la configurazione dei moduli tecnici. L’ambiente lavorativo era ben organizzato e orientato all’efficienza: ogni reparto aveva un ruolo chiaro e definito.
+        </p>
+        <p>
+          Parallelamente, ho iniziato a lavorare alla <strong>progettazione di un software</strong> chiamato <strong>ModParser</strong>, ideato per leggere file contenenti configurazioni tecniche dei moduli aziendali e trasformarli in dati ordinati, esportabili in formato Excel.
+        </p>
+
+        <h3>💻 Seconda fase: sviluppo e presentazione finale</h3>
+        <p>
+          Nel secondo periodo del PCTO ho sviluppato in autonomia <strong>ModParser</strong>, realizzando uno script capace di analizzare i file tecnici e popolare automaticamente <strong>fogli Excel</strong> con i dati estratti. Questo strumento aveva lo scopo di <em>automatizzare e velocizzare</em> un processo che prima richiedeva l’intervento manuale.
+        </p>
+        <p>
+          Il progetto si è concluso con una <strong>presentazione del lavoro in sala conferenze</strong>, davanti al personale tecnico e ai tutor aziendali. Ho spiegato il funzionamento del software, illustrato i vantaggi per il team, e mostrato un esempio pratico di esportazione.
+        </p>
+
+        <div style="text-align: center; margin: 20px 0;">
+          <img src="img/sala_conferenze.jpg" alt="Sala conferenze presentazione progetto" style="max-width: 100%; border-radius: 12px;">
+          <p style="font-size: 0.9rem; color: #444;">Presentazione del progetto finale nella sala conferenze</p>
+        </div>
+
+        <h3>🧠 Giudizio personale</h3>
+        <p>
+          L’esperienza è stata <strong>formativa e stimolante</strong>, mi ha permesso di mettere in pratica le mie competenze tecniche in un contesto reale, migliorando anche la mia capacità di <em>lavorare in autonomia, risolvere problemi e presentare il mio lavoro in modo chiaro</em>.
+        </p>
+        <p>
+          Tuttavia, ho capito che un ambiente di lavoro così <strong>statico e orientato alla programmazione individuale</strong> non rispecchia appieno le mie aspirazioni. Durante il PCTO ho sentito il bisogno di un maggiore <strong>scambio umano e confronto diretto</strong>, elementi che per me sono fondamentali. In futuro mi piacerebbe svolgere un ruolo che mi consenta di <strong>lavorare a contatto con le persone</strong>, dove possa unire competenze tecniche e relazionali.
+        </p>
       </div>
-      <p><em>Giudizio personale:</em> Il PCTO è stata un’esperienza formativa che mi ha permesso di mettere in pratica le competenze informatiche e relazionali acquisite, rafforzando il mio approccio professionale e il lavoro in team.</p>
     </section>
 
+    <!-- Sezione Materie -->
     <section id="materie" class="content-section">
       <h2>Materie</h2>
       <div class="materie-grid">
-        <div class="materia-card" onclick="showMateriaDetail('Italiano')">
-          <img src="img/italiano.jpg" alt="Italiano" />
+        <div class="materia-card">
+          <img src="Materie/italiano.jfif" alt="Italiano" />
           <h3>Italiano</h3>
+          <p>Lingua, letteratura, scrittura.</p>
         </div>
-        <div class="materia-card" onclick="showMateriaDetail('TPSIT')">
-          <img src="img/tpsit.jpg" alt="TPSIT" />
-          <h3>TPSIT</h3>
-        </div>
-        <div class="materia-card" onclick="showMateriaDetail('Sistemi e Reti')">
-          <img src="img/sistemi.jpg" alt="Sistemi e Reti" />
-          <h3>Sistemi e Reti</h3>
-        </div>
-        <div class="materia-card" onclick="showMateriaDetail('Storia')">
-          <img src="img/storia.jpg" alt="Storia" />
+        <div class="materia-card">
+          <img src="Materie/storia.jfif" alt="Storia" />
           <h3>Storia</h3>
+          <p>Storia antica e moderna.</p>
         </div>
-        <!-- Puoi aggiungere altre materie qui -->
-      </div>
-
-      <div id="materia-detail" class="materia-detail-container">
-        <h3 id="materia-title">Seleziona una materia per vedere i dettagli</h3>
-        <p id="materia-description"></p>
+        <div class="materia-card">
+          <img src="Materie/matematica.jfif" alt="Matematica" />
+          <h3>Matematica</h3>
+          <p>Numeri, funzioni, logica.</p>
+        </div>
+        <div class="materia-card">
+          <img src="Materie/inglese.jfif" alt="Inglese" />
+          <h3>Inglese</h3>
+          <p>Lingua e cultura inglese.</p>
+        </div>
+        <div class="materia-card">
+          <img src="Materie/informatica.jpg" alt="Informatica" />
+          <h3>Informatica</h3>
+          <p>Programmazione e sistemi.</p>
+        </div>
+        <div class="materia-card">
+          <img src="Materie/sistemi e reti.jfif" alt="Sistemi e Reti" />
+          <h3>Sistemi e Reti</h3>
+          <p>Architetture e reti.</p>
+        </div>
+        <div class="materia-card">
+          <img src="Materie/int art.jfif" alt="Intelligenza Artificiale" />
+          <h3>Intelligenza Artificiale</h3>
+          <p>Machine Learning e automazione.</p>
+        </div>
+        <div class="materia-card">
+          <img src="Materie/tipsit.jfif" alt="TPSIT" />
+          <h3>TPSIT</h3>
+          <p>Sistemi e telecomunicazioni.</p>
+        </div>
+        <div class="materia-card">
+          <img src="Materie/gpoi.jfif" alt="GPOI" />
+          <h3>GPOI</h3>
+          <p>Gestione progetti.</p>
+        </div>
+        <div class="materia-card">
+          <img src="Materie/gim.jpg" alt="Scienze Motorie" />
+          <h3>Scienze Motorie</h3>
+          <p>Attività fisica e salute.</p>
+        </div>
+        <div class="materia-card">
+          <img src="Materie/civica.jfif" alt="Educazione Civica" />
+          <h3>Educazione Civica</h3>
+          <p>Diritti e cittadinanza.</p>
+        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Cristian Ambrosini - IIS Marconi Pieralisi Jesi</p>
+    <p>© 2025 - Sito scolastico personale</p>
   </footer>
 
   <script src="script.js"></script>
