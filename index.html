@@ -2,10 +2,10 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Il Mio Sito Scolastico</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
@@ -24,16 +24,22 @@
     <section id="biografia" class="content-section active">
       <h2>Biografia</h2>
       <div class="bio-container">
-        <img src="img/amici.jpg" alt="Foto di Gruppo" class="bio-img">
-        <div class="bio-text">
-          <p id="bio-ita">
-            Ciao! Mi chiamo Cristian Ambrosini e frequento l'Istituto Tecnico Tecnologico. Sono appassionato di informatica, programmazione e nuove tecnologie. Amo lavorare su progetti innovativi e migliorare le mie competenze tecniche. Nel tempo libero pratico sport e leggo libri di fantascienza.
-          </p>
-          <p id="bio-eng" style="display:none;">
-            Hi! My name is Cristian Ambrosini and I attend the Technical Technological Institute. I am passionate about computer science, programming, and new technologies. I love working on innovative projects and improving my technical skills. In my free time, I practice sports and read science fiction books.
-          </p>
-          <button onclick="toggleLanguage()">🌍 Traduci in Inglese</button>
+        <img src="img/amici.jpg" alt="Foto di Gruppo" class="bio-img" />
+        <div class="bio-text" id="bio-text">
+          <!-- testo in italiano iniziale -->
+          Mi chiamo Cristian Ambrosini, ho 19 anni, e oggi mi ritrovo alla fine di un viaggio che, pur durato cinque anni, sembra essere passato in un battito di ciglia. Frequentare l’indirizzo Informatica all’IIS “Marconi Pieralisi” di Jesi è stata una scelta che nasce dalla mia passione per la tecnologia, i videogiochi e il mondo digitale. Ma quello che non potevo immaginare il primo giorno, seduto su quei banchi con lo zaino ancora rigido e la testa piena di sogni, era quanto questa scuola mi avrebbe cambiato..
+          <br /><br />
+          In questi anni non ho solo imparato a programmare, ma ho imparato a conoscermi. Ho scoperto il valore delle relazioni, il senso profondo della collaborazione, e quanto possa essere potente il sentirsi parte di qualcosa. Le gite scolastiche, i momenti di condivisione e persino le difficoltà ci hanno unito come classe, trasformandoci da semplici compagni in una famiglia vera e propria. Oggi porto con me legami che sanno di affetto sincero, costruiti giorno dopo giorno, sorriso dopo sorriso.
+          <br /><br />
+          Sono entrato come un ragazzo forse un po' ingenuo, incerto su chi fosse e su cosa volesse diventare. Esco come una persona che ha imparato a credere in sé stessa, che ha imparato ad ascoltare gli altri, a lavorare in gruppo, ad essere più aperta, più empatica, più consapevole dei propri limiti e delle proprie forze.
+          <br /><br />
+          Fuori dalla scuola, mi lascio ispirare da tutto ciò che stimola la mia creatività: la palestra, i momenti con gli amici, il mondo dell’arte e del disegno digitale. Sono passioni che mi aiutano a esprimere ciò che a volte le parole non sanno dire. Amo il confronto, le idee che si incrociano, le energie che si sommano. Forse è questo che mi ha insegnato davvero la scuola: che insieme siamo più forti.
+          <br /><br />
+          Chiudo questo capitolo con gratitudine, con il cuore pieno di ricordi e con la voglia di affrontare ciò che verrà, portando con me tutto quello che questi cinque anni mi hanno insegnato.
         </div>
+      </div>
+      <div class="bio-button">
+        <button id="translate-btn">🌍 Traduci in Inglese</button>
       </div>
     </section>
 
@@ -45,8 +51,8 @@
           Durante il mio percorso PCTO ho avuto l’opportunità di svolgere l’alternanza scuola-lavoro presso <strong>Ariston Group</strong>, nella sede di <strong>Arcevia</strong>, un’importante realtà industriale che opera nel settore della termotecnica e del comfort ambientale.
         </p>
 
-        <div style="text-align: center; margin: 20px 0;">
-          <img src="img/azienda.jpg" alt="Sede Ariston Group" style="max-width: 100%; border-radius: 12px;">
+        <div class="image-center">
+          <img src="img/azienda.jpg" alt="Sede Ariston Group" />
         </div>
 
         <h3>🧩 Prima fase: analisi dell'azienda e progettazione</h3>
@@ -65,9 +71,9 @@
           Il progetto si è concluso con una <strong>presentazione del lavoro in sala conferenze</strong>, davanti al personale tecnico e ai tutor aziendali. Ho spiegato il funzionamento del software, illustrato i vantaggi per il team, e mostrato un esempio pratico di esportazione.
         </p>
 
-        <div style="text-align: center; margin: 20px 0;">
-          <img src="img/sala_conferenze.jpg" alt="Sala conferenze presentazione progetto" style="max-width: 100%; border-radius: 12px;">
-          <p style="font-size: 0.9rem; color: #444;">Presentazione del progetto finale nella sala conferenze</p>
+        <div class="image-center">
+          <img src="img/sala_conferenze.jpg" alt="Sala conferenze presentazione progetto" />
+          <p class="img-caption">Presentazione del progetto finale nella sala conferenze</p>
         </div>
 
         <h3>🧠 Giudizio personale</h3>
@@ -84,62 +90,33 @@
     <section id="materie" class="content-section">
       <h2>Materie</h2>
       <div class="materie-grid">
-        <div class="materia-card" onclick="showMateria('italiano')">
-          <img src="Materie/italiano.jfif" alt="Italiano">
+        <div class="materia-card" data-id="italiano">
+          <img src="Materie/italiano.jfif" alt="Italiano" />
           <h3>Italiano</h3>
+          <p>Lingua, letteratura, scrittura.</p>
         </div>
-        <div class="materia-card" onclick="showMateria('storia')">
-          <img src="Materie/storia.jfif" alt="Storia">
-          <h3>Storia</h3>
-        </div>
-        <div class="materia-card" onclick="showMateria('matematica')">
-          <img src="Materie/matematica.jfif" alt="Matematica">
-          <h3>Matematica</h3>
-        </div>
-        <div class="materia-card" onclick="showMateria('inglese')">
-          <img src="Materie/inglese.jfif" alt="Inglese">
-          <h3>Inglese</h3>
-        </div>
-        <div class="materia-card" onclick="showMateria('informatica')">
-          <img src="Materie/informatica.jpg" alt="Informatica">
-          <h3>Informatica</h3>
-        </div>
-        <div class="materia-card" onclick="showMateria('sistemi')">
-          <img src="Materie/sistemi e reti.jfif" alt="Sistemi e Reti">
+        <div class="materia-card" data-id="sistemi-e-reti">
+          <img src="Materie/sistemi e reti.jfif" alt="Sistemi e Reti" />
           <h3>Sistemi e Reti</h3>
+          <p>Architetture e reti.</p>
         </div>
-        <div class="materia-card" onclick="showMateria('intelligenza')">
-          <img src="Materie/int art.jfif" alt="Intelligenza Artificiale">
-          <h3>Intelligenza Artificiale</h3>
-        </div>
-        <div class="materia-card" onclick="showMateria('tipsit')">
-          <img src="Materie/tipsit.jfif" alt="TPSIT">
+        <div class="materia-card" data-id="tipsit">
+          <img src="Materie/tipsit.jfif" alt="TPSIT" />
           <h3>TPSIT</h3>
+          <p>Programmazione, algoritmi, software.</p>
         </div>
-        <div class="materia-card" onclick="showMateria('gpoi')">
-          <img src="Materie/gpoi.jfif" alt="GPOI">
-          <h3>GPOI</h3>
-        </div>
-        <div class="materia-card" onclick="showMateria('scienze')">
-          <img src="Materie/gim.jpg" alt="Scienze Motorie">
-          <h3>Scienze Motorie</h3>
-        </div>
-        <div class="materia-card" onclick="showMateria('civica')">
-          <img src="Materie/civica.jfif" alt="Educazione Civica">
-          <h3>Educazione Civica</h3>
-        </div>
+        <!-- Puoi aggiungere altre materie qui -->
       </div>
 
-      <!-- Area testo materia -->
-      <div id="materia-text" style="margin-top: 20px; padding: 15px; border: 1px solid #ccc; border-radius: 8px; background-color: #f9f9f9; display:none;">
-        <button onclick="closeMateria()" style="float:right; background:#d33; color:#fff; border:none; padding:5px 10px; border-radius:4px; cursor:pointer;">Chiudi ✖</button>
-        <div id="materia-content"></div>
+      <div id="materia-content" class="materia-content">
+        <button id="close-materia">Chiudi</button>
+        <div id="materia-text"></div>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 - Sito scolastico personale</p>
+    <p>© 2025 Cristian Ambrosini - IIS Marconi Pieralisi Jesi</p>
   </footer>
 
   <script src="script.js"></script>
