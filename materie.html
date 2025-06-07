@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Materie - Cristian Ambrosini</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Biografia</a></li>
+        <li><a href="pcto.html">PCTO</a></li>
+        <li><a href="materie.html" class="active">Materie</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="materie">
+      <h1 data-it="Materie" data-en="Subjects">Materie</h1>
+      <button id="toggleLangMaterie" aria-label="Switch Language">English</button>
+
+      <!-- Materia: Italiano -->
+      <article class="materia">
+        <h2 data-it="Italiano" data-en="Italian">Italiano</h2>
+        <img src="img/italiano.jpg" alt="Letteratura Italiana" />
+        <p data-it="Analisi approfondita di Svevo e D'Annunzio, con attenzione al contesto storico e tematico. Riflessioni critiche sul simbolismo e il modernismo nella letteratura italiana."
+           data-en="In-depth analysis of Svevo and D'Annunzio, focusing on historical and thematic contexts. Critical reflections on symbolism and modernism in Italian literature.">
+          Analisi approfondita di Svevo e D'Annunzio, con attenzione al contesto storico e tematico. Riflessioni critiche sul simbolismo e il modernismo nella letteratura italiana.
+        </p>
+      </article>
+
+      <!-- Materia: Sistemi e Reti -->
+      <article class="materia">
+        <h2 data-it="Sistemi e Reti" data-en="Systems and Networks">Sistemi e Reti</h2>
+        <img src="img/sistemi_reti.jpg" alt="Sistemi e Reti" />
+        <p data-it="Studio di protocolli di comunicazione, modelli OSI e TCP/IP, e progettazione di reti locali. Approfondimenti su sicurezza informatica e gestione del traffico dati."
+           data-en="Study of communication protocols, OSI and TCP/IP models, and design of local networks. Insights into cybersecurity and data traffic management.">
+          Studio di protocolli di comunicazione, modelli OSI e TCP/IP, e progettazione di reti locali. Approfondimenti su sicurezza informatica e gestione del traffico dati.
+        </p>
+      </article>
+
+      <!-- Materia: TIPSIT -->
+      <article class="materia">
+        <h2 data-it="TIPSIT" data-en="TIPSIT">TIPSIT</h2>
+        <img src="img/tipsit.jpg" alt="Tecnologie Informatiche e Programmazione" />
+        <p data-it="Programmazione orientata agli oggetti, sviluppo di software con linguaggi come Python e C#, e uso di ambienti di sviluppo integrati. Progetti pratici e lavoro di gruppo."
+           data-en="Object-oriented programming, software development with languages like Python and C#, and use of integrated development environments. Practical projects and teamwork.">
+          Programmazione orientata agli oggetti, sviluppo di software con linguaggi come Python e C#, e uso di ambienti di sviluppo integrati. Progetti pratici e lavoro di gruppo.
+        </p>
+      </article>
+
+      <!-- Puoi aggiungere altre materie qui seguendo lo stesso schema -->
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Cristian Ambrosini</p>
+  </footer>
+
+  <script>
+    const toggleBtnMaterie = document.getElementById('toggleLangMaterie');
+    const elementsMaterie = document.querySelectorAll('#materie [data-it]');
+
+    toggleBtnMaterie.addEventListener('click', () => {
+      if(toggleBtnMaterie.textContent === 'English') {
+        elementsMaterie.forEach(el => {
+          el.textContent = el.getAttribute('data-en');
+        });
+        toggleBtnMaterie.textContent = 'Italiano';
+      } else {
+        elementsMaterie.forEach(el => {
+          el.textContent = el.getAttribute('data-it');
+        });
+        toggleBtnMaterie.textContent = 'English';
+      }
+    });
+  </script>
+</body>
+</html>
