@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sito Scolastico - Cristian Ambrosini</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet" />
+  <title>Cristian Ambrosini - Sito Maturità</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header>
-    <h1>Cristian Ambrosini - Maturità 2025</h1>
+    <h1>Cristian Ambrosini - IIS Marconi Pieralisi Jesi</h1>
     <nav>
       <ul>
         <li><a href="#" onclick="showSection('biografia'); return false;">Biografia</a></li>
@@ -21,57 +21,56 @@
 
   <main>
     <section id="biografia" class="content-section active">
-      <h2>Biografia</h2>
       <div class="bio-container">
-        <img class="bio-img" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=300&q=80" alt="Foto di Cristian" />
+        <img src="img/foto_biografia.jpg" alt="Foto Cristian" class="bio-img" />
         <div class="bio-text" id="bio-text"></div>
       </div>
     </section>
 
     <section id="pcto" class="content-section">
       <h2>PCTO</h2>
-      <p>Durante il mio percorso di PCTO, ho avuto l’opportunità di conoscere a fondo l’azienda e di sviluppare un software che esporta automaticamente dati in Excel, semplificando così il lavoro d’ufficio. Ho lavorato su due fasi: studio dell’azienda e realizzazione pratica del progetto. La presentazione finale in sala conferenze è stata un momento di grande soddisfazione e crescita personale.</p>
+      <p>
+        Durante il PCTO ho avuto l'opportunità di immergermi nel mondo lavorativo con due periodi distinti. Nel primo, ho studiato a fondo l’azienda, comprendendone struttura e funzioni, e ho iniziato l'elaborazione del compito affidatomi. Nel secondo periodo, mi sono dedicato alla realizzazione pratica del lavoro, sviluppando un software con esportazione automatica in Excel, che ho presentato con successo in ufficio. 
+      </p>
       <div class="pcto-images">
-        <img src="https://images.unsplash.com/photo-1551836022-7bde2b3021e5?auto=format&fit=crop&w=400&q=80" alt="Attività aziendale" />
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=400&q=80" alt="Sala conferenze" />
+        <img src="img/pcto_attivita.jpg" alt="Attività PCTO" />
+        <img src="img/pcto_sala_conferenze.jpg" alt="Sala conferenze PCTO" />
       </div>
-      <p class="pcto-judgment"><strong>Giudizio personale:</strong> Questo percorso mi ha permesso di mettere in pratica le conoscenze informatiche acquisite, di sviluppare capacità organizzative e di migliorare le mie abilità comunicative. Sono orgoglioso dei risultati ottenuti e motivato a continuare su questa strada.</p>
+      <p><em>Giudizio personale:</em> Il PCTO è stata un’esperienza formativa che mi ha permesso di mettere in pratica le competenze informatiche e relazionali acquisite, rafforzando il mio approccio professionale e il lavoro in team.</p>
     </section>
 
     <section id="materie" class="content-section">
       <h2>Materie</h2>
       <div class="materie-grid">
-        <div class="materia-card" onclick="showMateriaDetail('Italiano')" tabindex="0" role="button" aria-pressed="false">
-          <img src="https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?auto=format&fit=crop&w=300&q=80" alt="Libro aperto" />
+        <div class="materia-card" onclick="showMateriaDetail('Italiano')">
+          <img src="img/italiano.jpg" alt="Italiano" />
           <h3>Italiano</h3>
         </div>
-        <div class="materia-card" onclick="showMateriaDetail('TPSIT')" tabindex="0" role="button" aria-pressed="false">
-          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=300&q=80" alt="Rete e server" />
+        <div class="materia-card" onclick="showMateriaDetail('TPSIT')">
+          <img src="img/tpsit.jpg" alt="TPSIT" />
           <h3>TPSIT</h3>
         </div>
-        <div class="materia-card" onclick="showMateriaDetail('Sistemi e Reti')" tabindex="0" role="button" aria-pressed="false">
-          <img src="https://images.unsplash.com/photo-1517433456452-f9633a875f6f?auto=format&fit=crop&w=300&q=80" alt="Computer con rete" />
+        <div class="materia-card" onclick="showMateriaDetail('Sistemi e Reti')">
+          <img src="img/sistemi.jpg" alt="Sistemi e Reti" />
           <h3>Sistemi e Reti</h3>
         </div>
-        <div class="materia-card disabled">
-          <h3>Altre materie in arrivo...</h3>
+        <div class="materia-card" onclick="showMateriaDetail('Storia')">
+          <img src="img/storia.jpg" alt="Storia" />
+          <h3>Storia</h3>
         </div>
+        <!-- Puoi aggiungere altre materie qui -->
+      </div>
+
+      <div id="materia-detail" class="materia-detail-container">
+        <h3 id="materia-title">Seleziona una materia per vedere i dettagli</h3>
+        <p id="materia-description"></p>
       </div>
     </section>
   </main>
 
   <footer>
-    © 2025 Cristian Ambrosini - IIS Marconi Pieralisi Jesi
+    <p>© 2025 Cristian Ambrosini - IIS Marconi Pieralisi Jesi</p>
   </footer>
-
-  <!-- Modal -->
-  <div id="materiaModal" class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title" aria-describedby="modal-text">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal()" aria-label="Chiudi">&times;</span>
-      <h2 id="modal-title"></h2>
-      <p id="modal-text"></p>
-    </div>
-  </div>
 
   <script src="script.js"></script>
 </body>
