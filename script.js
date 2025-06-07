@@ -7,6 +7,30 @@ function showSection(sectionId) {
   document.getElementById(sectionId).classList.add('active');
 }
 
+const materieDetails = {
+  "Italiano": "Nel corso dell’anno abbiamo studiato Svevo e D’Annunzio. Svevo con la sua scrittura introspettiva, rappresenta l’uomo moderno in conflitto con se stesso. D’Annunzio invece, con la sua esaltazione dell’estetica e del superuomo, incarna un’ideologia completamente opposta. Questo contrasto aiuta a capire le tensioni culturali del primo Novecento.",
+  "Storia": "Abbiamo analizzato le due guerre mondiali, il fascismo e la resistenza. Importante è stato anche il confronto tra totalitarismi e democrazia.",
+  "Matematica": "Funzioni, derivate, integrali e probabilità sono stati i temi principali. Abbiamo visto come la matematica modella fenomeni complessi.",
+  "Inglese": "Lettura e analisi di testi originali, grammatica avanzata e preparazione all’esame di Stato con simulazioni orali.",
+  "Informatica": "Progettazione e sviluppo software, uso dei linguaggi Python e JavaScript, basi di dati relazionali.",
+  "Sistemi e Reti": "Studio delle architetture client-server, protocolli di rete, indirizzamento IP, e sicurezza informatica.",
+  "Intelligenza Artificiale": "Machine learning, reti neurali e progetti su Google Colab. Approccio pratico e teorico all’IA.",
+  "TPSIT": "Approfondimento sulle telecomunicazioni, protocolli, e servizi di rete. Implementazione di semplici server.",
+  "GPOI": "Gestione progetti con Gantt, diagrammi di flusso e lavoro di gruppo per simulare il mondo lavorativo.",
+  "Scienze Motorie": "Analisi dei benefici dell’attività fisica, cenni di anatomia e importanza del benessere psicofisico.",
+  "Educazione Civica": "Costituzione, diritti e doveri, cittadinanza attiva e sostenibilità ambientale."
+};
+
+function showMateriaDetail(titolo) {
+  document.getElementById("modal-title").textContent = titolo;
+  document.getElementById("modal-text").textContent = materieDetails[titolo] || "Contenuto in aggiornamento...";
+  document.getElementById("materiaModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("materiaModal").style.display = "none";
+}
+
 // Biografia - testi italiano e inglese
 const bioTextIT =  `Mi chiamo Cristian Ambrosini, ho 19 anni, e oggi mi ritrovo alla fine di un viaggio che, pur durato cinque anni, sembra essere passato in un battito di ciglia. Frequentare l’indirizzo Informatica all’IIS “Marconi Pieralisi” di Jesi è stata una scelta che nasce dalla mia passione per la tecnologia, i videogiochi e il mondo digitale. Ma quello che non potevo immaginare il primo giorno, seduto su quei banchi con lo zaino ancora rigido e la testa piena di sogni, era quanto questa scuola mi avrebbe cambiato..
 
@@ -35,6 +59,8 @@ function toggleLanguage() {
   isEnglish = !isEnglish;
   updateBioText();
 }
+
+
 
 function updateBioText() {
   const text = isEnglish ? bioTextEN : bioTextIT;
