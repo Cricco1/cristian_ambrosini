@@ -1,94 +1,51 @@
-// Funzione per mostrare una sezione
-function showSection(sectionId) {
-  document.querySelectorAll('.content-section').forEach(sec => {
-    sec.classList.remove('active');
-  });
-  document.getElementById(sectionId).classList.add('active');
+// Traduzione biografia Italiano <-> Inglese
 
-  // Nascondo area materia testo se aperta
-  closeMateria();
-}
+const translateBtn = document.getElementById('translateBtn');
+const bioText = document.getElementById('bio-text');
 
-// Funzione per toggle lingua biografia
-function toggleLanguage() {
-  const ita = document.getElementById('bio-ita');
-  const eng = document.getElementById('bio-eng');
-  if (ita.style.display !== 'none') {
-    ita.style.display = 'none';
-    eng.style.display = 'block';
+const bioItaliano = `Mi chiamo Cristian Ambrosini, ho 19 anni, e oggi mi ritrovo alla fine di un viaggio che, pur durato cinque anni, sembra essere passato in un battito di ciglia. Frequentare l’indirizzo Informatica all’IIS “Marconi Pieralisi” di Jesi è stata una scelta che nasce dalla mia passione per la tecnologia, i videogiochi e il mondo digitale. Ma quello che non potevo immaginare il primo giorno, seduto su quei banchi con lo zaino ancora rigido e la testa piena di sogni, era quanto questa scuola mi avrebbe cambiato..
+
+In questi anni non ho solo imparato a programmare, ma ho imparato a conoscermi. Ho scoperto il valore delle relazioni, il senso profondo della collaborazione, e quanto possa essere potente il sentirsi parte di qualcosa. Le gite scolastiche, i momenti di condivisione e persino le difficoltà ci hanno unito come classe, trasformandoci da semplici compagni in una famiglia vera e propria. Oggi porto con me legami che sanno di affetto sincero, costruiti giorno dopo giorno, sorriso dopo sorriso.
+
+Sono entrato come un ragazzo forse un po' ingenuo, incerto su chi fosse e su cosa volesse diventare. Esco come una persona che ha imparato a credere in sé stessa, che ha imparato ad ascoltare gli altri, a lavorare in gruppo, ad essere più aperta, più empatica, più consapevole dei propri limiti e delle proprie forze.
+
+Fuori dalla scuola, mi lascio ispirare da tutto ciò che stimola la mia creatività: la palestra, i momenti con gli amici, il mondo dell’arte e del disegno digitale. Sono passioni che mi aiutano a esprimere ciò che a volte le parole non sanno dire. Amo il confronto, le idee che si incrociano, le energie che si sommano. Forse è questo che mi ha insegnato davvero la scuola: che insieme siamo più forti.
+
+Chiudo questo capitolo con gratitudine, con il cuore pieno di ricordi e con la voglia di affrontare ciò che verrà, portando con me tutto quello che questi cinque anni mi hanno insegnato.`;
+
+const bioEnglish = `My name is Cristian Ambrosini, I am 19 years old, and today I find myself at the end of a journey that, although lasting five years, seems to have passed in the blink of an eye. Attending the Computer Science course at IIS “Marconi Pieralisi” in Jesi was a choice born from my passion for technology, video games, and the digital world. But what I couldn’t imagine on the first day, sitting on those benches with a still rigid backpack and a head full of dreams, was how much this school would change me..
+
+In these years I have not only learned to program, but I have learned to know myself. I discovered the value of relationships, the deep meaning of collaboration, and how powerful it can be to feel part of something. School trips, moments of sharing, and even difficulties united us as a class, turning us from simple classmates into a true family. Today I carry with me bonds that know sincere affection, built day after day, smile after smile.
+
+I entered as a perhaps somewhat naive boy, uncertain of who he was and what he wanted to become. I leave as a person who has learned to believe in herself, who has learned to listen to others, to work in a group, to be more open, more empathetic, more aware of her own limits and strengths.
+
+Outside of school, I am inspired by everything that stimulates my creativity: the gym, moments with friends, the world of art and digital drawing. These are passions that help me express what words sometimes cannot say. I love confrontation, ideas that intersect, energies that add up. Maybe this is what school really taught me: that together we are stronger.
+
+I close this chapter with gratitude, with a heart full of memories, and with the desire to face what is to come, carrying with me everything these five years have taught me.`;
+
+let isItalian = true;
+
+translateBtn.addEventListener('click', () => {
+  if (isItalian) {
+    bioText.textContent = bioEnglish;
+    translateBtn.textContent = "Traduci in Italiano";
   } else {
-    ita.style.display = 'block';
-    eng.style.display = 'none';
+    bioText.textContent = bioItaliano;
+    translateBtn.textContent = "Translate to English";
   }
-}
+  isItalian = !isItalian;
+});
 
-// Funzione per mostrare testo materia
-function showMateria(nomeMateria) {
-  const materiaText = document.getElementById('materia-text');
-  const materiaContent = document.getElementById('materia-content');
+// Materie cliccabili: fai scroll nella sezione corrispondente o mostra alert
 
-  let testo = '';
-
-  switch(nomeMateria) {
-    case 'italiano':
-      testo = `<h3>Italiano</h3>
-        <p>Analisi di Svevo e D’Annunzio, studio dei testi principali, riflessioni sullo stile e l’epoca storica.</p>`;
-      break;
-    case 'storia':
-      testo = `<h3>Storia</h3>
-        <p>Unità 1 – Dalla belle époque alla Grande guerra</p>
-        <ul>
-          <li>Cap. 1 – All’alba del Novecento tra euforia e inquietudini</li>
-          <li>Cap. 3 – L’Italia nell’età giolittiana</li>
-          <li>Cap. 4 – La Grande guerra</li>
-          <li>Cap. 5 – I fragili equilibri del dopoguerra</li>
-        </ul>`;
-      break;
-    case 'matematica':
-      testo = `<h3>Matematica</h3><p>Numeri, funzioni, logica, algebra e geometria.</p>`;
-      break;
-    case 'inglese':
-      testo = `<h3>Inglese</h3><p>Lingua e cultura inglese, grammatica e conversazione.</p>`;
-      break;
-    case 'informatica':
-      testo = `<h3>Informatica</h3><p>Programmazione, algoritmi e basi di dati.</p>`;
-      break;
-    case 'sistemi':
-      testo = `<h3>Sistemi e Reti</h3><p>Architetture hardware, protocolli di rete e sicurezza.</p>`;
-      break;
-    case 'intelligenza':
-      testo = `<h3>Intelligenza Artificiale</h3><p>Machine Learning, reti neurali e automazione.</p>`;
-      break;
-    case 'tipsit':
-      testo = `<h3>TPSIT</h3>
-        <p><strong>Sviluppo di applicazioni per dispositivi mobili Android:</strong></p>
-        <ul>
-          <li>Storia e diffusione</li>
-          <li>Architettura: Applications Layer, Application Framework Layer, Libraries Layer, Android Runtime Layer, Linux Kernel Layer</li>
-          <li>Avvio di un'app, gestione dei processi e della memoria centrale</li>
-          <li>Protezione: meccanismi di sicurezza di Linux, caratteristiche dell’ambiente Android, meccanismi di sicurezza di Android</li>
-        </ul>`;
-      break;
-    case 'gpoi':
-      testo = `<h3>GPOI</h3><p>Gestione progetti, metodologie e strumenti.</p>`;
-      break;
-    case 'scienze':
-      testo = `<h3>Scienze Motorie</h3><p>Attività fisica, salute e benessere.</p>`;
-      break;
-    case 'civica':
-      testo = `<h3>Educazione Civica</h3><p>Diritti, doveri e cittadinanza attiva.</p>`;
-      break;
-    default:
-      testo = `<p>Contenuto non disponibile.</p>`;
-  }
-
-  materiaContent.innerHTML = testo;
-  materiaText.style.display = 'block';
-  window.scrollTo({ top: materiaText.offsetTop, behavior: 'smooth' });
-}
-
-// Funzione per chiudere area testo materia
-function closeMateria() {
-  const materiaText = document.getElementById('materia-text');
-  materiaText.style.display = 'none';
-}
+document.querySelectorAll('.materia').forEach(materia => {
+  materia.addEventListener('click', () => {
+    alert(`Hai cliccato su: ${materia.querySelector('h3').textContent}`);
+  });
+  materia.addEventListener('keydown', e => {
+    if(e.key === 'Enter' || e.key === ' ') {
+      e.preventDefault();
+      materia.click();
+    }
+  });
+});
