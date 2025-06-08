@@ -2,28 +2,114 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Materia</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
 </head>
 <body class="materia-page">
-  <!-- Barra di navigazione -->
-  <nav>
-    <button onclick="location.href='index.html'">Biografia</button>
-    <button onclick="location.href='materie.html'">Materie</button>
-    <button onclick="location.href='pcto.html'">PCTO</button>
-  </nav>
+  <header>
+    <nav class="navbar">
+      <button onclick="window.location.href='index.html'">Biografia</button>
+      <button onclick="window.location.href='materie.html'">Materie</button>
+      <button onclick="window.location.href='pcto.html'">PCTO</button>
+      <div class="language-buttons">
+        <button id="btnIt">IT</button>
+        <button id="btnEn">EN</button>
+      </div>
+    </nav>
+    <h1 id="nomeMateria">Materia</h1>
+  </header>
 
   <main>
-    <h1 id="nomeMateria">Materia</h1>
-    <div id="contenutoMateria" class="materia-contenuto">
-      <!-- Il testo della materia verrà caricato via JavaScript -->
-    </div>
+    <section id="contenutoMateria">
+      <!-- Qui verrà inserito dinamicamente il testo della materia -->
+    </section>
   </main>
 
   <footer>
     <p>&copy; 2025 Cristian Ambrosini</p>
   </footer>
+
+  <script src="script.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const params = new URLSearchParams(window.location.search);
+      const nome = params.get("nome") || "Materia";
+
+      document.getElementById("nomeMateria").textContent = nome;
+
+      const contenutiMaterie = {
+        "Intelligenza Artificiale": {
+          it: "Testo in italiano per Intelligenza Artificiale.",
+          en: "Italian text for Artificial Intelligence."
+        },
+        "Scienze Motorie": {
+          it: "Testo in italiano per Scienze Motorie.",
+          en: "Italian text for Motor Sciences."
+        },
+        "Sistemi e Reti": {
+          it: "Testo in italiano per Sistemi e Reti.",
+          en: "Italian text for Systems and Networks."
+        },
+        "GPOI": {
+          it: "Testo in italiano per GPOI.",
+          en: "Italian text for GPOI."
+        },
+        "Storia": {
+          it: "Testo in italiano per Storia.",
+          en: "Italian text for History."
+        },
+        "Italiano": {
+          it: "Testo in italiano per Italiano.",
+          en: "Italian text for Italian language."
+        },
+        "TPSIT": {
+          it: "Testo in italiano per TPSIT.",
+          en: "Italian text for TPSIT."
+        },
+        "Educazione Civica": {
+          it: "Testo in italiano per Educazione Civica.",
+          en: "Italian text for Civic Education."
+        },
+        "Informatica": {
+          it: "Testo in italiano per Informatica.",
+          en: "Italian text for Computer Science."
+        },
+        "Inglese": {
+          it: "Testo in italiano per Inglese.",
+          en: "Italian text for English."
+        },
+        "Matematica": {
+          it: "Testo in italiano per Matematica.",
+          en: "Italian text for Mathematics."
+        }
+      };
+
+      // Lingua di default
+      let currentLang = "it";
+
+      function mostraTesto(lang) {
+        const contenuto = contenutiMaterie[nome];
+        const testo = contenuto ? (contenuto[lang] || contenuto["it"]) : "Testo non disponibile.";
+        document.getElementById("contenutoMateria").textContent = testo;
+      }
+
+      // Inizializza testo
+      mostraTesto(currentLang);
+
+      // Funzione per cambiare lingua
+      function setLanguage(lang) {
+        currentLang = lang;
+        mostraTesto(lang);
+      }
+
+      // Eventi bottoni lingua
+      const btnIt = document.getElementById("btnIt");
+      const btnEn = document.getElementById("btnEn");
+
+      if (btnIt) btnIt.addEventListener("click", () => setLanguage("it"));
+      if (btnEn) btnEn.addEventListener("click", () => setLanguage("en"));
+    });
+  </script>
 </body>
 </html>
