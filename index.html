@@ -2,60 +2,26 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sito scolastico - Cristian Ambrosini</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Biografia - Cristian Ambrosini</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    /* Stili aggiuntivi per centrare il contenuto */
-    .header-content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    
-    .main-title {
-      margin: 10px 0;
-    }
-    
-    .nav-container {
-      margin: 10px 0;
-    }
-    
-    .lang-container {
-      margin-bottom: 10px;
-    }
-    
-    .bio-image-container {
-      max-width: 250px;
-    }
-  </style>
 </head>
 <body>
-  <header>
-    <div class="header-content">
-      <div class="lang-container">
-        <button id="langBtn">🇮🇹 / 🇬🇧</button>
-      </div>
-      <h1 class="main-title">Sito scolastico</h1>
-      <div class="nav-container">
-        <nav class="main-nav">
-          <a href="index.html" class="nav-btn active">Biografia</a>
-          <a href="pcto.html" class="nav-btn">PCTO</a>
-          <a href="materia.html" class="nav-btn">Materie</a>
-        </nav>
-      </div>
-    </div>
-  </header>
 
-  <main>
-    <section class="bio-section">
-      <div class="bio-image-container">
-        <img src="img/amici.jpg" alt="Cristian Ambrosini" class="bio-image" />
-      </div>
+<header>
+  <nav class="nav-menu">
+    <button data-section="biografia" class="active">Biografia</button>
+    <button data-section="materie">Materie</button>
+    <button data-section="pcto">PCTO</button>
+  </nav>
+</header>
 
-      <div class="bio-content">
+<main>
+  <!-- Biografia -->
+  <section id="biografia" class="section active">
+    <div class="bio-wrapper">
+      <img src="amici.jpg" alt="Foto amici" class="bio-img" />
+      <div class="bio-text">
         <p data-it="Mi chiamo Cristian Ambrosini, ho 19 anni, e oggi mi ritrovo alla fine di un viaggio che, pur durato cinque anni, sembra essere passato in un battito di ciglia. Frequentare l'indirizzo Informatica all'IIS 'Marconi Pieralisi' di Jesi è stata una scelta che nasce dalla mia passione per la tecnologia, i videogiochi e il mondo digitale. Ma quello che non potevo immaginare il primo giorno, seduto su quei banchi con lo zaino ancora rigido e la testa piena di sogni, era quanto questa scuola mi avrebbe cambiato.." data-en="My name is Cristian Ambrosini, I'm 19 years old, and today I find myself at the end of a journey that, although lasting five years, seems to have passed in the blink of an eye. Attending the Computer Science program at IIS 'Marconi Pieralisi' in Jesi was a choice born from my passion for technology, videogames, and the digital world. But what I could not imagine on the first day, sitting on those desks with my backpack still stiff and my head full of dreams, was how much this school would change me...">
           Mi chiamo Cristian Ambrosini, ho 19 anni, e oggi mi ritrovo alla fine di un viaggio che, pur durato cinque anni, sembra essere passato in un battito di ciglia. Frequentare l'indirizzo Informatica all'IIS "Marconi Pieralisi" di Jesi è stata una scelta che nasce dalla mia passione per la tecnologia, i videogiochi e il mondo digitale. Ma quello che non potevo immaginare il primo giorno, seduto su quei banchi con lo zaino ancora rigido e la testa piena di sogni, era quanto questa scuola mi avrebbe cambiato..
         </p>
@@ -72,34 +38,31 @@
           Chiudo questo capitolo con gratitudine, con il cuore pieno di ricordi e con la voglia di affrontare ciò che verrà, portando con me tutto quello che questi cinque anni mi hanno insegnato.
         </p>
       </div>
-    </section>
-  </main>
+    </div>
+  </section>
 
-  <footer>
-    <p>&copy; 2025 Cristian Ambrosini</p>
-  </footer>
+  <!-- Materie -->
+  <section id="materie" class="section hidden">
+    <div class="materie-container">
+      <!-- I bottoni materie generati da JS -->
+    </div>
+  </section>
 
-  <script>
-    // Funzionalità di cambio lingua
-    const langBtn = document.getElementById("langBtn");
-    let currentLang = "it";
+  <!-- PCTO -->
+  <section id="pcto" class="section hidden">
+    <div class="pcto-content">
+      <h2>PCTO</h2>
+      <p>Qui puoi inserire il contenuto relativo al PCTO.</p>
+    </div>
+  </section>
+</main>
 
-    langBtn.addEventListener("click", () => {
-      currentLang = currentLang === "it" ? "en" : "it";
-      document.querySelectorAll("[data-it]").forEach(el => {
-        el.textContent = el.dataset[currentLang];
-      });
-    });
+<footer>
+  <p>&copy; 2025 Cristian Ambrosini</p>
+  <button id="toggleLang">EN</button>
+</footer>
 
-    // Evidenzia il pulsante della pagina corrente
-    const currentPage = window.location.pathname.split('/').pop();
-    document.querySelectorAll('.nav-btn').forEach(btn => {
-      if (btn.getAttribute('href') === currentPage) {
-        btn.classList.add('active');
-      } else {
-        btn.classList.remove('active');
-      }
-    });
-  </script>
+<script src="script.js"></script>
+
 </body>
 </html>
