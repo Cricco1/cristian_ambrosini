@@ -2,55 +2,54 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Materie</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Materia</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <header>
-    <h1 id="nomeMateria">Materie</h1>
-  </header>
 
-  <main class="materia-page">
-    <div id="selezioneMaterie" class="card-grid">
-      <a href="?nome=Intelligenza Artificiale" class="materia-card">Intelligenza Artificiale</a>
-      <a href="?nome=Scienze Motorie" class="materia-card">Scienze Motorie</a>
-      <a href="?nome=Sistemi e Reti" class="materia-card">Sistemi e Reti</a>
-      <a href="?nome=GPOI" class="materia-card">GPOI</a>
-      <a href="?nome=Storia" class="materia-card">Storia</a>
-      <a href="?nome=Italiano" class="materia-card">Italiano</a>
-      <a href="?nome=TPSIT" class="materia-card">TPSIT</a>
-      <a href="?nome=Educazione Civica" class="materia-card">Educazione Civica</a>
-    </div>
+  <nav>
+    <a href="index.html">Biografia</a>
+    <a href="materie.html">Materie</a>
+    <a href="pcto.html">PCTO</a>
+  </nav>
 
-    <div id="editorMateria" style="display: none;">
-      <h2 id="titoloMateria"></h2>
-      <textarea placeholder="Scrivi qui il testo della materia..."></textarea>
-    </div>
+  <main>
+    <button id="back" onclick="location.href='materie.html'">← Torna a Materie</button>
+    <h1 id="titoloMateria">Materia</h1>
+    <p id="contenutoMateria">Caricamento...</p>
   </main>
 
   <footer>
-    <p style="color: white;">&copy; 2025 Cristian Ambrosini</p>
+    &copy; 2025 Cristian Ambrosini
   </footer>
 
   <script>
-    const params = new URLSearchParams(window.location.search);
-    const nome = params.get("nome");
+    const contenutiMaterie = {
+      "Intelligenza Artificiale": "L’intelligenza artificiale è il ramo dell’informatica che studia la progettazione di sistemi capaci di svolgere compiti che richiedono intelligenza umana, come l’apprendimento, la risoluzione di problemi e il riconoscimento di pattern.",
+      "Scienze Motorie": "Le scienze motorie si occupano dello studio del movimento umano, dell’attività fisica e delle sue implicazioni sulla salute e sul benessere.",
+      "Sistemi e Reti": "Questa materia tratta i sistemi informatici e le reti di comunicazione, coprendo argomenti come protocolli, architetture di rete, sicurezza e gestione.",
+      "GPOI": "Gestione del Progetto, Organizzazione e Impresa è una materia che si concentra sugli aspetti organizzativi e gestionali delle aziende e dei progetti.",
+      "Storia": "Lo studio della storia consente di comprendere eventi, culture e sviluppi che hanno formato il mondo attuale.",
+      "Italiano": "Questa materia riguarda la lingua e la letteratura italiana, analizzando testi e sviluppando capacità di comprensione e produzione scritta.",
+      "TPSIT": "Tecnologie e Progettazione di Sistemi Informatici e Tecnologie è una materia tecnica focalizzata sui sistemi informatici e le loro applicazioni.",
+      "Educazione Civica": "L’educazione civica promuove la conoscenza dei diritti e doveri dei cittadini e stimola la partecipazione attiva alla vita sociale e politica."
+    };
 
-    const selezione = document.getElementById("selezioneMaterie");
-    const editor = document.getElementById("editorMateria");
-    const titolo = document.getElementById("titoloMateria");
-    const headerTitle = document.getElementById("nomeMateria");
+    function getQueryParam(param) {
+      const params = new URLSearchParams(window.location.search);
+      return params.get(param);
+    }
 
-    if (nome) {
-      selezione.style.display = "none";
-      editor.style.display = "block";
-      titolo.textContent = nome;
-      headerTitle.textContent = nome;
+    const nomeMateria = getQueryParam('nome');
+    if (nomeMateria && contenutiMaterie[nomeMateria]) {
+      document.getElementById('titoloMateria').textContent = nomeMateria;
+      document.getElementById('contenutoMateria').textContent = contenutiMaterie[nomeMateria];
+    } else {
+      document.getElementById('titoloMateria').textContent = "Materia non trovata";
+      document.getElementById('contenutoMateria').textContent = "Spiacenti, non è stato possibile trovare la materia richiesta.";
     }
   </script>
+
 </body>
 </html>
