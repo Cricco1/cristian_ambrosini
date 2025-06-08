@@ -1,231 +1,139 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cristian Ambrosini - Materie</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* STILE SOLO PER LA SEZIONE MATERIE */
-        .materie-section {
-            padding: 5rem 0;
-            background-color: #f5f7ff;
-        }
-        
-        .section-title {
-            text-align: center;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-        
-        .section-title h2 {
-            font-size: 2.5rem;
-            color: #4361ee;
-            margin-bottom: 1rem;
-        }
-        
-        .section-title p {
-            color: #6c757d;
-            font-size: 1.1rem;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -15px;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 80px;
-            height: 4px;
-            background: #4895ef;
-            border-radius: 2px;
-        }
-        
-        .materie-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-        
-        .materia-card {
-            background: white;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
-            transition: all 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            height: 100%;
-        }
-        
-        .materia-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
-        }
-        
-        .card-header {
-            background: #4361ee;
-            color: white;
-            padding: 1.5rem;
-            text-align: center;
-        }
-        
-        .card-header i {
-            font-size: 2.5rem;
-            margin-bottom: 1rem;
-        }
-        
-        .card-header h3 {
-            font-size: 1.5rem;
-            margin: 0;
-        }
-        
-        .card-body {
-            padding: 1.5rem;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .card-body p {
-            margin-bottom: 1.5rem;
-            color: #6c757d;
-            flex-grow: 1;
-        }
-        
-        .card-footer {
-            padding: 0 1.5rem 1.5rem;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 10px 25px;
-            background: #4361ee;
-            color: white;
-            text-decoration: none;
-            border-radius: 50px;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            border: 2px solid #4361ee;
-        }
-        
-        .btn:hover {
-            background: transparent;
-            color: #4361ee;
-            transform: translateY(-3px);
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .materie-section {
-                padding: 3rem 0;
-            }
-            
-            .section-title h2 {
-                font-size: 2rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- SOLO SEZIONE MATERIE -->
-    <section class="materie-section">
-        <div class="container">
-            <div class="section-title">
-                <h2>Materie di Studio</h2>
-                <p>Esplora le discipline che caratterizzano il mio percorso scolastico</p>
-            </div>
-            
-            <div class="materie-grid">
-                <!-- Materia 1 -->
-                <div class="materia-card">
-                    <div class="card-header">
-                        <i class="fas fa-laptop-code"></i>
-                        <h3>Informatica</h3>
-                    </div>
-                    <div class="card-body">
-                        <p>L'informatica è il cuore del mio percorso di studi. Imparo a sviluppare software, comprendere gli algoritmi e gestire database. Studio linguaggi di programmazione come Java, Python e C++, e imparo a creare applicazioni web e mobile.</p>
-                        <div class="card-footer">
-                            <a href="#" class="btn">Approfondisci</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Materia 2 -->
-                <div class="materia-card">
-                    <div class="card-header">
-                        <i class="fas fa-calculator"></i>
-                        <h3>Matematica</h3>
-                    </div>
-                    <div class="card-body">
-                        <p>La matematica fornisce gli strumenti logici e analitici fondamentali per l'informatica. Studio algebra, geometria, analisi matematica e statistica. Queste competenze sono essenziali per risolvere problemi complessi e sviluppare algoritmi efficienti.</p>
-                        <div class="card-footer">
-                            <a href="#" class="btn">Approfondisci</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Materia 3 -->
-                <div class="materia-card">
-                    <div class="card-header">
-                        <i class="fas fa-network-wired"></i>
-                        <h3>Sistemi e Reti</h3>
-                    </div>
-                    <div class="card-body">
-                        <p>In questa materia imparo come funzionano i computer a livello hardware e come sono interconnessi attraverso le reti. Studio l'architettura dei sistemi, i protocolli di rete, la sicurezza informatica e la configurazione di server e dispositivi di rete.</p>
-                        <div class="card-footer">
-                            <a href="#" class="btn">Approfondisci</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Materia 4 -->
-                <div class="materia-card">
-                    <div class="card-header">
-                        <i class="fas fa-database"></i>
-                        <h3>Basi di Dati</h3>
-                    </div>
-                    <div class="card-body">
-                        <p>Le basi di dati sono fondamentali per gestire e organizzare grandi quantità di informazioni. Studio i modelli relazionali, il linguaggio SQL, la progettazione di database e le tecniche di ottimizzazione. Imparo a creare e gestire database efficienti e sicuri.</p>
-                        <div class="card-footer">
-                            <a href="#" class="btn">Approfondisci</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Materia 5 -->
-                <div class="materia-card">
-                    <div class="card-header">
-                        <i class="fas fa-globe"></i>
-                        <h3>Inglese Tecnico</h3>
-                    </div>
-                    <div class="card-body">
-                        <p>L'inglese è la lingua universale dell'informatica. Miglioro le mie competenze linguistiche con particolare attenzione al lessico tecnico, alla comprensione di documentazione e manuali, e alla comunicazione professionale in contesti internazionali.</p>
-                        <div class="card-footer">
-                            <a href="#" class="btn">Approfondisci</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Materia 6 -->
-                <div class="materia-card">
-                    <div class="card-header">
-                        <i class="fas fa-project-diagram"></i>
-                        <h3>Progettazione</h3>
-                    </div>
-                    <div class="card-body">
-                        <p>La progettazione mi insegna come trasformare un'idea in un prodotto concreto. Seguo tutte le fasi del ciclo di vita del software: dall'analisi dei requisiti alla progettazione, dall'implementazione al testing e alla manutenzione.</p>
-                        <div class="card-footer">
-                            <a href="#" class="btn">Approfondisci</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
+<!-- Materia 1 -->
+<div class="materia-card">
+    <div class="card-header">
+        <i class="fas fa-robot"></i>
+        <h3>Intelligenza Artificiale</h3>
+    </div>
+    <div class="card-body">
+        <p></p>
+        <div class="card-footer">
+            <a href="#" class="btn">Approfondisci</a>
         </div>
-    </section>
-</body>
-</html>
+    </div>
+</div>
+
+<!-- Materia 2 -->
+<div class="materia-card">
+    <div class="card-header">
+        <i class="fas fa-language"></i>
+        <h3>Inglese</h3>
+    </div>
+    <div class="card-body">
+        <p></p>
+        <div class="card-footer">
+            <a href="#" class="btn">Approfondisci</a>
+        </div>
+    </div>
+</div>
+
+<!-- Materia 3 -->
+<div class="materia-card">
+    <div class="card-header">
+        <i class="fas fa-running"></i>
+        <h3>Scienze Motorie</h3>
+    </div>
+    <div class="card-body">
+        <p></p>
+        <div class="card-footer">
+            <a href="#" class="btn">Approfondisci</a>
+        </div>
+    </div>
+</div>
+
+<!-- Materia 4 -->
+<div class="materia-card">
+    <div class="card-header">
+        <i class="fas fa-network-wired"></i>
+        <h3>Sistemi e Reti</h3>
+    </div>
+    <div class="card-body">
+        <p></p>
+        <div class="card-footer">
+            <a href="#" class="btn">Approfondisci</a>
+        </div>
+    </div>
+</div>
+
+<!-- Materia 5 -->
+<div class="materia-card">
+    <div class="card-header">
+        <i class="fas fa-balance-scale"></i>
+        <h3>Educazione Civica</h3>
+    </div>
+    <div class="card-body">
+        <p></p>
+        <div class="card-footer">
+            <a href="#" class="btn">Approfondisci</a>
+        </div>
+    </div>
+</div>
+
+<!-- Materia 6 -->
+<div class="materia-card">
+    <div class="card-header">
+        <i class="fas fa-cogs"></i>
+        <h3>GPOI</h3>
+    </div>
+    <div class="card-body">
+        <p></p>
+        <div class="card-footer">
+            <a href="#" class="btn">Approfondisci</a>
+        </div>
+    </div>
+</div>
+
+<!-- Materia 7 -->
+<div class="materia-card">
+    <div class="card-header">
+        <i class="fas fa-landmark"></i>
+        <h3>Storia</h3>
+    </div>
+    <div class="card-body">
+        <p></p>
+        <div class="card-footer">
+            <a href="#" class="btn">Approfondisci</a>
+        </div>
+    </div>
+</div>
+
+<!-- Materia 8 -->
+<div class="materia-card">
+    <div class="card-header">
+        <i class="fas fa-pen-fancy"></i>
+        <h3>Italiano</h3>
+    </div>
+    <div class="card-body">
+        <p></p>
+        <div class="card-footer">
+            <a href="#" class="btn">Approfondisci</a>
+        </div>
+    </div>
+</div>
+
+<!-- Materia 9 -->
+<div class="materia-card">
+    <div class="card-header">
+        <i class="fas fa-square-root-alt"></i>
+        <h3>Matematica</h3>
+    </div>
+    <div class="card-body">
+        <p></p>
+        <div class="card-footer">
+            <a href="#" class="btn">Approfondisci</a>
+        </div>
+    </div>
+</div>
+
+<!-- Materia 10 -->
+<div class="materia-card">
+    <div class="card-header">
+        <i class="fas fa-tools"></i>
+        <h3>TPSIT</h3>
+    </div>
+    <div class="card-body">
+        <p></p>
+        <div class="card-footer">
+            <a href="#" class="btn">Approfondisci</a>
+        </div>
+    </div>
+</div>
