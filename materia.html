@@ -1,31 +1,56 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Materia</title>
+  <title>Materie</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
-    <h1 id="nomeMateria">Materia</h1>
+    <h1 id="nomeMateria">Materie</h1>
   </header>
 
   <main class="materia-page">
-    <textarea placeholder="Scrivi qui il testo della materia..."></textarea>
+    <div id="selezioneMaterie" class="card-grid">
+      <a href="?nome=Intelligenza Artificiale" class="materia-card">Intelligenza Artificiale</a>
+      <a href="?nome=Scienze Motorie" class="materia-card">Scienze Motorie</a>
+      <a href="?nome=Sistemi e Reti" class="materia-card">Sistemi e Reti</a>
+      <a href="?nome=GPOI" class="materia-card">GPOI</a>
+      <a href="?nome=Storia" class="materia-card">Storia</a>
+      <a href="?nome=Italiano" class="materia-card">Italiano</a>
+      <a href="?nome=TPSIT" class="materia-card">TPSIT</a>
+      <a href="?nome=Educazione Civica" class="materia-card">Educazione Civica</a>
+    </div>
+
+    <div id="editorMateria" style="display: none;">
+      <h2 id="titoloMateria"></h2>
+      <textarea placeholder="Scrivi qui il testo della materia..."></textarea>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Cristian Ambrosini</p>
+    <p style="color: white;">&copy; 2025 Cristian Ambrosini</p>
   </footer>
 
   <script>
     const params = new URLSearchParams(window.location.search);
-    const nome = params.get("nome") || "Materia";
-    document.getElementById("nomeMateria").textContent = nome;
+    const nome = params.get("nome");
+
+    const selezione = document.getElementById("selezioneMaterie");
+    const editor = document.getElementById("editorMateria");
+    const titolo = document.getElementById("titoloMateria");
+    const headerTitle = document.getElementById("nomeMateria");
+
+    if (nome) {
+      selezione.style.display = "none";
+      editor.style.display = "block";
+      titolo.textContent = nome;
+      headerTitle.textContent = nome;
+    }
   </script>
 </body>
 </html>
