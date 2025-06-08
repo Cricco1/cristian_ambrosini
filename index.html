@@ -6,6 +6,31 @@
   <title>Sito scolastico - Cristian Ambrosini</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
   <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Stili aggiuntivi per centrare il contenuto */
+    .header-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    
+    .main-title {
+      margin: 10px 0;
+    }
+    
+    .nav-container {
+      margin: 10px 0;
+    }
+    
+    .lang-container {
+      margin-bottom: 10px;
+    }
+    
+    .bio-image-container {
+      max-width: 250px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -16,16 +41,16 @@
       <h1 class="main-title">Sito scolastico</h1>
       <div class="nav-container">
         <nav class="main-nav">
-          <button class="nav-btn active" data-page="bio">Biografia</button>
-          <button class="nav-btn" data-page="pcto">PCTO</button>
-          <button class="nav-btn" data-page="materia">Materie</button>
+          <a href="index.html" class="nav-btn active">Biografia</a>
+          <a href="pcto.html" class="nav-btn">PCTO</a>
+          <a href="materia.html" class="nav-btn">Materie</a>
         </nav>
       </div>
     </div>
   </header>
 
   <main>
-    <section id="bio" class="page-section active bio-section">
+    <section class="bio-section">
       <div class="bio-image-container">
         <img src="img/amici.jpg" alt="Cristian Ambrosini" class="bio-image" />
       </div>
@@ -48,14 +73,6 @@
         </p>
       </div>
     </section>
-
-    <section id="pcto" class="page-section pcto-section">
-      <!-- Contenuto PCTO dal tuo file pcto.html -->
-    </section>
-
-    <section id="materia" class="page-section materia-section">
-      <!-- Contenuto Materie dal tuo file materia.html -->
-    </section>
   </main>
 
   <footer>
@@ -72,36 +89,16 @@
       document.querySelectorAll("[data-it]").forEach(el => {
         el.textContent = el.dataset[currentLang];
       });
-      
-      // Aggiorna il testo dei pulsanti di navigazione
-      if (currentLang === "en") {
-        document.querySelector('[data-page="bio"]').textContent = "Biography";
-        document.querySelector('[data-page="pcto"]').textContent = "PCTO";
-        document.querySelector('[data-page="materia"]').textContent = "Subjects";
-      } else {
-        document.querySelector('[data-page="bio"]').textContent = "Biografia";
-        document.querySelector('[data-page="pcto"]').textContent = "PCTO";
-        document.querySelector('[data-page="materia"]').textContent = "Materie";
-      }
     });
 
-    // Funzionalità di navigazione tra le pagine
-    const navButtons = document.querySelectorAll(".nav-btn");
-    const sections = document.querySelectorAll(".page-section");
-
-    navButtons.forEach(button => {
-      button.addEventListener("click", () => {
-        // Rimuovi la classe 'active' da tutti i pulsanti e sezioni
-        navButtons.forEach(btn => btn.classList.remove("active"));
-        sections.forEach(section => section.classList.remove("active"));
-        
-        // Aggiungi 'active' al pulsante cliccato
-        button.classList.add("active");
-        
-        // Mostra la sezione corrispondente
-        const targetSection = document.getElementById(button.dataset.page);
-        targetSection.classList.add("active");
-      });
+    // Evidenzia il pulsante della pagina corrente
+    const currentPage = window.location.pathname.split('/').pop();
+    document.querySelectorAll('.nav-btn').forEach(btn => {
+      if (btn.getAttribute('href') === currentPage) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
     });
   </script>
 </body>
