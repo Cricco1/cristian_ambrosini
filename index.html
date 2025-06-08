@@ -10,7 +10,7 @@
   <header>
     <nav>
       <ul>
-        <li><a href="index.html" class="active">Biografia</a></li>
+        <li><a href="index.html" class="active">BIOGRAFIA</a></li>
         <li><a href="pcto.html">PCTO</a></li>
         <li><a href="materie.html">Materie</a></li>
       </ul>
@@ -20,7 +20,7 @@
   <main>
     <section id="biografia">
       <h1 data-it="Biografia" data-en="Biography">Biografia</h1>
-      <button id="toggleLang" aria-label="Switch Language">English</button>
+      <button id="toggleLangBio" class="toggle-lang" aria-label="Switch Language">English</button>
 
       <div class="bio-content">
         <p data-it="Mi chiamo Cristian Ambrosini, ho 19 anni, e oggi mi ritrovo alla fine di un viaggio che, pur durato cinque anni, sembra essere passato in un battito di ciglia. Frequentare l'indirizzo Informatica all'IIS 'Marconi Pieralisi' di Jesi è stata una scelta che nasce dalla mia passione per la tecnologia, i videogiochi e il mondo digitale. Ma quello che non potevo immaginare il primo giorno, seduto su quei banchi con lo zaino ancora rigido e la testa piena di sogni, era quanto questa scuola mi avrebbe cambiato.." data-en="My name is Cristian Ambrosini, I'm 19 years old, and today I find myself at the end of a journey that, although lasting five years, seems to have passed in the blink of an eye. Attending the Computer Science program at IIS 'Marconi Pieralisi' in Jesi was a choice born from my passion for technology, videogames, and the digital world. But what I could not imagine on the first day, sitting on those desks with my backpack still stiff and my head full of dreams, was how much this school would change me...">
@@ -40,8 +40,8 @@
         </p>
       </div>
 
-      <div class="bio-image" style="text-align:center; margin-top: 2rem;">
-        <img src="img/amici.jpg" alt="Gita Milano" style="max-width: 300px; border-radius: 15px; box-shadow: 0 0 10px rgba(0,0,0,0.15);" />
+      <div style="text-align: center;">
+        <img src="img/amici.jpg" alt="Gita Milano" />
       </div>
     </section>
   </main>
@@ -50,6 +50,21 @@
     <p>© 2025 Cristian Ambrosini</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script>
+    const toggleBtnBio = document.getElementById('toggleLangBio');
+    const elementsBio = document.querySelectorAll('.bio-content p, #biografia h1');
+
+    toggleBtnBio.addEventListener('click', () => {
+      elementsBio.forEach(el => {
+        if (el.textContent === el.dataset.it) {
+          el.textContent = el.dataset.en;
+          toggleBtnBio.textContent = 'Italiano';
+        } else {
+          el.textContent = el.dataset.it;
+          toggleBtnBio.textContent = 'English';
+        }
+      });
+    });
+  </script>
 </body>
 </html>
