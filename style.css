@@ -108,3 +108,41 @@ button#back:hover {
   color: #444;
   white-space: pre-line; /* Mantiene a capo */
 }
+.materie-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.materia-card {
+  cursor: pointer;
+  width: 180px;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  transition: box-shadow 0.3s ease;
+  background-color: #f8f8f8;
+}
+
+.materia-card:hover {
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.materia-card img {
+  max-width: 100%;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.materia-card span {
+  display: block;
+  margin-top: 10px;
+  font-weight: 600;
+  font-size: 1.1em;
+  color: #333;
+}
+
