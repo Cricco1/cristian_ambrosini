@@ -150,3 +150,30 @@ footer {
   margin-bottom: 10px;
   border-radius: 0 0 4px 4px;
 }
+.materie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.materia-box {
+  background-color: #5a4a8f;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.materia-box img {
+  max-width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+
+.materia-box .panel {
+  background-color: #2e2a38;
+  padding: 10px 15px;
+  display: none;
+  color: #ddd;
+}
+
