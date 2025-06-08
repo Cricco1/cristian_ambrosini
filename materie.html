@@ -5,74 +5,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Materie</title>
   <link rel="stylesheet" href="style.css" />
-  <script defer src="script.js"></script>
 </head>
 <body>
+  <nav class="navbar">
+    <button onclick="location.href='index.html'">Biografia</button>
+    <button class="active">Materie</button>
+    <button onclick="location.href='pcto.html'">PCTO</button>
+  </nav>
 
-<nav>
-  <button onclick="window.location.href='index.html'">Biografia</button>
-  <button onclick="window.location.href='materie.html'">Materie</button>
-  <button onclick="window.location.href='pcto.html'">PCTO</button>
-</nav>
+  <main class="materie-container">
+    <h1>Materie</h1>
+    <div class="materie-grid">
+      <button onclick="location.href='intelligenza-artificiale.html'">Intelligenza Artificiale</button>
+      <button onclick="location.href='scienze-motorie.html'">Scienze Motorie</button>
+      <button onclick="location.href='sistemi-reti.html'">Sistemi e Reti</button>
+      <button onclick="location.href='gpoi.html'">GPOI</button>
+      <button onclick="location.href='storia.html'">Storia</button>
+      <button onclick="location.href='italiano.html'">Italiano</button>
+      <button onclick="location.href='tpsit.html'">TPSIT</button>
+      <button onclick="location.href='educazione-civica.html'">Educazione Civica</button>
+      <button onclick="location.href='informatica.html'">Informatica</button>
+      <button onclick="location.href='inglese.html'">Inglese</button>
+      <button onclick="location.href='matematica.html'">Matematica</button>
+    </div>
+  </main>
 
-<div class="language-buttons">
-  <button id="btnIt">IT</button>
-  <button id="btnEn">EN</button>
-</div>
-
-<main>
-  <h1>Materie</h1>
-  <div class="materie-container">
-    <button class="materia-button" onclick="openMateria('Intelligenza Artificiale')">
-      <img src="img/ai.jpg" alt="Intelligenza Artificiale" />
-      Intelligenza Artificiale
-    </button>
-    <button class="materia-button" onclick="openMateria('Scienze Motorie')">
-      <img src="img/scienze_motorie.jpg" alt="Scienze Motorie" />
-      Scienze Motorie
-    </button>
-    <button class="materia-button" onclick="openMateria('Sistemi e Reti')">
-      <img src="img/sistemi_reti.jpg" alt="Sistemi e Reti" />
-      Sistemi e Reti
-    </button>
-    <button class="materia-button" onclick="openMateria('GPOI')">
-      <img src="img/gpoi.jpg" alt="GPOI" />
-      GPOI
-    </button>
-    <button class="materia-button" onclick="openMateria('Storia')">
-      <img src="img/storia.jpg" alt="Storia" />
-      Storia
-    </button>
-    <button class="materia-button" onclick="openMateria('Italiano')">
-      <img src="img/italiano.jpg" alt="Italiano" />
-      Italiano
-    </button>
-    <button class="materia-button" onclick="openMateria('TPSIT')">
-      <img src="img/tpsit.jpg" alt="TPSIT" />
-      TPSIT
-    </button>
-    <button class="materia-button" onclick="openMateria('Educazione Civica')">
-      <img src="img/educazione_civica.jpg" alt="Educazione Civica" />
-      Educazione Civica
-    </button>
-    <button class="materia-button" onclick="openMateria('Informatica')">
-      <img src="img/informatica.jpg" alt="Informatica" />
-      Informatica
-    </button>
-    <button class="materia-button" onclick="openMateria('Inglese')">
-      <img src="img/inglese.jpg" alt="Inglese" />
-      Inglese
-    </button>
-    <button class="materia-button" onclick="openMateria('Matematica')">
-      <img src="img/matematica.jpg" alt="Matematica" />
-      Matematica
-    </button>
-  </div>
-</main>
-
-<footer>
-  <p>&copy; 2025 Cristian Ambrosini</p>
-</footer>
-
+  <footer>
+    <p>&copy; 2025 Cristian Ambrosini</p>
+  </footer>
 </body>
 </html>
