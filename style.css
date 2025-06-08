@@ -148,3 +148,12 @@ footer {
   margin-bottom: 10px;
   border-radius: 0 0 4px 4px;
 }
+.panel {
+  padding: 0 15px;
+  display: none;
+  background-color: #2e2a38;
+  color: #ddd;
+  overflow: hidden;
+  margin-bottom: 10px;
+  border-radius: 0 0 4px 4px;
+}
