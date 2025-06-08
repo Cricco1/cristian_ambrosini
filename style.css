@@ -1,151 +1,126 @@
-/* style.css */
-
-/* Reset base */
+/* Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; padding: 0; box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
 }
 
-/* Font generale moderno */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
+  background: #f9f9f9;
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
 
-/* Header e navigazione */
 header {
-  background-color: #1e2a38;
-  padding: 1rem 0;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: #34495e;
+  padding: 1rem 2rem;
 }
 
 nav ul {
   list-style: none;
   display: flex;
+  gap: 1.5rem;
   justify-content: center;
-  gap: 2rem;
 }
 
 nav ul li a {
-  color: #ddd;
+  color: white;
   text-decoration: none;
   font-weight: 600;
-  padding: 0.3rem 0.5rem;
-  border-radius: 4px;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-  background-color: #4caf50;
-  color: white;
+  background-color: #1abc9c;
+  color: #fff;
 }
 
-/* Main - container per contenuti */
 main {
   flex-grow: 1;
-  padding: 2rem 1rem;
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
 }
 
-/* Sezione materie */
-.materie-section .section-title {
+h1 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  color: #2c3e50;
 }
 
-.materie-section .section-title h2 {
-  font-size: 2.5rem;
-  color: #1e2a38;
-  margin-bottom: 0.5rem;
-}
-
-.materie-section .section-title p {
-  font-size: 1.1rem;
-  color: #555;
-}
-
-/* Griglia materie */
-.materie-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
-  gap: 1.5rem;
-}
-
-/* Card materia */
-.materia-card {
-  background-color: white;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.07);
-  padding: 1.5rem 1rem;
-  text-decoration: none;
-  color: #1e2a38;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
+button#toggleLang {
+  display: block;
+  margin: 0.5rem auto 2rem auto;
+  background-color: #1abc9c;
+  border: none;
+  color: white;
+  font-weight: 700;
+  padding: 0.5rem 1.2rem;
+  border-radius: 25px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button#toggleLang:hover {
+  background-color: #16a085;
+}
+
+.bio-content p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+.bio-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+}
+
+.materie-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.materia-card {
+  display: block;
+  background: #1abc9c;
+  color: white;
+  padding: 1.2rem 2rem;
+  border-radius: 12px;
+  text-align: center;
+  font-weight: 700;
+  text-decoration: none;
+  width: 150px;
+  transition: background-color 0.3s ease;
+  user-select: none;
 }
 
 .materia-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+  background-color: #16a085;
 }
 
-/* Icona e titolo nella card */
-.materia-card .card-header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
+.responsive-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.1);
 }
 
-.materia-card i {
-  font-size: 3rem;
-  color: #4caf50;
-  transition: color 0.3s ease;
-}
-
-.materia-card:hover i {
-  color: #388e3c;
-}
-
-.materia-card h3 {
-  font-size: 1.3rem;
-  font-weight: 700;
-  text-align: center;
-}
-
-/* Footer */
 footer {
-  background-color: #1e2a38;
-  color: #ddd;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem;
+  background: #34495e;
+  color: white;
   font-size: 0.9rem;
-  margin-top: auto;
-}
-
-/* Responsive adjustments */
-@media (max-width: 480px) {
-  nav ul {
-    flex-direction: column;
-    gap: 1rem;
-  }
-
-  main {
-    padding: 1rem;
-  }
-
-  .materie-section .section-title h2 {
-    font-size: 2rem;
-  }
 }
