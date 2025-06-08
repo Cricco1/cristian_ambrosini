@@ -2,11 +2,13 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Materia</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body class="materia-page">
+  <!-- Barra di navigazione -->
   <nav>
     <button onclick="location.href='index.html'">Biografia</button>
     <button onclick="location.href='materie.html'">Materie</button>
@@ -15,13 +17,13 @@
 
   <main>
     <h1 id="nomeMateria">Materia</h1>
-    <p id="testoMateria"></p>
+    <div id="contenutoMateria" class="materia-contenuto">
+      <!-- Il testo della materia verrà caricato via JavaScript -->
+    </div>
   </main>
 
   <footer>
     <p>&copy; 2025 Cristian Ambrosini</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
