@@ -1,4 +1,3 @@
-// Funzione per il toggle della lingua su ogni pagina
 function setupLanguageToggle(buttonId, selector) {
   const toggleBtn = document.getElementById(buttonId);
   const elements = document.querySelectorAll(selector);
@@ -24,6 +23,9 @@ function setupLanguageToggle(buttonId, selector) {
 setupLanguageToggle('toggleLangBiografia', '#biografia [data-it]');
 setupLanguageToggle('toggleLangPCTO', '#pcto [data-it]');
 setupLanguageToggle('toggleLangMaterie', '#materie [data-it]');
+// Funzione per il toggle della lingua su ogni pagina
+setupLanguageToggle('toggleLangEnvironment', '#environment [data-it]');
+
 // Accordion per Materie
 document.querySelectorAll('.accordion').forEach(button => {
   button.addEventListener('click', () => {
