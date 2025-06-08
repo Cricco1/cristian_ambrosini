@@ -176,4 +176,49 @@ footer {
   display: none;
   color: #ddd;
 }
+/* Stile per le materie - Mobile First */
+.subjects {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.subject {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.subject:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.subject-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.subject-content {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 1rem;
+}
+
+/* Per desktop */
+@media (min-width: 768px) {
+    .subjects {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .subjects {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
 
