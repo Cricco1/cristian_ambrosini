@@ -1,3 +1,5 @@
+/* style.css */
+
 /* Reset base */
 * {
   margin: 0;
@@ -5,109 +7,145 @@
   box-sizing: border-box;
 }
 
-/* Corpo */
+/* Font generale moderno */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
   background-color: #f9f9f9;
-  color: #222;
-  padding-bottom: 40px;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Header e navigazione */
 header {
-  background-color: #0a3d62;
-  padding: 15px 0;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  background-color: #1e2a38;
+  padding: 1rem 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav ul {
   list-style: none;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 2rem;
 }
 
 nav ul li a {
-  color: #fff;
+  color: #ddd;
   text-decoration: none;
-  font-weight: bold;
-  padding: 8px 16px;
-  border-radius: 8px;
-  transition: background 0.3s;
+  font-weight: 600;
+  padding: 0.3rem 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-  background-color: #1e5ea3;
-}
-
-/* Titolo principale */
-h1 {
-  text-align: center;
-  margin: 30px 0 10px;
-  font-size: 2.2rem;
-  color: #0a3d62;
-}
-
-/* Bottone lingua */
-#toggleLang {
-  display: block;
-  margin: 0 auto 20px;
-  padding: 8px 16px;
-  font-size: 1rem;
-  background-color: #1e5ea3;
+  background-color: #4caf50;
   color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
 }
 
-#toggleLang:hover {
-  background-color: #155a96;
-}
-
-/* Sezione immagine */
-.bio-image {
-  text-align: center;
-  margin: 30px 0;
-}
-
-.bio-image img {
-  max-width: 400px;
-  width: 90%;
-  border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-.bio-image p {
-  font-size: 0.9rem;
-  color: #555;
-  margin-top: 8px;
-}
-
-/* Contenuto della biografia */
-.bio-content {
-  max-width: 850px;
+/* Main - container per contenuti */
+main {
+  flex-grow: 1;
+  padding: 2rem 1rem;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  width: 100%;
 }
 
-.bio-content p {
-  margin-bottom: 18px;
-  text-align: justify;
-  font-size: 1.05rem;
+/* Sezione materie */
+.materie-section .section-title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.materie-section .section-title h2 {
+  font-size: 2.5rem;
+  color: #1e2a38;
+  margin-bottom: 0.5rem;
+}
+
+.materie-section .section-title p {
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Griglia materie */
+.materie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
+  gap: 1.5rem;
+}
+
+/* Card materia */
+.materia-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.07);
+  padding: 1.5rem 1rem;
+  text-decoration: none;
+  color: #1e2a38;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  cursor: pointer;
+}
+
+.materia-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Icona e titolo nella card */
+.materia-card .card-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.materia-card i {
+  font-size: 3rem;
+  color: #4caf50;
+  transition: color 0.3s ease;
+}
+
+.materia-card:hover i {
+  color: #388e3c;
+}
+
+.materia-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 /* Footer */
 footer {
+  background-color: #1e2a38;
+  color: #ddd;
   text-align: center;
-  padding: 20px 0;
-  background-color: #0a3d62;
-  color: #fff;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-  margin-top: 40px;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+  margin-top: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .materie-section .section-title h2 {
+    font-size: 2rem;
+  }
 }
