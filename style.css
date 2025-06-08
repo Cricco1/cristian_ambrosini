@@ -14,13 +14,17 @@ body {
   flex-direction: column;
 }
 
-/* Barra di navigazione comune */
+/* Barra di navigazione comune sticky */
 .navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
   background-color: #005f73;
   padding: 15px 10px;
   display: flex;
   justify-content: center;
   gap: 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 }
 
 .navbar button {
@@ -32,7 +36,8 @@ body {
   font-size: 1.15rem;
   border-radius: 6px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.12);
 }
 
 .navbar button.active,
@@ -62,6 +67,7 @@ main {
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 25px;
   justify-items: center;
+  padding: 0 10px;
 }
 
 .materie-grid button {
@@ -97,6 +103,7 @@ main {
   max-width: 800px;
   margin-left: auto;
   margin-right: auto;
+  padding: 0 15px;
 }
 
 /* Footer */
@@ -112,7 +119,7 @@ footer {
 /* Immagine nella biografia (esempio amici.jpg) */
 .bio-image {
   display: block;
-  max-width: 250px;
+  max-width: 200px;  /* immagine più piccola */
   width: 100%;
   height: auto;
   margin: 20px auto;
@@ -125,7 +132,7 @@ button {
   font-family: inherit;
 }
 
-/* Responsive per nav */
+/* Responsive per nav e griglia materie */
 @media (max-width: 480px) {
   .navbar {
     flex-direction: column;
