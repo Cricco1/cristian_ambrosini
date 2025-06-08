@@ -1,20 +1,12 @@
-const toggleBtn = document.getElementById('toggleLang');
+document.addEventListener("DOMContentLoaded", function () {
+  const langBtn = document.getElementById("lang-btn");
+  const translatableElements = document.querySelectorAll("[data-it][data-en]");
 
-if (toggleBtn) {
-  let lang = 'it'; // lingua di default
-
-  toggleBtn.addEventListener('click', () => {
-    lang = lang === 'it' ? 'en' : 'it';
-    toggleBtn.textContent = lang === 'it' ? 'English' : 'Italiano';
-
-    document.querySelectorAll('[data-it]').forEach(el => {
-      el.textContent = el.getAttribute(lang === 'it' ? 'data-it' : 'data-en');
+  langBtn.addEventListener("click", function () {
+    const isEnglish = langBtn.innerText === "EN";
+    translatableElements.forEach((el) => {
+      el.innerText = isEnglish ? el.getAttribute("data-en") : el.getAttribute("data-it");
     });
-
-    // Cambia anche il titolo della pagina (h1) se presente
-    const h1 = document.querySelector('h1');
-    if (h1) {
-      h1.textContent = h1.getAttribute(lang === 'it' ? 'data-it' : 'data-en');
-    }
+    langBtn.innerText = isEnglish ? "IT" : "EN";
   });
-}
+});
