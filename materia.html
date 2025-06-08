@@ -5,27 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Materia</title>
   <link rel="stylesheet" href="style.css" />
-  <script src="script.js" defer></script>
 </head>
-<body>
+<body class="materia-page">
   <header>
-    <div class="navbar">
-      <button onclick="window.location.href='index.html'">Biografia</button>
-      <button onclick="window.location.href='materie.html'">Materie</button>
-      <button onclick="window.location.href='pcto.html'">PCTO</button>
-      <button id="langToggle" onclick="toggleLanguage()">EN</button>
-    </div>
+    <nav class="navbar">
+      <button onclick="location.href='index.html'">Biografia</button>
+      <button onclick="location.href='materie.html'">Materie</button>
+      <button onclick="location.href='pcto.html'">PCTO</button>
+    </nav>
     <h1 id="nomeMateria">Materia</h1>
   </header>
 
-  <main class="materia-dettaglio">
-    <div id="contenutoMateria" class="contenuto">
-      <!-- Il contenuto della materia verrà inserito dinamicamente -->
-    </div>
+  <main>
+    <div id="contenutoMateria" class="contenuto"></div>
   </main>
 
   <footer>
     <p>&copy; 2025 Cristian Ambrosini</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
