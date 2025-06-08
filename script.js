@@ -1,21 +1,20 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Rileva tutti i bottoni di cambio lingua presenti nella pagina
-  const toggleButtons = document.querySelectorAll("[id^='toggleLang']");
+const toggleBtn = document.getElementById('toggleLang');
 
-  toggleButtons.forEach(button => {
-    button.addEventListener("click", () => {
-      const sectionId = button.id.replace("toggleLang", "").toLowerCase(); // es: PCTO -> pcto
-      const elements = document.querySelectorAll(`#${sectionId} [data-it]`);
-      const isEnglish = button.textContent === "English";
+if (toggleBtn) {
+  let lang = 'it'; // lingua di default
 
-      elements.forEach(el => {
-        const newText = el.getAttribute(isEnglish ? "data-en" : "data-it");
-        if (newText !== null) {
-          el.textContent = newText;
-        }
-      });
+  toggleBtn.addEventListener('click', () => {
+    lang = lang === 'it' ? 'en' : 'it';
+    toggleBtn.textContent = lang === 'it' ? 'English' : 'Italiano';
 
-      button.textContent = isEnglish ? "Italiano" : "English";
+    document.querySelectorAll('[data-it]').forEach(el => {
+      el.textContent = el.getAttribute(lang === 'it' ? 'data-it' : 'data-en');
     });
+
+    // Cambia anche il titolo della pagina (h1) se presente
+    const h1 = document.querySelector('h1');
+    if (h1) {
+      h1.textContent = h1.getAttribute(lang === 'it' ? 'data-it' : 'data-en');
+    }
   });
-});
+}
