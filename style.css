@@ -1,12 +1,15 @@
-/* Reset */
+/* Reset e base */
 * {
-  margin: 0; padding: 0; box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: #f9f9f9;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 18px;
+  background-color: #f7f8fa;
+  color: #333;
   line-height: 1.6;
   min-height: 100vh;
   display: flex;
@@ -14,113 +17,124 @@ body {
 }
 
 header {
-  background: #34495e;
-  padding: 1rem 2rem;
+  background-color: #1a1a2e;
+  padding: 15px 20px;
 }
 
 nav ul {
-  list-style: none;
   display: flex;
-  gap: 1.5rem;
   justify-content: center;
+  gap: 30px;
+  list-style: none;
 }
 
 nav ul li a {
-  color: white;
   text-decoration: none;
+  color: #ddd;
   font-weight: 600;
-  padding: 0.3rem 0.6rem;
-  border-radius: 5px;
-  transition: background-color 0.3s ease;
+  padding: 8px 12px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav ul li a:hover,
 nav ul li a.active {
-  background-color: #1abc9c;
+  background-color: #16213e;
   color: #fff;
 }
 
 main {
   flex-grow: 1;
-  max-width: 900px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-  background: white;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 20px 60px;
 }
 
-h1 {
-  text-align: center;
-  margin-bottom: 1rem;
-  color: #2c3e50;
-}
-
-button#toggleLang {
-  display: block;
-  margin: 0.5rem auto 2rem auto;
-  background-color: #1abc9c;
-  border: none;
-  color: white;
-  font-weight: 700;
-  padding: 0.5rem 1.2rem;
-  border-radius: 25px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button#toggleLang:hover {
-  background-color: #16a085;
-}
-
-.bio-content p {
-  margin-bottom: 1rem;
-  font-size: 1.05rem;
-}
-
-.bio-image img {
+/* Biografia e PCTO immagini */
+main img {
   max-width: 100%;
+  border-radius: 12px;
+  margin: 20px 0;
   height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
-.materie-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
+/* Footer */
+footer {
+  background-color: #1a1a2e;
+  color: #fff;
+  text-align: center;
+  padding: 18px 10px;
+  font-size: 16px;
+  margin-top: auto;
+}
+
+/* Materie - griglia e card */
+.materie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
 }
 
 .materia-card {
-  display: block;
-  background: #1abc9c;
-  color: white;
-  padding: 1.2rem 2rem;
-  border-radius: 12px;
-  text-align: center;
+  background-color: #fff;
+  border-radius: 14px;
+  padding: 18px 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 700;
-  text-decoration: none;
-  width: 150px;
-  transition: background-color 0.3s ease;
+  color: #16213e;
+  font-size: 20px;
+  text-align: center;
   user-select: none;
 }
 
 .materia-card:hover {
-  background-color: #16a085;
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
-.responsive-img {
-  max-width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 0 12px rgba(0,0,0,0.1);
-}
-
-footer {
-  text-align: center;
-  padding: 1rem;
-  background: #34495e;
+/* Bottone toggle lingua - solo PCTO e Biografia */
+button.toggle-lang {
+  background-color: #16213e;
   color: white;
-  font-size: 0.9rem;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 17px;
+  cursor: pointer;
+  margin-bottom: 25px;
+  transition: background-color 0.3s ease;
+}
+
+button.toggle-lang:hover {
+  background-color: #0f1628;
+}
+
+/* Titoli */
+h1, h3 {
+  color: #16213e;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 24px;
+  margin-top: 40px;
+}
+
+/* Paragrafi */
+p {
+  margin-bottom: 20px;
+  font-size: 19px;
+  line-height: 1.7;
 }
