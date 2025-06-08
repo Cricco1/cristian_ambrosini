@@ -121,6 +121,7 @@ footer {
   flex-shrink: 0;
   font-size: 1rem;
 }
+
 .accordion {
   background-color: #6a4c93; /* viola scuro */
   color: white;
@@ -140,14 +141,6 @@ footer {
   background-color: #573380; /* viola più scuro */
 }
 
-.panel {
-  padding: 0 15px;
-  display: none;
-  background-color: #f1f1f1;
-  overflow: hidden;
-  margin-bottom: 10px;
-  border-radius: 0 0 4px 4px;
-}
 .panel {
   padding: 0 15px;
   display: none;
