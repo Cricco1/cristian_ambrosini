@@ -2,36 +2,59 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Materie</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <header>
+    <div class="navbar">
+      <button onclick="window.location.href='index.html'">Biografia</button>
+      <button onclick="window.location.href='materie.html'">Materie</button>
+      <button onclick="window.location.href='pcto.html'">PCTO</button>
+      <button id="langToggle" onclick="toggleLanguage()">EN</button>
+    </div>
+    <h1 data-it="Le Materie" data-en="Subjects">Le Materie</h1>
+  </header>
 
-  <nav>
-    <a href="index.html">Biografia</a>
-    <a href="materie.html">Materie</a>
-    <a href="pcto.html">PCTO</a>
-  </nav>
-
-  <main>
-    <h1>Materie</h1>
-    <div class="buttons-container">
-      <button class="materia-btn" onclick="location.href='materia.html?nome=Intelligenza Artificiale'">Intelligenza Artificiale</button>
-      <button class="materia-btn" onclick="location.href='materia.html?nome=Scienze Motorie'">Scienze Motorie</button>
-      <button class="materia-btn" onclick="location.href='materia.html?nome=Sistemi e Reti'">Sistemi e Reti</button>
-      <button class="materia-btn" onclick="location.href='materia.html?nome=GPOI'">GPOI</button>
-      <button class="materia-btn" onclick="location.href='materia.html?nome=Storia'">Storia</button>
-      <button class="materia-btn" onclick="location.href='materia.html?nome=Italiano'">Italiano</button>
-      <button class="materia-btn" onclick="location.href='materia.html?nome=TPSIT'">TPSIT</button>
-      <button class="materia-btn" onclick="location.href='materia.html?nome=Educazione Civica'">Educazione Civica</button>
+  <main class="materie-container">
+    <div class="materia-card" onclick="openMateria('Intelligenza Artificiale')">
+      <img src="img/intelligenza_artificiale.jpg" alt="Intelligenza Artificiale" />
+      <span>Intelligenza Artificiale</span>
+    </div>
+    <div class="materia-card" onclick="openMateria('Scienze Motorie')">
+      <img src="img/scienze_motorie.jpg" alt="Scienze Motorie" />
+      <span>Scienze Motorie</span>
+    </div>
+    <div class="materia-card" onclick="openMateria('Sistemi e Reti')">
+      <img src="img/sistemi_e_reti.jpg" alt="Sistemi e Reti" />
+      <span>Sistemi e Reti</span>
+    </div>
+    <div class="materia-card" onclick="openMateria('GPOI')">
+      <img src="img/gpoi.jpg" alt="GPOI" />
+      <span>GPOI</span>
+    </div>
+    <div class="materia-card" onclick="openMateria('Storia')">
+      <img src="img/storia.jpg" alt="Storia" />
+      <span>Storia</span>
+    </div>
+    <div class="materia-card" onclick="openMateria('Italiano')">
+      <img src="img/italiano.jpg" alt="Italiano" />
+      <span>Italiano</span>
+    </div>
+    <div class="materia-card" onclick="openMateria('TPSIT')">
+      <img src="img/tpsit.jpg" alt="TPSIT" />
+      <span>TPSIT</span>
+    </div>
+    <div class="materia-card" onclick="openMateria('Educazione Civica')">
+      <img src="img/educazione_civica.jpg" alt="Educazione Civica" />
+      <span>Educazione Civica</span>
     </div>
   </main>
 
   <footer>
-    &copy; 2025 Cristian Ambrosini
+    <p>&copy; 2025 Cristian Ambrosini</p>
   </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
