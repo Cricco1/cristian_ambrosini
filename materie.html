@@ -2,30 +2,35 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Materie</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Materie</h1>
-  </header>
 
-  <main class="subjects">
-    <div class="grid">
-      <a href="materia.html?nome=IA">Intelligenza Artificiale</a>
-      <a href="materia.html?nome=ScienzeMotorie">Scienze Motorie</a>
-      <a href="materia.html?nome=Sistemi">Sistemi e Reti</a>
-      <a href="materia.html?nome=GPOI">GPOI</a>
-      <a href="materia.html?nome=Storia">Storia</a>
-      <a href="materia.html?nome=Italiano">Italiano</a>
-      <a href="materia.html?nome=TPSIT">TPSIT</a>
-      <a href="materia.html?nome=EducazioneCivica">Educazione Civica</a>
+  <nav>
+    <a href="index.html">Biografia</a>
+    <a href="materie.html">Materie</a>
+    <a href="pcto.html">PCTO</a>
+  </nav>
+
+  <main>
+    <h1>Materie</h1>
+    <div class="buttons-container">
+      <button class="materia-btn" onclick="location.href='materia.html?nome=Intelligenza Artificiale'">Intelligenza Artificiale</button>
+      <button class="materia-btn" onclick="location.href='materia.html?nome=Scienze Motorie'">Scienze Motorie</button>
+      <button class="materia-btn" onclick="location.href='materia.html?nome=Sistemi e Reti'">Sistemi e Reti</button>
+      <button class="materia-btn" onclick="location.href='materia.html?nome=GPOI'">GPOI</button>
+      <button class="materia-btn" onclick="location.href='materia.html?nome=Storia'">Storia</button>
+      <button class="materia-btn" onclick="location.href='materia.html?nome=Italiano'">Italiano</button>
+      <button class="materia-btn" onclick="location.href='materia.html?nome=TPSIT'">TPSIT</button>
+      <button class="materia-btn" onclick="location.href='materia.html?nome=Educazione Civica'">Educazione Civica</button>
     </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Cristian Ambrosini</p>
+    &copy; 2025 Cristian Ambrosini
   </footer>
+
 </body>
 </html>
