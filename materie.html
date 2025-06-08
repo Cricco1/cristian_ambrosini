@@ -20,16 +20,18 @@
   <main>
     <section id="materie">
       <h1 data-it="Materie" data-en="Subjects">Materie</h1>
-     
-
-      <!-- Materia: Italiano -->
-      <article class="materia">      
-        <button class="accordion" data-it="Italiano" data-en="Italian">Italiano</button>
-    <div class="panel">
-      <img src="Materie/italiano.jfif" alt="Letteratura Italiana" />
+      <button id="toggleLang" aria-label="Switch Language">English</button>
       
-        <p data-it="Analisi approfondita di Svevo e D'Annunzio, con attenzione al contesto storico e tematico. Riflessioni critiche sul simbolismo e il modernismo nella letteratura italiana."
-           data-en="In-depth analysis of Svevo and D'Annunzio, focusing on historical and thematic contexts. Critical reflections on symbolism and modernism in Italian literature.">
+      <div class="subjects-container">
+        <!-- Materia: Italiano -->
+        <div class="subject">
+          <div class="subject-header">
+            <span data-it="Italiano" data-en="Italian">Italiano</span>
+            <span class="arrow">▶</span>
+          </div>
+          <div class="subject-content">
+            <img src="Materie/italiano.jfif" alt="Letteratura Italiana" />
+            <p>"Analisi approfondita di Svevo e D'Annunzio, con attenzione al contesto storico e tematico. Riflessioni critiche sul simbolismo e il modernismo nella letteratura italiana."
           Italiano – Italo Svevo
 Italo Svevo, pseudonimo di Ettore Schmitz, è uno degli autori più originali del Novecento italiano. La sua opera rappresenta un punto di rottura con la narrativa ottocentesca, in quanto rifiuta i modelli tradizionali di eroe positivo, preferendo invece personaggi problematici, incerti, inadeguati. L’autore introduce la figura dell’inetto, un individuo incapace di affrontare la vita e di adattarsi al mondo moderno.
 
@@ -40,6 +42,9 @@ Il momento più visionario del romanzo è l’ecatombe finale, in cui Zeno immag
 Svevo ha introdotto una vera rivoluzione nella letteratura italiana: ha portato il romanzo dentro la psicologia del personaggio, abbandonando le certezze e mostrando le ambiguità dell’essere umano. In questo senso, è fortemente influenzato dalla psicoanalisi freudiana, che ha saputo rielaborare in chiave narrativa con originalità.
 
           
+
+
+
 Italiano – Gabriele D’Annunzio
 Gabriele D’Annunzio è il perfetto rappresentante dell’estetismo e del decadentismo europeo. La sua vita stessa è stata concepita come un’opera d’arte, inimitabile ed estrema. Egli ha incarnato l’ideale del superuomo, colui che si pone al di sopra delle regole morali comuni per vivere secondo il culto del bello, dell’azione e del piacere.
 
@@ -52,20 +57,21 @@ In "I pastori", invece, emerge la nostalgia per un mondo arcaico, rurale, puro, 
 D’Annunzio ha trasformato la letteratura italiana, elevandola a un livello estetico e simbolico mai visto prima. Tuttavia, se confrontato con Svevo, appare come il suo esatto contrario: dove D’Annunzio esalta la bellezza, Svevo ne denuncia l’illusorietà; dove il primo celebra l’azione, il secondo riflette sull’incapacità di agire.
 
 Entrambi, però, raccontano una crisi: quella dell’uomo moderno, schiacciato tra desiderio e insicurezza, tra impulso e razionalità. Due strade diverse per descrivere la complessità dell’animo umano.
+</p>
+          </div>
+        </div>
 
-
-        </p>
-      </article>
-
-      <!-- Materia: Sistemi e Reti -->
-      <article class="materia">
-       <button class="accordion" data-it="Sistemi e Reti" data-en="Italian">"Sistemi e Reti</button>
-    <div class="panel">
-      <img src="Materie/sistemi e reti.jfif" alt="Sistemi e Reti" />
-        <p data-it="Studio di protocolli di comunicazione, modelli OSI e TCP/IP, e progettazione di reti locali. Approfondimenti su sicurezza informatica e gestione del traffico dati."
-           data-en="Study of communication protocols, OSI and TCP/IP models, and design of local networks. Insights into cybersecurity and data traffic management.">
-          
-         In un contesto digitale sempre più esposto a minacce, la sicurezza dei sistemi informativi rappresenta una delle principali sfide dell’informatica moderna. Essa si fonda su tre pilastri fondamentali: la riservatezza dei dati, che garantisce che solo chi è autorizzato possa accedervi; l’integrità, che assicura che i dati non siano stati alterati; e la disponibilità, ovvero la possibilità di accedere ai dati e ai servizi quando necessario.
+        <!-- Materia: Sistemi e Reti -->
+        <div class="subject">
+          <div class="subject-header">
+            <span data-it="Sistemi e Reti" data-en="Systems and Networks">Sistemi e Reti</span>
+            <span class="arrow">▶</span>
+          </div>
+          <div class="subject-content">
+            <img src="Materie/sistemi e reti.jfif" alt="Sistemi e Reti" />
+            <p data-it="Studio di protocolli di comunicazione, modelli OSI e TCP/IP, e progettazione di reti locali. Approfondimenti su sicurezza informatica e gestione del traffico dati."
+               data-en="Study of communication protocols, OSI and TCP/IP models, and design of local networks. Insights into cybersecurity and data traffic management.">
+              In un contesto digitale sempre più esposto a minacce, la sicurezza dei sistemi informativi rappresenta una delle principali sfide dell’informatica moderna. Essa si fonda su tre pilastri fondamentali: la riservatezza dei dati, che garantisce che solo chi è autorizzato possa accedervi; l’integrità, che assicura che i dati non siano stati alterati; e la disponibilità, ovvero la possibilità di accedere ai dati e ai servizi quando necessario.
 
 Una buona gestione della sicurezza parte dalla valutazione dei rischi, ossia l’individuazione dei punti vulnerabili del sistema e delle possibili minacce, come virus, worm, attacchi DDoS, phishing e tecniche di ingegneria sociale. Per affrontarle, si ricorre a diversi strumenti. Uno tra i più importanti è il firewall, che agisce come filtro tra rete interna ed esterna, decidendo quali pacchetti accettare o rifiutare secondo specifiche regole. Esistono diversi tipi di firewall: da quelli hardware a quelli software, da quelli basati sul contenuto a quelli orientati alla connessione. Le politiche di autorizzazione definiscono il comportamento del firewall in base al tipo di traffico.
 
@@ -78,135 +84,93 @@ Un ruolo sempre più rilevante è quello delle VPN (Virtual Private Network), ch
 Infine, nelle comunicazioni su Internet, i protocolli SSL/TLS offrono cifratura e autenticazione, proteggendo informazioni sensibili come quelle bancarie o di login. Sono alla base di connessioni HTTPS sicure, riconoscibili dall’icona del lucchetto nel browser.
 
 In sintesi, la sicurezza informatica si basa su una serie di tecnologie e metodologie integrate che, combinate, garantiscono la protezione, la privacy e la continuità dei servizi digitali.
-        </p>
-      </article>
 
-      <!-- Materia: Storia -->
-      <article class="materia">
-        <button class="accordion" data-it="Storia" data-en="Storia">Storia</button>
-    <div class="panel">
-      <img src="Materie/storia.jfif" alt="Storia" />
-       <p>Un conflitto totale che cambiò per sempre la storia del mondo e dell’Italia</p>
+            </p>
+          </div>
+        </div>
 
-  <p>All’alba del Novecento l’Europa sembrava avviata verso un’era di progresso e stabilità. Eppure, sotto la superficie della Belle Époque covavano tensioni politiche, sociali ed economiche pronte a esplodere. La Prima Guerra Mondiale, scoppiata nel 1914, fu il punto di rottura: un conflitto devastante che segnò la fine del vecchio ordine e l’inizio del “secolo breve”.</p>
+        <!-- Materia: Storia -->
+        <div class="subject">
+          <div class="subject-header">
+            <span data-it="Storia" data-en="History">Storia</span>
+            <span class="arrow">▶</span>
+          </div>
+          <div class="subject-content">
+            <img src="Materie/storia.jfif" alt="Storia" />
+            <p>----------------storia</p>
+          </div>
+        </div>
 
-  <h3>🔥 Le cause della guerra: un equilibrio solo apparente</h3>
-  <p>Il sistema delle alleanze (Triplice Alleanza e Triplice Intesa), la corsa agli armamenti, le ambizioni imperialiste e i nazionalismi accesero la miccia in un’Europa divisa ma interdipendente. L’assassinio dell’arciduca Francesco Ferdinando a Sarajevo (28 giugno 1914) fu solo il detonatore di una guerra che affondava le sue radici nell’instabilità dell’Impero austro-ungarico, nella rivalità franco-tedesca e nella crisi dei Balcani.</p>
+        <!-- Materia: TIPSIT -->
+        <div class="subject">
+          <div class="subject-header">
+            <span data-it="TIPSIT" data-en="TIPSIT">TIPSIT</span>
+            <span class="arrow">▶</span>
+          </div>
+          <div class="subject-content">
+            <img src="Materie/tipsit.jfif" alt="TIPSIT" />
+            <p>Testo TIPSIT originale qui...</p>
+          </div>
+        </div>
 
-  <h3>⚔️ Un conflitto moderno e disumano</h3>
-  <p>La guerra si trasformò ben presto in un conflitto di trincea, segnato da stalli militari e nuove armi (gas, mitragliatrici, carri armati). Le battaglie di Verdun, la Somme e Caporetto sono tristemente emblematiche del numero enorme di vite spezzate. La mobilitazione industriale e civile fu totale: l’intera società fu coinvolta nello sforzo bellico, segnando una frattura tra civili e fronte, ma anche tra vecchia e nuova concezione della guerra.</p>
+        <!-- Materia: Informatica -->
+        <div class="subject">
+          <div class="subject-header">
+            <span data-it="Informatica" data-en="Computer Science">Informatica</span>
+            <span class="arrow">▶</span>
+          </div>
+          <div class="subject-content">
+            <img src="Materie/Informaticat.jpg" alt="Informatica" />
+            <p>Testo informatica originale qui...</p>
+          </div>
+        </div>
 
-  <h3>🇮🇹 L’Italia nella guerra: neutralità, intervento, sofferenza</h3>
-  <p>L’Italia entrò in guerra nel maggio 1915 a fianco dell’Intesa, rompendo la Triplice Alleanza. Il “Patto di Londra” aveva promesso all’Italia ampi guadagni territoriali. Ma il fronte italiano, soprattutto sul Carso e lungo l’Isonzo, fu durissimo: milioni di soldati italiani combatterono in condizioni estreme. La disfatta di Caporetto (1917) fu uno spartiacque: l’esercito italiano, costretto alla ritirata, fu però ricompattato nella battaglia di Vittorio Veneto (1918), che portò alla vittoria e alla fine dell’Impero austro-ungarico.</p>
+        <!-- Materia: Intelligenza Artificiale -->
+        <div class="subject">
+          <div class="subject-header">
+            <span data-it="Intelligenza Artificiale" data-en="Artificial Intelligence">Intelligenza Artificiale</span>
+            <span class="arrow">▶</span>
+          </div>
+          <div class="subject-content">
+            <img src="Materie/int art.jfif" alt="Intelligenza Artificiale" />
+            <p>Testo IA originale qui...</p>
+          </div>
+        </div>
 
-  <h3>🕊️ Il dopoguerra: un mondo nuovo, ma instabile</h3>
-  <p>Il 1918 segna la fine della guerra e la vittoria dell’Intesa, ma non la pace. Il trattato di Versailles (1919) punì duramente la Germania, gettando le basi per il risentimento che alimenterà il nazismo. Anche l’Italia uscì vincente, ma amareggiata: nonostante i guadagni territoriali, molti italiani parlarono di “vittoria mutilata”, sentimento che verrà sfruttato dai futuri fascisti.</p>
+        <!-- Materia: Inglese -->
+        <div class="subject">
+          <div class="subject-header">
+            <span data-it="Inglese" data-en="English">Inglese</span>
+            <span class="arrow">▶</span>
+          </div>
+          <div class="subject-content">
+            <img src="Materie/Inglese.jfif" alt="Inglese" />
+            <p>Testo inglese originale qui...</p>
+          </div>
+        </div>
 
-  <p>Dal punto di vista sociale ed economico, il Paese era stremato: crisi industriale, disoccupazione, scioperi, proteste contadine e operaie. Il cosiddetto “Biennio rosso” (1919–1920) fu un periodo turbolento che aprì la strada alla ricerca di ordine e autorità. In questo contesto esploderà il fascismo.</p>
+        <!-- Materia: GPOI -->
+        <div class="subject">
+          <div class="subject-header">
+            <span data-it="GPOI" data-en="GPOI">GPOI</span>
+            <span class="arrow">▶</span>
+          </div>
+          <div class="subject-content">
+            <img src="img/GPOI.jpg" alt="GPOI" />
+            <p>Testo GPOI originale qui...</p>
+          </div>
+        </div>
 
-  <h3>💬 Riflessione critica</h3>
-  <p>La Grande Guerra rappresenta la fine dell’Europa ottocentesca e la nascita del mondo contemporaneo. Con essa caddero imperi, cambiarono i confini e mutò profondamente la percezione della guerra: da esperienza gloriosa a tragedia collettiva. Fu anche l’inizio di una nuova fase di instabilità che, solo vent’anni dopo, avrebbe portato al secondo grande conflitto mondiale.</p>
-
-  <p>Studiare oggi questo evento significa capire le origini della fragilità democratica, la complessità del mondo moderno e l’importanza di memoria, pace e dialogo tra i popoli.</p>
-        
-      </article>
-
-      <!-- Materia: TIPSIT -->
-      <article class="materia">
-       <button class="accordion" data-it="TIPSIT" data-en="TIPSIT">TIPSIT</button>
-    <div class="panel">
-      <img src="Materie/tipsit.jfif" alt="TIPSIT" />
-        <p>La concorrenza è uno dei concetti fondamentali dell’informatica moderna, soprattutto nei sistemi operativi. Gestire più processi che accedono contemporaneamente alle risorse di sistema è essenziale per garantire efficienza, reattività e corretto funzionamento. In questa sezione analizzeremo cosa significa concorrenza, come viene gestita nei sistemi operativi, e quali sono i principali problemi e soluzioni legati a essa.</p>
-
-  <h3>🧩 Concetti base della concorrenza</h3>
-  <p>La concorrenza è la capacità di eseguire più processi (o thread) in modo “simultaneo”. Nei sistemi monoprocessore, questa simultaneità è solo apparente: il processore alterna velocemente l’esecuzione dei processi, dando l’illusione che essi vengano eseguiti nello stesso momento. Nei sistemi multiprocessore, invece, è possibile avere parallelismo reale, con più core che eseguono processi indipendenti davvero nello stesso istante.</p>
-
-  <h3>⚙️ Processi disgiunti e congiunti</h3>
-  <p>I processi disgiunti non condividono alcuna risorsa e possono essere eseguiti in modo indipendente.</p>
-  <p>I processi congiunti, invece, condividono risorse come file, variabili o memoria, e quindi richiedono meccanismi di coordinamento per evitare conflitti.</p>
-
-  <h3>🆚 Competizione e cooperazione</h3>
-  <p>I processi competono quando cercano di accedere alla stessa risorsa esclusiva (es. stampante, file in scrittura).</p>
-  <p>Cooperano quando lavorano insieme su un compito comune, condividendo dati o comunicando tra loro.</p>
-  <p>Questa interazione tra processi può causare problemi di sincronizzazione se non gestita correttamente.</p>
-
-  <h3>⚠️ Race Condition (condizioni di concorrenza)</h3>
-  <p>Una race condition si verifica quando il risultato dell’esecuzione dipende dall’ordine con cui i processi accedono a una risorsa condivisa. È un errore difficile da rilevare e può causare comportamenti imprevedibili e bug difficili da riprodurre.</p>
-
-  <h3>🛠 Tecniche di programmazione concorrente</h3>
-
-  <h4>🧵 Processi e thread</h4>
-  <p>Un processo è un programma in esecuzione con la sua memoria isolata.</p>
-  <p>Un thread è un’unità più leggera, che condivide memoria e risorse con altri thread dello stesso processo. Questo li rende più efficienti, ma anche più soggetti a errori di concorrenza.</p>
-
-  <h4>🪙 Sincronizzazione e semafori</h4>
-  <p>Per evitare conflitti tra processi/thread, si usano meccanismi di sincronizzazione, come:</p>
-  <ul>
-    <li>Semafori: variabili speciali usate per controllare l’accesso a una risorsa. Possono essere binari (tipo on/off) o contatori.</li>
-    <li>Mutex (mutual exclusion): permette a un solo processo per volta di accedere a una risorsa.</li>
-  </ul>
-
-  <h3>🔄 Problemi classici della programmazione concorrente</h3>
-
-  <h4>🍽 Il problema dei cinque filosofi a cena</h4>
-  <p>Cinque filosofi si alternano tra mangiare e pensare, usando due bacchette per mangiare. La difficoltà sta nel gestire l'accesso simultaneo alle bacchette senza creare deadlock (blocco totale) o starvation (fame infinita per uno o più filosofi).</p>
-
-  <h4>🧃 Il problema del produttore/consumatore</h4>
-  <p>Un produttore inserisce dati in un buffer, e un consumatore li legge. La gestione corretta del buffer (evitando overflow o letture di dati non ancora disponibili) richiede sincronizzazione precisa.</p>
-
-  <h4>♻️ Il buffer circolare</h4>
-  <p>È una struttura dati condivisa che simula uno spazio finito e riutilizzabile. Richiede un’attenta gestione per evitare la sovrascrittura di dati non ancora letti.</p>
-
-  <h3>🧠 Riflessione personale</h3>
-  <p>Studiare la concorrenza mi ha fatto comprendere quanto sia complesso garantire il corretto funzionamento di più processi contemporaneamente. L’aspetto più affascinante è che errori di concorrenza possono nascere anche in sistemi apparentemente semplici, e che servono soluzioni eleganti e robuste per evitarli. Credo che la programmazione concorrente sviluppi capacità analitiche e di problem solving fondamentali per chiunque voglia lavorare nel mondo del software, soprattutto in ambiti come i sistemi embedded, il networking o lo sviluppo di applicazioni multi-thread.</p>
-
-      </article>
-      <!-- Materia: Informatica -->
-      <article class="materia">
-        <button class="accordion" data-it="Informatica" data-en="Informatica">Informatica</button>
-    <div class="panel">
-      <img src="Materie/Informaticat.jpg" alt="Informatica" />
-        <p>
-          <!-- Inserisci qui il testo per Informatica -->
-        </p>
-      </article>
-
-      <!-- Materia: Intelligenza Artificiale -->
-      <article class="materia">
-       <button class="accordion" data-it="Intelligenza Artificiale" data-en="Intelligenza Artificiale">Intelligenza Artificiale</button>
-    <div class="panel">
-      <img src="Materie/int art.jfif" alt="Intelligenza Artificiale" />
-        <p>
-          <!-- Inserisci qui il testo per Intelligenza Artificiale -->
-        </p>
-      </article>
-
-      <!-- Materia: Inglese -->
-      <article class="materia">
-       <button class="accordion" data-it="Inglese" data-en="Inglese">Inglese</button>
-    <div class="panel">
-      <img src="Materie/Inglese.jfif" alt="Inglese" />
-      
-      </article>
-
-      <!-- Materia: GPOI -->
-      <article class="materia">
-        <button class="accordion" data-it="GPOI" data-en="GPOI">GPOI</button>
-    <div class="panel">
-      <img src="img/GPOI.jpg" alt="GPOI" />
-        <p>
-          <!-- Inserisci qui il testo per GPOI -->
-        </p>
-      </article>
-
-      <!-- Materia: Scienze Motorie -->
-      <article class="materia">
-         <button class="accordion" data-it="Scienze Motorie" data-en="Scienze Motorie">Scienze Motorie</button>
-    <div class="panel">
-      <img src="Materie/gim.jpg" alt="Scienze Motorie" />
-        <p><strong>L’importanza dell’allenamento e del recupero nelle scienze motorie</strong></p>
-
-<p>L’allenamento fisico è fondamentale per migliorare la salute, la forma fisica e le prestazioni sportive. Attraverso esercizi mirati, il corpo si adatta, aumentando forza, resistenza, flessibilità e coordinazione. Tuttavia, non basta solo allenarsi: il recupero è una componente altrettanto importante per ottenere risultati ottimali e prevenire infortuni.</p>
+        <!-- Materia: Scienze Motorie -->
+        <div class="subject">
+          <div class="subject-header">
+            <span data-it="Scienze Motorie" data-en="Physical Education">Scienze Motorie</span>
+            <span class="arrow">▶</span>
+          </div>
+          <div class="subject-content">
+            <img src="Materie/gim.jpg" alt="Scienze Motorie" />
+            <p><strong>L'importanza dell'allenamento e del recupero nelle scienze motorie</strong></p>
+            <p>L’allenamento fisico è fondamentale per migliorare la salute, la forma fisica e le prestazioni sportive. Attraverso esercizi mirati, il corpo si adatta, aumentando forza, resistenza, flessibilità e coordinazione. Tuttavia, non basta solo allenarsi: il recupero è una componente altrettanto importante per ottenere risultati ottimali e prevenire infortuni.</p>
 
 <p>Durante l’allenamento, il corpo subisce stress muscolare e microlesioni che stimolano i processi di riparazione e crescita muscolare. Questo processo è chiamato supercompensazione: dopo uno sforzo, il corpo si adatta diventando più forte o più resistente. Se però non si concede il giusto tempo di recupero, il corpo non riesce a rigenerarsi, si accumula fatica e si può andare incontro a sovrallenamento, che porta a cali di prestazione, affaticamento cronico e aumento del rischio di infortuni.</p>
 
@@ -214,22 +178,24 @@ In sintesi, la sicurezza informatica si basa su una serie di tecnologie e metodo
 
 <p>Inoltre, è importante variare gli stimoli di allenamento per non sovraccaricare sempre gli stessi gruppi muscolari e per favorire uno sviluppo armonico del corpo. Un programma ben strutturato tiene conto dell’intensità, del volume e della frequenza degli allenamenti, insieme ai tempi di recupero, per permettere progressi continui.</p>
 
-<p>Infine, l’allenamento regolare e il recupero equilibrato non migliorano solo la performance fisica, ma hanno anche effetti positivi sulla salute mentale, riducendo lo stress, migliorando l’umore e favorendo il benessere generale.</p>
+<p>Infine, l’allenamento regolare e il recupero equilibrato non migliorano solo la performance fisica, ma hanno anche effetti positivi sulla salute mentale, riducendo lo stress, migliorando l’umore e favorendo il benessere generale.
+</p>
+            <p><strong>Conclusione</strong><br>
+            In sintesi, l'allenamento e il recupero sono due aspetti imprescindibili e complementari per migliorare le prestazioni fisiche e mantenere la salute. Allenarsi con criterio e dedicare la giusta attenzione al recupero permette di ottenere risultati duraturi, prevenire infortuni e vivere in modo più sano e equilibrato.</p>
+          </div>
+        </div>
 
-<p><strong>Conclusione</strong><br>
-In sintesi, l’allenamento e il recupero sono due aspetti imprescindibili e complementari per migliorare le prestazioni fisiche e mantenere la salute. Allenarsi con criterio e dedicare la giusta attenzione al recupero permette di ottenere risultati duraturi, prevenire infortuni e vivere in modo più sano e equilibrato.</p>
-      </article>
-
-      <!-- Materia: Matematica -->
-      <article class="materia">
-       <button class="accordion" data-it="Matematica" data-en="Matematica">Matematica</button>
-    <div class="panel">
-      <img src="Materie/matematica.jfif" alt="Matematica" />
-        <p><strong>Il calcolo combinatorio: principi e applicazioni</strong></p>
-
-<p>Il calcolo combinatorio è una branca della matematica che studia i modi in cui è possibile combinare, ordinare o selezionare elementi di un insieme secondo precise regole. È fondamentale in molti campi, dalla statistica all’informatica, perché aiuta a determinare il numero di configurazioni possibili in situazioni diverse.</p>
-
-<p><strong>Principi base del calcolo combinatorio</strong></p>
+        <!-- Materia: Matematica -->
+        <div class="subject">
+          <div class="subject-header">
+            <span data-it="Matematica" data-en="Mathematics">Matematica</span>
+            <span class="arrow">▶</span>
+          </div>
+          <div class="subject-content">
+            <img src="Materie/matematica.jfif" alt="Matematica" />
+            <p><strong>Il calcolo combinatorio: principi e applicazioni</strong></p>
+            <p>Il calcolo combinatorio è una branca della matematica che studia i modi in cui è possibile combinare, ordinare o selezionare elementi di un insieme secondo precise regole. È fondamentale in molti campi, dalla statistica all'informatica, perché aiuta a determinare il numero di configurazioni possibili in situazioni diverse.</p>
+            <p><strong>Principi base del calcolo combinatorio</strong></p>
 
 <p>Le operazioni fondamentali del calcolo combinatorio sono:</p>
 <ul>
@@ -255,17 +221,19 @@ In sintesi, l’allenamento e il recupero sono due aspetti imprescindibili e com
 
 <p><strong>Conclusione</strong><br>
 Il calcolo combinatorio fornisce strumenti fondamentali per contare e organizzare oggetti e eventi in modo efficiente. Grazie a formule e principi semplici, è possibile risolvere problemi pratici e teorici che altrimenti sarebbero difficili da affrontare. La padronanza di questi concetti è essenziale per chi studia matematica, informatica o qualsiasi disciplina che richieda analisi di dati e possibilità.</p>
-      </article>
+          </div>
+        </div>
 
-      <!-- Materia: Educazione Civica -->
-      <article class="materia">
-        <button class="accordion" data-it="Educazione Civica" data-en="Educazione Civica">Educazione Civica</button>
-    <div class="panel">
-      <img src="Materie/civica.jfif" alt="Educazione Civica" />
-       <button id="toggleLangEnvironment">English</button>
-
-<section id="environment">
-  <p data-it="Il nostro pianeta affronta una delle sfide più importanti della sua storia: il cambiamento climatico. Questo fenomeno, ampiamente discusso nelle sezioni “Affrontare il cambiamento climatico” (pp. 60-61), è principalmente causato dall’aumento delle temperature medie della Terra, noto come riscaldamento globale, che modifica profondamente l’equilibrio naturale del pianeta."
+        <!-- Materia: Educazione Civica -->
+        <div class="subject">
+          <div class="subject-header">
+            <span data-it="Educazione Civica" data-en="Civic Education">Educazione Civica</span>
+            <span class="arrow">▶</span>
+          </div>
+          <div class="subject-content">
+            <img src="Materie/civica.jfif" alt="Educazione Civica" />
+            <button class="toggleLangEnvironment">English</button>
+            <p>data-it="Il nostro pianeta affronta una delle sfide più importanti della sua storia: il cambiamento climatico. Questo fenomeno, ampiamente discusso nelle sezioni “Affrontare il cambiamento climatico” (pp. 60-61), è principalmente causato dall’aumento delle temperature medie della Terra, noto come riscaldamento globale, che modifica profondamente l’equilibrio naturale del pianeta."
      data-en="Our planet is facing one of the most important challenges in its history: climate change. This phenomenon, extensively discussed in the sections 'Facing Climate Change' (pp. 60-61), is mainly caused by the increase of the Earth’s average temperatures, known as global warming, which deeply changes the natural balance of the planet.">
   </p>
 
@@ -287,11 +255,10 @@ Il calcolo combinatorio fornisce strumenti fondamentali per contare e organizzar
   <h3 data-it="Conclusione" data-en="Conclusion"></h3>
   <p data-it="Il cambiamento climatico è una sfida complessa e urgente che richiede impegno collettivo e scelte consapevoli. Come riassunto nella sezione “Riepilogo” (p. 63), solo attraverso un’azione coordinata e continua sarà possibile proteggere il nostro pianeta e garantire un futuro sano e stabile per le prossime generazioni."
      data-en="Climate change is a complex and urgent challenge that requires collective commitment and conscious choices. As summarized in the 'Summing Up' section (p. 63), only through coordinated and continuous action will it be possible to protect our planet and ensure a healthy and stable future for the next generations.">
-  </p>
-</section>
-      
-      </article>
-
+</p>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -300,5 +267,28 @@ Il calcolo combinatorio fornisce strumenti fondamentali per contare e organizzar
   </footer>
 
   <script src="script.js"></script>
+  <script>
+    // Script per il cambio lingua (originale preservato)
+    const toggleBtn = document.getElementById('toggleLang');
+    const elementsToTranslate = document.querySelectorAll('[data-it]');
+
+    toggleBtn.addEventListener('click', () => {
+      if(toggleBtn.textContent === 'English') {
+        elementsToTranslate.forEach(el => {
+          if (el.textContent !== el.getAttribute('data-en')) {
+            el.textContent = el.getAttribute('data-en');
+          }
+        });
+        toggleBtn.textContent = 'Italiano';
+      } else {
+        elementsToTranslate.forEach(el => {
+          if (el.textContent !== el.getAttribute('data-it')) {
+            el.textContent = el.getAttribute('data-it');
+          }
+        });
+        toggleBtn.textContent = 'English';
+      }
+    });
+  </script>
 </body>
 </html>
