@@ -2,55 +2,30 @@
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Materia</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <header>
+    <div class="navbar">
+      <button onclick="window.location.href='index.html'">Biografia</button>
+      <button onclick="window.location.href='materie.html'">Materie</button>
+      <button onclick="window.location.href='pcto.html'">PCTO</button>
+      <button id="langToggle" onclick="toggleLanguage()">EN</button>
+    </div>
+    <h1 id="nomeMateria">Materia</h1>
+  </header>
 
-  <nav>
-    <a href="index.html">Biografia</a>
-    <a href="materie.html">Materie</a>
-    <a href="pcto.html">PCTO</a>
-  </nav>
-
-  <main>
-    <button id="back" onclick="location.href='materie.html'">← Torna a Materie</button>
-    <h1 id="titoloMateria">Materia</h1>
-    <p id="contenutoMateria">Caricamento...</p>
+  <main class="materia-dettaglio">
+    <div id="contenutoMateria" class="contenuto">
+      <!-- Il contenuto della materia verrà inserito dinamicamente -->
+    </div>
   </main>
 
   <footer>
-    &copy; 2025 Cristian Ambrosini
+    <p>&copy; 2025 Cristian Ambrosini</p>
   </footer>
-
-  <script>
-    const contenutiMaterie = {
-      "Intelligenza Artificiale": "L’intelligenza artificiale è il ramo dell’informatica che studia la progettazione di sistemi capaci di svolgere compiti che richiedono intelligenza umana, come l’apprendimento, la risoluzione di problemi e il riconoscimento di pattern.",
-      "Scienze Motorie": "Le scienze motorie si occupano dello studio del movimento umano, dell’attività fisica e delle sue implicazioni sulla salute e sul benessere.",
-      "Sistemi e Reti": "Questa materia tratta i sistemi informatici e le reti di comunicazione, coprendo argomenti come protocolli, architetture di rete, sicurezza e gestione.",
-      "GPOI": "Gestione del Progetto, Organizzazione e Impresa è una materia che si concentra sugli aspetti organizzativi e gestionali delle aziende e dei progetti.",
-      "Storia": "Lo studio della storia consente di comprendere eventi, culture e sviluppi che hanno formato il mondo attuale.",
-      "Italiano": "Questa materia riguarda la lingua e la letteratura italiana, analizzando testi e sviluppando capacità di comprensione e produzione scritta.",
-      "TPSIT": "Tecnologie e Progettazione di Sistemi Informatici e Tecnologie è una materia tecnica focalizzata sui sistemi informatici e le loro applicazioni.",
-      "Educazione Civica": "L’educazione civica promuove la conoscenza dei diritti e doveri dei cittadini e stimola la partecipazione attiva alla vita sociale e politica."
-    };
-
-    function getQueryParam(param) {
-      const params = new URLSearchParams(window.location.search);
-      return params.get(param);
-    }
-
-    const nomeMateria = getQueryParam('nome');
-    if (nomeMateria && contenutiMaterie[nomeMateria]) {
-      document.getElementById('titoloMateria').textContent = nomeMateria;
-      document.getElementById('contenutoMateria').textContent = contenutiMaterie[nomeMateria];
-    } else {
-      document.getElementById('titoloMateria').textContent = "Materia non trovata";
-      document.getElementById('contenutoMateria').textContent = "Spiacenti, non è stato possibile trovare la materia richiesta.";
-    }
-  </script>
-
-  <script src="script.js"></script>
 </body>
 </html>
