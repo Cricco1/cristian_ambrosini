@@ -1,191 +1,181 @@
-/* style.css - stile più moderno e vivace */
-
 /* RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* FONT E COLORI */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
-
+/* BODY */
 body {
-  font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #f0faff, #d0f0ff);
-  color: #222;
+  background: #f0f4f8;
+  color: #333;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
-/* CONTAINER PRINCIPALE */
+/* HEADER & NAV BAR - stile unificato */
+header {
+  background: #004080;
+  padding: 15px 0;
+  text-align: center;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  background: #0073e6;
+  padding: 12px 0;
+  font-weight: 600;
+}
+
+nav button {
+  background: #0059b3;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 22px;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+nav button:hover, nav button:focus {
+  background: #003d66;
+  outline: none;
+}
+
+/* MAIN CONTENT */
 main {
-  flex: 1 0 auto;
-  padding: 2rem 2.5rem;
+  flex-grow: 1;
+  padding: 25px 15px;
+  max-width: 960px;
+  margin: 20px auto;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  min-height: 300px;
+}
+
+/* IMMAGINE BIOGRAFIA (amici.jpg) */
+.bio-image {
+  display: block;
+  max-width: 220px;
+  width: 90%;
+  height: auto;
+  margin: 0 auto 20px auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* BIOGRAFIA TESTO */
+.bio-content p {
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: #222;
+}
+
+/* BOTTONI MATERIE - layout a griglia centrata */
+.materie-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* NAVBAR UNIFICATA */
-nav {
-  background: #0d6efd; /* blu vivace */
-  display: flex;
-  justify-content: center;
-  gap: 1.2rem;
-  padding: 1.3rem 0;
-  box-shadow: 0 4px 15px rgba(13,110,253,0.5);
-  position: sticky;
-  top: 0;
-  z-index: 100;
-}
-
-nav button {
-  background: linear-gradient(45deg, #ff7e5f, #feb47b); /* arancio gradiente */
-  border: none;
+.materia-button {
+  background: #0073e6;
+  border-radius: 10px;
   color: white;
-  font-weight: 700;
-  font-size: 1.2rem;
-  padding: 0.7rem 1.8rem;
-  border-radius: 12px;
-  cursor: pointer;
-  box-shadow: 0 5px 15px rgba(255,126,95,0.6);
-  transition: all 0.3s ease;
-  user-select: none;
-  min-width: 130px;
-}
-
-nav button:hover,
-nav button.active {
-  background: linear-gradient(45deg, #feb47b, #ff7e5f);
-  box-shadow: 0 8px 20px rgba(254,180,123,0.9);
-  transform: scale(1.05);
-}
-
-/* BIOGRAFIA */
-.bio-content {
-  max-width: 700px;
-  margin: 2.5rem auto;
-  font-size: 1.3rem;
-  color: #1a1a1a;
-  line-height: 1.55;
-  text-align: justify;
-}
-
-.bio-content p {
-  margin-bottom: 1.5rem;
-}
-
-.bio-image {
-  display: block;
-  max-width: 180px;
-  width: 100%;
-  margin: 2rem auto 3rem;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(255,126,95,0.4);
-  object-fit: cover;
-  border: 4px solid #feb47b;
-}
-
-/* PCTO */
-.pcto-content {
-  max-width: 720px;
-  margin: 2.5rem auto;
-  font-size: 1.25rem;
-  color: #1a1a1a;
-  text-align: justify;
-  line-height: 1.6;
-  padding: 0 0.5rem;
-}
-
-/* MATERIE - GRIGLIA */
-.materie-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
-  gap: 1.8rem;
-  max-width: 960px;
-  margin: 2rem auto 3rem;
-  padding: 0 1rem;
-}
-
-.materie-grid button {
-  background: linear-gradient(135deg, #11998e, #38ef7d); /* verde acqua */
-  color: white;
-  font-weight: 700;
+  padding: 18px 10px;
   font-size: 1.15rem;
-  border-radius: 18px;
-  padding: 1.2rem 0;
-  cursor: pointer;
-  box-shadow: 0 6px 20px rgba(56,239,125,0.5);
-  border: none;
-  width: 100%;
+  font-weight: 600;
   text-align: center;
-  user-select: none;
-  transition: background 0.35s ease, transform 0.3s ease;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.12);
 }
 
-.materie-grid button:hover {
-  background: linear-gradient(135deg, #38ef7d, #11998e);
-  box-shadow: 0 10px 30px rgba(17,153,142,0.9);
-  transform: scale(1.08);
+.materia-button:hover, .materia-button:focus {
+  background: #0059b3;
+  outline: none;
 }
 
-/* PAGINA MATERIA */
-.materia-page {
-  max-width: 840px;
-  margin: 3rem auto;
-  font-size: 1.3rem;
-  color: #222;
-}
-
-.materia-page textarea {
-  width: 100%;
-  min-height: 320px;
-  font-size: 1.15rem;
-  padding: 1.3rem;
-  border-radius: 16px;
-  border: 2px solid #38ef7d;
-  resize: vertical;
-  font-family: 'Poppins', sans-serif;
-  color: #222;
-  background-color: #e6fff9;
-  box-shadow: inset 0 4px 10px rgba(56,239,125,0.4);
+/* Immagine nelle materie */
+.materia-button img {
+  width: 80px;
+  height: 80px;
+  margin-bottom: 12px;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
 }
 
 /* FOOTER */
 footer {
-  flex-shrink: 0;
-  background: #0d6efd;
+  background: #004080;
   color: white;
   text-align: center;
-  padding: 1.3rem 0;
-  font-size: 1rem;
-  font-weight: 600;
-  box-shadow: 0 -3px 15px rgba(13,110,253,0.7);
+  padding: 14px 10px;
+  font-size: 0.9rem;
+  margin-top: 30px;
   user-select: none;
 }
 
-/* RESPONSIVE */
-@media (max-width: 480px) {
+/* TEXTAREA MATERIA PAGE */
+.materia-page textarea {
+  width: 100%;
+  min-height: 300px;
+  font-size: 1.1rem;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #aaa;
+  resize: vertical;
+  font-family: inherit;
+  box-shadow: inset 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* BOTTONI LINGUA */
+.language-buttons {
+  position: fixed;
+  top: 18px;
+  right: 18px;
+  display: flex;
+  gap: 8px;
+  z-index: 100;
+}
+
+.language-buttons button {
+  background: #0073e6;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.language-buttons button:hover {
+  background: #0059b3;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
   nav {
-    flex-wrap: wrap;
-    gap: 0.8rem;
-    padding: 1rem 0;
+    flex-direction: column;
+    gap: 10px;
   }
-  nav button {
-    min-width: 100px;
-    font-size: 1rem;
-    padding: 0.6rem 1rem;
-  }
-  .materie-grid {
-    grid-template-columns: repeat(auto-fit,minmax(140px,1fr));
-    gap: 1rem;
-  }
-  .bio-content, .pcto-content {
-    font-size: 1.1rem;
-    padding: 0 1rem;
-  }
-  .materia-page textarea {
-    min-height: 260px;
+
+  .materie-container {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   }
 }
