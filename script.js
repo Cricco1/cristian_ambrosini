@@ -1,5 +1,7 @@
 // script.js
-
+function openMateria(nome) {
+  window.location.href = `materia.html?nome=${encodeURIComponent(nome)}`;
+}
 // --- Cambio lingua per Biografia ---
 function setLanguage(lang) {
   const bioParagraphs = document.querySelectorAll(".bio-content p");
