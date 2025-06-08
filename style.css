@@ -116,3 +116,29 @@ footer {
   resize: vertical;
   font-family: inherit;
 }
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  justify-items: center;
+}
+
+.materia-card {
+  display: block;
+  background-color: #f0f0f0;
+  border-radius: 12px;
+  padding: 1.2rem;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  color: #333;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.materia-card:hover {
+  background-color: #dceeff;
+  transform: scale(1.05);
+}
