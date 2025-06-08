@@ -5,19 +5,31 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Biografia</title>
   <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
 </head>
 <body>
 
-  <nav>
-    <a href="index.html">Biografia</a>
-    <a href="materie.html">Materie</a>
-    <a href="pcto.html">PCTO</a>
-  </nav>
+<nav>
+  <button onclick="window.location.href='index.html'">Biografia</button>
+  <button onclick="window.location.href='materie.html'">Materie</button>
+  <button onclick="window.location.href='pcto.html'">PCTO</button>
+</nav>
 
-  <main>
-    <h1>Biografia</h1>
-    <img src="img/amici.jpg" alt="Amici" id="amici" />
-            <p data-it="Mi chiamo Cristian Ambrosini, ho 19 anni, e oggi mi ritrovo alla fine di un viaggio che, pur durato cinque anni, sembra essere passato in un battito di ciglia. Frequentare l'indirizzo Informatica all'IIS 'Marconi Pieralisi' di Jesi è stata una scelta che nasce dalla mia passione per la tecnologia, i videogiochi e il mondo digitale. Ma quello che non potevo immaginare il primo giorno, seduto su quei banchi con lo zaino ancora rigido e la testa piena di sogni, era quanto questa scuola mi avrebbe cambiato.." data-en="My name is Cristian Ambrosini, I'm 19 years old, and today I find myself at the end of a journey that, although lasting five years, seems to have passed in the blink of an eye. Attending the Computer Science program at IIS 'Marconi Pieralisi' in Jesi was a choice born from my passion for technology, videogames, and the digital world. But what I could not imagine on the first day, sitting on those desks with my backpack still stiff and my head full of dreams, was how much this school would change me...">
+<div class="language-buttons">
+  <button id="btnIt">IT</button>
+  <button id="btnEn">EN</button>
+</div>
+
+<main>
+  <img src="amici.jpg" alt="Foto amici" class="bio-image" />
+  <div class="bio-content">
+    <p data-it="Ciao, sono Cristian Ambrosini, questo è il mio sito personale." 
+       data-en="Hi, I'm Cristian Ambrosini, this is my personal website.">
+      Ciao, sono Cristian Ambrosini, questo è il mio sito personale.
+    </p>
+    <p data-it="Benvenuto nella mia biografia, qui puoi trovare informazioni su di me."
+       data-en="Welcome to my biography, here you can find information about me.">
+       <p data-it="Mi chiamo Cristian Ambrosini, ho 19 anni, e oggi mi ritrovo alla fine di un viaggio che, pur durato cinque anni, sembra essere passato in un battito di ciglia. Frequentare l'indirizzo Informatica all'IIS 'Marconi Pieralisi' di Jesi è stata una scelta che nasce dalla mia passione per la tecnologia, i videogiochi e il mondo digitale. Ma quello che non potevo immaginare il primo giorno, seduto su quei banchi con lo zaino ancora rigido e la testa piena di sogni, era quanto questa scuola mi avrebbe cambiato.." data-en="My name is Cristian Ambrosini, I'm 19 years old, and today I find myself at the end of a journey that, although lasting five years, seems to have passed in the blink of an eye. Attending the Computer Science program at IIS 'Marconi Pieralisi' in Jesi was a choice born from my passion for technology, videogames, and the digital world. But what I could not imagine on the first day, sitting on those desks with my backpack still stiff and my head full of dreams, was how much this school would change me...">
           Mi chiamo Cristian Ambrosini, ho 19 anni, e oggi mi ritrovo alla fine di un viaggio che, pur durato cinque anni, sembra essere passato in un battito di ciglia. Frequentare l'indirizzo Informatica all'IIS "Marconi Pieralisi" di Jesi è stata una scelta che nasce dalla mia passione per la tecnologia, i videogiochi e il mondo digitale. Ma quello che non potevo immaginare il primo giorno, seduto su quei banchi con lo zaino ancora rigido e la testa piena di sogni, era quanto questa scuola mi avrebbe cambiato..
         </p>
         <p data-it="In questi anni non ho solo imparato a programmare, ma ho imparato a conoscermi. Ho scoperto il valore delle relazioni, il senso profondo della collaborazione, e quanto possa essere potente il sentirsi parte di qualcosa. Le gite scolastiche, i momenti di condivisione e persino le difficoltà ci hanno unito come classe, trasformandoci da semplici compagni in una famiglia vera e propria. Oggi porto con me legami che sanno di affetto sincero, costruiti giorno dopo giorno, sorriso dopo sorriso." data-en="In these years I not only learned to program, but I also learned to know myself. I discovered the value of relationships, the deep meaning of collaboration, and how powerful it can be to feel part of something. School trips, moments of sharing and even difficulties united us as a class, transforming us from simple classmates into a true family. Today I carry with me bonds that feel like sincere affection, built day by day, smile after smile.">
@@ -32,12 +44,14 @@
         <p data-it="Chiudo questo capitolo con gratitudine, con il cuore pieno di ricordi e con la voglia di affrontare ciò che verrà, portando con me tutto quello che questi cinque anni mi hanno insegnato." data-en="I close this chapter with gratitude, with a heart full of memories and with the desire to face what will come, carrying with me everything these five years have taught me.">
           Chiudo questo capitolo con gratitudine, con il cuore pieno di ricordi e con la voglia di affrontare ciò che verrà, portando con me tutto quello che questi cinque anni mi hanno insegnato.
         </p>
-  </main>
+    </p>
+  </div>
+</main>
 
-  <footer>
-    &copy; 2025 Cristian Ambrosini
-  </footer>
-  <script src="script.js"></script>
+<footer>
+  <p>&copy; 2025 Cristian Ambrosini</p>
+</footer>
+
 </body>
 </html>
 
