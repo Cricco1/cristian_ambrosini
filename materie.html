@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cristian Ambrosini - Materie</title>
+  <title>Materie - Cristian Ambrosini</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
 <body>
   <header>
@@ -19,87 +18,15 @@
   </header>
 
   <main>
-    <section class="materie-section">
-      <div class="container">
-        <div class="section-title">
-          <h2>Materie di Studio</h2>
-          <p>Esplora le discipline che caratterizzano il mio percorso scolastico</p>
-        </div>
+    <section id="materie">
+      <h1 data-it="Materie" data-en="Subjects">Materie</h1>
+      <button id="toggleLang" aria-label="Switch Language">English</button>
 
-        <div class="materie-grid">
-          <!-- Card template: cambia href e icona per ogni materia -->
-
-          <a href="materia-intelligenza-artificiale.html" class="materia-card">
-            <div class="card-header">
-              <i class="fas fa-robot"></i>
-              <h3>Intelligenza Artificiale</h3>
-            </div>
-          </a>
-
-          <a href="materia-inglese.html" class="materia-card">
-            <div class="card-header">
-              <i class="fas fa-language"></i>
-              <h3>Inglese</h3>
-            </div>
-          </a>
-
-          <a href="materia-scienze-motorie.html" class="materia-card">
-            <div class="card-header">
-              <i class="fas fa-dumbbell"></i>
-              <h3>Scienze Motorie</h3>
-            </div>
-          </a>
-
-          <a href="materia-sistemi-reti.html" class="materia-card">
-            <div class="card-header">
-              <i class="fas fa-network-wired"></i>
-              <h3>Sistemi e Reti</h3>
-            </div>
-          </a>
-
-          <a href="materia-educazione-civica.html" class="materia-card">
-            <div class="card-header">
-              <i class="fas fa-balance-scale"></i>
-              <h3>Educazione Civica</h3>
-            </div>
-          </a>
-
-          <a href="materia-gpoi.html" class="materia-card">
-            <div class="card-header">
-              <i class="fas fa-project-diagram"></i>
-              <h3>GPOI</h3>
-            </div>
-          </a>
-
-          <a href="materia-storia.html" class="materia-card">
-            <div class="card-header">
-              <i class="fas fa-landmark"></i>
-              <h3>Storia</h3>
-            </div>
-          </a>
-
-          <a href="materia-italiano.html" class="materia-card">
-            <div class="card-header">
-              <i class="fas fa-book"></i>
-              <h3>Italiano</h3>
-            </div>
-          </a>
-
-          <a href="materia-matematica.html" class="materia-card">
-            <div class="card-header">
-              <i class="fas fa-calculator"></i>
-              <h3>Matematica</h3>
-            </div>
-          </a>
-
-          <a href="materia-tipsit.html" class="materia-card">
-            <div class="card-header">
-              <i class="fas fa-cogs"></i>
-              <h3>TIPSIT</h3>
-            </div>
-          </a>
-
-        </div>
+      <div class="materie-container">
+        <a href="materia1.html" class="materia-card" data-it="Informatica" data-en="Computer Science">Informatica</a>
+        <a href="materia2.html" class="materia-card" data-it="Matematica" data-en="Mathematics">Matematica</a>
+        <a href="materia3.html" class="materia-card" data-it="Inglese" data-en="English">Inglese</a>
+        <!-- aggiungi altre materie qui -->
       </div>
     </section>
   </main>
@@ -107,5 +34,7 @@
   <footer>
     <p>© 2025 Cristian Ambrosini</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
