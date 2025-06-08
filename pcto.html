@@ -18,17 +18,15 @@
   </header>
 
   <main>
-    <section id="pcto" class="content-section">
+    <section id="pcto">
       <h1 data-it="PCTO" data-en="PCTO">PCTO</h1>
-      <button id="toggleLangPCTO" aria-label="Switch Language" class="lang-toggle">English</button>
+      <button id="toggleLangPCTO" aria-label="Switch Language">English</button>
 
-      <div class="image-container">
-        <img src="img/azienda.jpg" alt="Sede Ariston Group" class="responsive-img" />
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="img/azienda.jpg" alt="Sede Ariston Group" style="max-width: 100%; border-radius: 12px;" />
       </div>
 
-      <h3 data-it="🧩 Prima fase: analisi dell'azienda e progettazione" data-en="🧩 First phase: company analysis and design">
-        🧩 Prima fase: analisi dell'azienda e progettazione
-      </h3>
+      <h3 data-it="🧩 Prima fase: analisi dell'azienda e progettazione" data-en="🧩 First phase: company analysis and design">🧩 Prima fase: analisi dell'azienda e progettazione</h3>
       <p data-it="La prima parte del percorso è stata dedicata allo studio della struttura aziendale. Ho analizzato il funzionamento dell’ufficio tecnico e dei suoi flussi operativi, osservando l’uso di strumenti per la gestione dei dati e la configurazione dei moduli tecnici. L’ambiente lavorativo era ben organizzato e orientato all’efficienza: ogni reparto aveva un ruolo chiaro e definito."
          data-en="The first part of the path was dedicated to studying the company's structure. I analyzed the functioning of the technical office and its operational flows, observing the use of tools for data management and the configuration of technical modules. The work environment was well organized and efficiency-oriented: each department had a clear and defined role.">
         La prima parte del percorso è stata dedicata allo studio della struttura aziendale. Ho analizzato il funzionamento dell’ufficio tecnico e dei suoi flussi operativi, osservando l’uso di strumenti per la gestione dei dati e la configurazione dei moduli tecnici. L’ambiente lavorativo era ben organizzato e orientato all’efficienza: ogni reparto aveva un ruolo chiaro e definito.
@@ -38,9 +36,7 @@
         Parallelamente, ho iniziato a lavorare alla progettazione di un software chiamato ModParser, ideato per leggere file contenenti configurazioni tecniche dei moduli aziendali e trasformarli in dati ordinati, esportabili in formato Excel.
       </p>
 
-      <h3 data-it="💻 Seconda fase: sviluppo e presentazione finale" data-en="💻 Second phase: development and final presentation">
-        💻 Seconda fase: sviluppo e presentazione finale
-      </h3>
+      <h3 data-it="💻 Seconda fase: sviluppo e presentazione finale" data-en="💻 Second phase: development and final presentation">💻 Seconda fase: sviluppo e presentazione finale</h3>
       <p data-it="Nel secondo periodo del PCTO ho sviluppato in autonomia ModParser, realizzando uno script capace di analizzare i file tecnici e popolare automaticamente fogli Excel con i dati estratti. Questo strumento aveva lo scopo di automatizzare e velocizzare un processo che prima richiedeva molte ore di lavoro manuale."
          data-en="In the second period of PCTO, I independently developed ModParser, creating a script capable of analyzing technical files and automatically populating Excel sheets with the extracted data. This tool aimed to automate and speed up a process that previously took many hours of manual work.">
         Nel secondo periodo del PCTO ho sviluppato in autonomia ModParser, realizzando uno script capace di analizzare i file tecnici e popolare automaticamente fogli Excel con i dati estratti. Questo strumento aveva lo scopo di automatizzare e velocizzare un processo che prima richiedeva molte ore di lavoro manuale.
@@ -50,8 +46,8 @@
         Ho poi presentato il progetto ai responsabili dell’ufficio tecnico in una sala conferenze, illustrando le funzionalità e i benefici apportati. L’esperienza mi ha insegnato molto sull’importanza della comunicazione efficace e del lavoro di squadra.
       </p>
 
-      <div class="image-container">
-        <img src="img/sala_conferenze.jpg" alt="Sala conferenze per la presentazione" class="responsive-img" />
+      <div style="text-align: center; margin: 20px 0;">
+        <img src="img/sala_conferenze.jpg" alt="Sala conferenze per la presentazione" style="max-width: 100%; border-radius: 12px;" />
       </div>
 
       <h3 data-it="📝 Giudizio personale" data-en="📝 Personal judgment">📝 Giudizio personale</h3>
@@ -66,17 +62,6 @@
     <p>© 2025 Cristian Ambrosini</p>
   </footer>
 
-  <script>
-    const toggleBtnPCTO = document.getElementById('toggleLangPCTO');
-    const elementsPCTO = document.querySelectorAll('#pcto [data-it]');
-
-    toggleBtnPCTO.addEventListener('click', () => {
-      const isEnglish = toggleBtnPCTO.textContent === 'English';
-      elementsPCTO.forEach(el => {
-        el.textContent = el.getAttribute(isEnglish ? 'data-en' : 'data-it');
-      });
-      toggleBtnPCTO.textContent = isEnglish ? 'Italiano' : 'English';
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
