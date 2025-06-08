@@ -112,5 +112,20 @@
       if (btnEn) btnEn.addEventListener("click", () => setLanguage("en"));
     });
   </script>
+  <script>
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+      // Imposta classe active sul bottone corrente (opzionale)
+      const pathname = window.location.pathname.split('/').pop();
+      document.querySelectorAll('.navbar button').forEach(btn => {
+        const href = btn.getAttribute('onclick').match(/'(.*?)'/)[1];
+        if (href === pathname) {
+          btn.classList.add('active');
+        }
+      });
+    });
+</script>
 </body>
 </html>
