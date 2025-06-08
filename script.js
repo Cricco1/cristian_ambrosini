@@ -24,3 +24,18 @@ function setupLanguageToggle(buttonId, selector) {
 setupLanguageToggle('toggleLangBiografia', '#biografia [data-it]');
 setupLanguageToggle('toggleLangPCTO', '#pcto [data-it]');
 setupLanguageToggle('toggleLangMaterie', '#materie [data-it]');
+// Accordion per Materie
+document.querySelectorAll('.accordion').forEach(button => {
+  button.addEventListener('click', () => {
+    // Toggle classe active al bottone
+    button.classList.toggle('active');
+
+    // Toggle display del pannello associato (il div subito dopo il bottone)
+    const panel = button.nextElementSibling;
+    if (panel.style.display === 'block') {
+      panel.style.display = 'none';
+    } else {
+      panel.style.display = 'block';
+    }
+  });
+});
