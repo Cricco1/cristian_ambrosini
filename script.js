@@ -41,3 +41,21 @@ document.querySelectorAll('.accordion').forEach(button => {
     }
   });
 });
+document.querySelectorAll('.accordion').forEach((accordionBtn, index) => {
+  accordionBtn.addEventListener('click', () => {
+    const allAccordions = document.querySelectorAll('.accordion');
+    const allPanels = document.querySelectorAll('.panel');
+
+    allAccordions.forEach((btn, i) => {
+      if (i === index) {
+        // Toggle corrente
+        btn.classList.toggle("active");
+        allPanels[i].style.display = btn.classList.contains("active") ? "block" : "none";
+      } else {
+        // Chiudi gli altri
+        btn.classList.remove("active");
+        allPanels[i].style.display = "none";
+      }
+    });
+  });
+});
