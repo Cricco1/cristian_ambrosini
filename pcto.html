@@ -1,46 +1,52 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>PCTO - Cristian Ambrosini</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Biografia</a></li>
-        <li><a href="pcto.html" class="active">PCTO</a></li>
-        <li><a href="materie.html">Materie</a></li>
-      </ul>
-    </nav>
+    <h1 data-it="Percorsi per le Competenze Trasversali e l'Orientamento" data-en="Work-based Learning Experiences">
+      Percorsi per le Competenze Trasversali e l'Orientamento
+    </h1>
+    <button id="lang-btn">EN</button>
   </header>
 
-  <main>
-    <section id="pcto">
-      <h1 data-it="PCTO" data-en="PCTO">PCTO</h1>
-      <button id="toggleLang" aria-label="Switch Language">English</button>
-
-      <div style="text-align: center; margin: 20px 0;">
-        <img src="img/azienda.jpg" alt="Sede Ariston Group" class="responsive-img" />
+  <main class="container">
+    <section class="card-grid">
+      <div class="card">
+        <img src="img/azienda1.jpg" alt="Esperienza Azienda 1">
+        <h2 data-it="Stage presso Azienda 1" data-en="Internship at Company 1">Stage presso Azienda 1</h2>
+        <p data-it="Durante il terzo anno ho partecipato a uno stage..." data-en="During the third year I participated in an internship...">
+          Durante il terzo anno ho partecipato a uno stage presso un'azienda locale dove ho appreso le basi dello sviluppo web.
+        </p>
       </div>
 
-      <h3 data-it="🧩 Prima fase: analisi dell'azienda e progettazione" data-en="🧩 First phase: company analysis and design">🧩 Prima fase: analisi dell'azienda e progettazione</h3>
-      <p data-it="La prima parte del percorso è stata dedicata allo studio della struttura aziendale. Ho analizzato il funzionamento dell’ufficio tecnico e dei vari reparti. Questa fase mi ha permesso di comprendere l’importanza dell’organizzazione interna." data-en="The first part of the path was dedicated to studying the company structure. I analyzed the operation of the technical office and various departments. This phase allowed me to understand the importance of internal organization.">
-        La prima parte del percorso è stata dedicata allo studio della struttura aziendale. Ho analizzato il funzionamento dell’ufficio tecnico e dei vari reparti. Questa fase mi ha permesso di comprendere l’importanza dell’organizzazione interna.
-      </p>
+      <div class="card">
+        <img src="img/azienda2.jpg" alt="Esperienza Azienda 2">
+        <h2 data-it="Progetto di gruppo" data-en="Group Project">Progetto di gruppo</h2>
+        <p data-it="Abbiamo lavorato a un sito per la gestione eventi scolastici..." data-en="We worked on a website for managing school events...">
+          Abbiamo lavorato a un sito per la gestione eventi scolastici, imparando la collaborazione e l'uso di GitHub.
+        </p>
+      </div>
 
-      <h3 data-it="🔧 Seconda fase: progettazione e programmazione di un software" data-en="🔧 Second phase: design and programming of software">🔧 Seconda fase: progettazione e programmazione di un software</h3>
-      <p data-it="Ho collaborato alla realizzazione di un software gestionale, occupandomi della parte di programmazione e test. Questa esperienza ha rafforzato le mie competenze in sviluppo e problem solving." data-en="I collaborated on the creation of a management software, dealing with programming and testing. This experience strengthened my skills in development and problem solving.">
-        Ho collaborato alla realizzazione di un software gestionale, occupandomi della parte di programmazione e test. Questa esperienza ha rafforzato le mie competenze in sviluppo e problem solving.
-      </p>
+      <div class="card">
+        <img src="img/presentazione.jpg" alt="Presentazione finale">
+        <h2 data-it="Presentazione finale" data-en="Final Presentation">Presentazione finale</h2>
+        <p data-it="Abbiamo presentato i nostri progetti a una commissione di docenti..." data-en="We presented our projects to a panel of teachers...">
+          Abbiamo presentato i nostri progetti a una commissione di docenti, affinando le capacità comunicative.
+        </p>
+      </div>
     </section>
   </main>
 
   <footer>
-    <p>© 2025 Cristian Ambrosini</p>
+    <p>&copy; 2025 Cristian Ambrosini</p>
   </footer>
 
   <script src="script.js"></script>
