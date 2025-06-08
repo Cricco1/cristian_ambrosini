@@ -3,51 +3,67 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Biografia - Cristian Ambrosini</title>
+  <title>Sito scolastico - Cristian Ambrosini</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
   <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
 </head>
 <body>
   <header>
-    <h1>Biografia</h1>
-    <button id="langBtn">🇮🇹 / 🇬🇧</button>
+    <div class="header-content">
+      <div class="lang-container">
+        <button id="langBtn">🇮🇹 / 🇬🇧</button>
+      </div>
+      <h1 class="main-title">Sito scolastico</h1>
+      <div class="nav-container">
+        <nav class="main-nav">
+          <button class="nav-btn active" data-page="bio">Biografia</button>
+          <button class="nav-btn" data-page="pcto">PCTO</button>
+          <button class="nav-btn" data-page="materia">Materie</button>
+        </nav>
+      </div>
+    </div>
   </header>
 
-  <main class="bio-section">
-    <div class="bio-image-container">
-      <img src="img/amici.jpg" alt="Cristian Ambrosini" class="bio-image" />
-    </div>
+  <main>
+    <section id="bio" class="page-section active bio-section">
+      <div class="bio-image-container">
+        <img src="img/amici.jpg" alt="Cristian Ambrosini" class="bio-image" />
+      </div>
 
-    <div class="bio-content">
-      <p data-it="Mi chiamo Cristian Ambrosini, ho 19 anni..." data-en="My name is Cristian Ambrosini, I'm 19 years old...">
-        Mi chiamo Cristian Ambrosini, ho 19 anni, e oggi mi ritrovo alla fine di un viaggio che, pur durato cinque anni, sembra essere passato in un battito di ciglia...
-      </p>
-      <p data-it="In questi anni non ho solo imparato a programmare..." data-en="In these years I not only learned to program...">
-        In questi anni non ho solo imparato a programmare, ma ho imparato a conoscermi...
-      </p>
-      <p data-it="Sono entrato come un ragazzo forse un po' ingenuo..." data-en="I entered as a boy maybe a bit naive...">
-        Sono entrato come un ragazzo forse un po' ingenuo, incerto su chi fosse e su cosa volesse diventare...
-      </p>
-      <p data-it="Fuori dalla scuola, mi lascio ispirare..." data-en="Outside of school, I let myself be inspired...">
-        Fuori dalla scuola, mi lascio ispirare da tutto ciò che stimola la mia creatività...
-      </p>
-      <p data-it="Chiudo questo capitolo con gratitudine..." data-en="I close this chapter with gratitude...">
-        Chiudo questo capitolo con gratitudine, con il cuore pieno di ricordi...
-      </p>
-    </div>
+      <div class="bio-content">
+        <p data-it="Mi chiamo Cristian Ambrosini, ho 19 anni, e oggi mi ritrovo alla fine di un viaggio che, pur durato cinque anni, sembra essere passato in un battito di ciglia. Frequentare l'indirizzo Informatica all'IIS 'Marconi Pieralisi' di Jesi è stata una scelta che nasce dalla mia passione per la tecnologia, i videogiochi e il mondo digitale. Ma quello che non potevo immaginare il primo giorno, seduto su quei banchi con lo zaino ancora rigido e la testa piena di sogni, era quanto questa scuola mi avrebbe cambiato.." data-en="My name is Cristian Ambrosini, I'm 19 years old, and today I find myself at the end of a journey that, although lasting five years, seems to have passed in the blink of an eye. Attending the Computer Science program at IIS 'Marconi Pieralisi' in Jesi was a choice born from my passion for technology, videogames, and the digital world. But what I could not imagine on the first day, sitting on those desks with my backpack still stiff and my head full of dreams, was how much this school would change me...">
+          Mi chiamo Cristian Ambrosini, ho 19 anni, e oggi mi ritrovo alla fine di un viaggio che, pur durato cinque anni, sembra essere passato in un battito di ciglia. Frequentare l'indirizzo Informatica all'IIS "Marconi Pieralisi" di Jesi è stata una scelta che nasce dalla mia passione per la tecnologia, i videogiochi e il mondo digitale. Ma quello che non potevo immaginare il primo giorno, seduto su quei banchi con lo zaino ancora rigido e la testa piena di sogni, era quanto questa scuola mi avrebbe cambiato..
+        </p>
+        <p data-it="In questi anni non ho solo imparato a programmare, ma ho imparato a conoscermi. Ho scoperto il valore delle relazioni, il senso profondo della collaborazione, e quanto possa essere potente il sentirsi parte di qualcosa. Le gite scolastiche, i momenti di condivisione e persino le difficoltà ci hanno unito come classe, trasformandoci da semplici compagni in una famiglia vera e propria. Oggi porto con me legami che sanno di affetto sincero, costruiti giorno dopo giorno, sorriso dopo sorriso." data-en="In these years I not only learned to program, but I also learned to know myself. I discovered the value of relationships, the deep meaning of collaboration, and how powerful it can be to feel part of something. School trips, moments of sharing and even difficulties united us as a class, transforming us from simple classmates into a true family. Today I carry with me bonds that feel like sincere affection, built day by day, smile after smile.">
+          In questi anni non ho solo imparato a programmare, ma ho imparato a conoscermi. Ho scoperto il valore delle relazioni, il senso profondo della collaborazione, e quanto possa essere potente il sentirsi parte di qualcosa. Le gite scolastiche, i momenti di condivisione e persino le difficoltà ci hanno unito come classe, trasformandoci da semplici compagni in una famiglia vera e propria. Oggi porto con me legami che sanno di affetto sincero, costruiti giorno dopo giorno, sorriso dopo sorriso.
+        </p>
+        <p data-it="Sono entrato come un ragazzo forse un po' ingenuo, incerto su chi fosse e su cosa volesse diventare. Esco come una persona che ha imparato a credere in sé stessa, che ha imparato ad ascoltare gli altri, a lavorare in gruppo, ad essere più aperta, più empatica, più consapevole dei propri limiti e delle proprie forze." data-en="I entered as a boy maybe a bit naive, uncertain of who he was and what he wanted to become. I leave as a person who has learned to believe in herself, who has learned to listen to others, to work in a group, to be more open, more empathetic, more aware of her own limits and strengths.">
+          Sono entrato come un ragazzo forse un po' ingenuo, incerto su chi fosse e su cosa volesse diventare. Esco come una persona che ha imparato a credere in sé stessa, che ha imparato ad ascoltare gli altri, a lavorare in gruppo, ad essere più aperta, più empatica, più consapevole dei propri limiti e delle proprie forze.
+        </p>
+        <p data-it="Fuori dalla scuola, mi lascio ispirare da tutto ciò che stimola la mia creatività: la palestra, i momenti con gli amici, il mondo dell'arte e del disegno digitale. Sono passioni che mi aiutano a esprimere ciò che a volte le parole non sanno dire. Amo il confronto, le idee che si incrociano, le energie che si sommano. Forse è questo che mi ha insegnato davvero la scuola: che insieme siamo più forti." data-en="Outside of school, I let myself be inspired by everything that stimulates my creativity: the gym, moments with friends, the world of art and digital drawing. These are passions that help me express what sometimes words cannot say. I love confrontation, ideas that intersect, energies that add up. Maybe this is what school really taught me: that together we are stronger.">
+          Fuori dalla scuola, mi lascio ispirare da tutto ciò che stimola la mia creatività: la palestra, i momenti con gli amici, il mondo dell'arte e del disegno digitale. Sono passioni che mi aiutano a esprimere ciò che a volte le parole non sanno dire. Amo il confronto, le idee che si incrociano, le energie che si sommano. Forse è questo che mi ha insegnato davvero la scuola: che insieme siamo più forti.
+        </p>
+        <p data-it="Chiudo questo capitolo con gratitudine, con il cuore pieno di ricordi e con la voglia di affrontare ciò che verrà, portando con me tutto quello che questi cinque anni mi hanno insegnato." data-en="I close this chapter with gratitude, with a heart full of memories and with the desire to face what will come, carrying with me everything these five years have taught me.">
+          Chiudo questo capitolo con gratitudine, con il cuore pieno di ricordi e con la voglia di affrontare ciò che verrà, portando con me tutto quello che questi cinque anni mi hanno insegnato.
+        </p>
+      </div>
+    </section>
+
+    <section id="pcto" class="page-section pcto-section">
+      <!-- Contenuto PCTO dal tuo file pcto.html -->
+    </section>
+
+    <section id="materia" class="page-section materia-section">
+      <!-- Contenuto Materie dal tuo file materia.html -->
+    </section>
   </main>
 
   <footer>
-    <nav>
-      <a href="materia.html">📚 Materie</a>
-      <a href="pcto.html">💼 PCTO</a>
-    </nav>
-    <p style="color: white;">&copy; 2025 Cristian Ambrosini</p>
+    <p>&copy; 2025 Cristian Ambrosini</p>
   </footer>
 
   <script>
+    // Funzionalità di cambio lingua
     const langBtn = document.getElementById("langBtn");
     let currentLang = "it";
 
@@ -55,6 +71,36 @@
       currentLang = currentLang === "it" ? "en" : "it";
       document.querySelectorAll("[data-it]").forEach(el => {
         el.textContent = el.dataset[currentLang];
+      });
+      
+      // Aggiorna il testo dei pulsanti di navigazione
+      if (currentLang === "en") {
+        document.querySelector('[data-page="bio"]').textContent = "Biography";
+        document.querySelector('[data-page="pcto"]').textContent = "PCTO";
+        document.querySelector('[data-page="materia"]').textContent = "Subjects";
+      } else {
+        document.querySelector('[data-page="bio"]').textContent = "Biografia";
+        document.querySelector('[data-page="pcto"]').textContent = "PCTO";
+        document.querySelector('[data-page="materia"]').textContent = "Materie";
+      }
+    });
+
+    // Funzionalità di navigazione tra le pagine
+    const navButtons = document.querySelectorAll(".nav-btn");
+    const sections = document.querySelectorAll(".page-section");
+
+    navButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        // Rimuovi la classe 'active' da tutti i pulsanti e sezioni
+        navButtons.forEach(btn => btn.classList.remove("active"));
+        sections.forEach(section => section.classList.remove("active"));
+        
+        // Aggiungi 'active' al pulsante cliccato
+        button.classList.add("active");
+        
+        // Mostra la sezione corrispondente
+        const targetSection = document.getElementById(button.dataset.page);
+        targetSection.classList.add("active");
       });
     });
   </script>
