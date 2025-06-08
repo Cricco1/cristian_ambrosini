@@ -1,39 +1,29 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Gestione dei pannelli delle materie
-    const subjectsContainer = document.querySelector('.subjects');
+    // Sistema "apri/chiudi" per le materie
+    const subjects = document.querySelectorAll('.subject');
     
-    subjectsContainer.addEventListener('click', (e) => {
-        const subjectCard = e.target.closest('.subject');
-        if (!subjectCard) return;
+    subjects.forEach(subject => {
+        const header = subject.querySelector('.subject-header');
+        const content = subject.querySelector('.subject-content');
+        const arrow = subject.querySelector('.arrow');
         
-        const subjectContent = subjectCard.querySelector('.subject-content');
-        const isOpen = subjectContent.style.maxHeight;
-        
-        // Chiudi tutti gli altri pannelli
-        document.querySelectorAll('.subject-content').forEach(content => {
-            if (content !== subjectContent) {
+        header.addEventListener('click', () => {
+            // Chiudi tutti gli altri
+            subjects.forEach(other => {
+                if (other !== subject) {
+                    other.querySelector('.subject-content').style.maxHeight = null;
+                    other.querySelector('.arrow').textContent = '▶';
+                }
+            });
+            
+            // Apri/chiudi questo
+            if (content.style.maxHeight) {
                 content.style.maxHeight = null;
-                content.previousElementSibling.querySelector('.arrow').textContent = '▶';
+                arrow.textContent = '▶';
+            } else {
+                content.style.maxHeight = content.scrollHeight + 'px';
+                arrow.textContent = '▼';
             }
         });
-        
-        // Apri/chiudi il pannello corrente
-        if (!isOpen) {
-            subjectContent.style.maxHeight = subjectContent.scrollHeight + 'px';
-            subjectCard.querySelector('.arrow').textContent = '▼';
-        } else {
-            subjectContent.style.maxHeight = null;
-            subjectCard.querySelector('.arrow').textContent = '▶';
-        }
     });
-    
-    // Animazione smooth per i pannelli
-    const style = document.createElement('style');
-    style.textContent = `
-        .subject-content {
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-        }
-    `;
-    document.head.appendChild(style);
 });
