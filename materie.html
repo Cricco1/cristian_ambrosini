@@ -1,294 +1,231 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Materie - Cristian Ambrosini</title>
-  <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cristian Ambrosini - Materie</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* STILE SOLO PER LA SEZIONE MATERIE */
+        .materie-section {
+            padding: 5rem 0;
+            background-color: #f5f7ff;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: #4361ee;
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            color: #6c757d;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #4895ef;
+            border-radius: 2px;
+        }
+        
+        .materie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .materia-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        
+        .materia-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-header {
+            background: #4361ee;
+            color: white;
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .card-header i {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .card-header h3 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .card-body p {
+            margin-bottom: 1.5rem;
+            color: #6c757d;
+            flex-grow: 1;
+        }
+        
+        .card-footer {
+            padding: 0 1.5rem 1.5rem;
+            display: flex;
+            justify-content: center;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 10px 25px;
+            background: #4361ee;
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #4361ee;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: #4361ee;
+            transform: translateY(-3px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .materie-section {
+                padding: 3rem 0;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Biografia</a></li>
-        <li><a href="pcto.html">PCTO</a></li>
-        <li><a href="materie.html" class="active">Materie</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main>
-    <section id="materie">
-      <h1 data-it="Materie" data-en="Subjects">Materie</h1>
-      <button id="toggleLang" aria-label="Switch Language">English</button>
-      
-      <div class="subjects-container">
-        <!-- Materia: Italiano -->
-        <div class="subject">
-          <div class="subject-header">
-            <span data-it="Italiano" data-en="Italian">Italiano</span>
-            <span class="arrow">▶</span>
-          </div>
-          <div class="subject-content">
-            <img src="Materie/italiano.jfif" alt="Letteratura Italiana" />
-            <p>"Analisi approfondita di Svevo e D'Annunzio, con attenzione al contesto storico e tematico. Riflessioni critiche sul simbolismo e il modernismo nella letteratura italiana."
-          Italiano – Italo Svevo
-Italo Svevo, pseudonimo di Ettore Schmitz, è uno degli autori più originali del Novecento italiano. La sua opera rappresenta un punto di rottura con la narrativa ottocentesca, in quanto rifiuta i modelli tradizionali di eroe positivo, preferendo invece personaggi problematici, incerti, inadeguati. L’autore introduce la figura dell’inetto, un individuo incapace di affrontare la vita e di adattarsi al mondo moderno.
-
-Nel romanzo "La coscienza di Zeno", Svevo sperimenta una narrazione innovativa. Il protagonista, Zeno Cosini, scrive il proprio diario come forma di terapia psicoanalitica, ma si presenta da subito come narratore inaffidabile, che mente a se stesso e al lettore. Le vicende più emblematiche sono cariche di simbolismo: l’eterna ultima sigaretta rappresenta l’incapacità di decidere e l’autogiustificazione; la morte del padre, accompagnata dallo schiaffo, simboleggia un trauma che segna per sempre il protagonista.
-
-Il momento più visionario del romanzo è l’ecatombe finale, in cui Zeno immagina che l’uomo, incapace di trovare un equilibrio, si autodistruggerà con un’arma perfetta. È una conclusione amaramente ironica, che anticipa i disastri del secolo e mette in discussione l’idea stessa di progresso.
-
-Svevo ha introdotto una vera rivoluzione nella letteratura italiana: ha portato il romanzo dentro la psicologia del personaggio, abbandonando le certezze e mostrando le ambiguità dell’essere umano. In questo senso, è fortemente influenzato dalla psicoanalisi freudiana, che ha saputo rielaborare in chiave narrativa con originalità.
-
-          
-
-
-
-Italiano – Gabriele D’Annunzio
-Gabriele D’Annunzio è il perfetto rappresentante dell’estetismo e del decadentismo europeo. La sua vita stessa è stata concepita come un’opera d’arte, inimitabile ed estrema. Egli ha incarnato l’ideale del superuomo, colui che si pone al di sopra delle regole morali comuni per vivere secondo il culto del bello, dell’azione e del piacere.
-
-Nel romanzo "Il Piacere", il protagonista Andrea Sperelli è l’archetipo dell’esteta: colto, raffinato, sensibile, ma al tempo stesso incapace di instaurare relazioni autentiche. Vive in funzione dell’arte e della bellezza, e questo lo condanna a una vita vuota, fatta di maschere e apparenze.
-
-Con la raccolta poetica "Alcyone", D’Annunzio raggiunge l’apice della sua poetica simbolista. Il componimento "La pioggia nel pineto" è emblematico di questo stile: attraverso un linguaggio ricchissimo di suoni, immagini e sinestesie, il poeta racconta una fusione mistica con la natura. Uomo e ambiente si confondono, i corpi diventano vegetali, la voce diventa pioggia, in un’armonia panica che annulla ogni distinzione tra soggetto e mondo.
-
-In "I pastori", invece, emerge la nostalgia per un mondo arcaico, rurale, puro, in contrasto con l’alienazione della società industriale. La poesia assume toni epici, lirici e solenni, elevando la figura del pastore a simbolo di una saggezza perduta.
-
-D’Annunzio ha trasformato la letteratura italiana, elevandola a un livello estetico e simbolico mai visto prima. Tuttavia, se confrontato con Svevo, appare come il suo esatto contrario: dove D’Annunzio esalta la bellezza, Svevo ne denuncia l’illusorietà; dove il primo celebra l’azione, il secondo riflette sull’incapacità di agire.
-
-Entrambi, però, raccontano una crisi: quella dell’uomo moderno, schiacciato tra desiderio e insicurezza, tra impulso e razionalità. Due strade diverse per descrivere la complessità dell’animo umano.
-</p>
-          </div>
+    <!-- SOLO SEZIONE MATERIE -->
+    <section class="materie-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Materie di Studio</h2>
+                <p>Esplora le discipline che caratterizzano il mio percorso scolastico</p>
+            </div>
+            
+            <div class="materie-grid">
+                <!-- Materia 1 -->
+                <div class="materia-card">
+                    <div class="card-header">
+                        <i class="fas fa-laptop-code"></i>
+                        <h3>Informatica</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>L'informatica è il cuore del mio percorso di studi. Imparo a sviluppare software, comprendere gli algoritmi e gestire database. Studio linguaggi di programmazione come Java, Python e C++, e imparo a creare applicazioni web e mobile.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn">Approfondisci</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Materia 2 -->
+                <div class="materia-card">
+                    <div class="card-header">
+                        <i class="fas fa-calculator"></i>
+                        <h3>Matematica</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>La matematica fornisce gli strumenti logici e analitici fondamentali per l'informatica. Studio algebra, geometria, analisi matematica e statistica. Queste competenze sono essenziali per risolvere problemi complessi e sviluppare algoritmi efficienti.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn">Approfondisci</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Materia 3 -->
+                <div class="materia-card">
+                    <div class="card-header">
+                        <i class="fas fa-network-wired"></i>
+                        <h3>Sistemi e Reti</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>In questa materia imparo come funzionano i computer a livello hardware e come sono interconnessi attraverso le reti. Studio l'architettura dei sistemi, i protocolli di rete, la sicurezza informatica e la configurazione di server e dispositivi di rete.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn">Approfondisci</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Materia 4 -->
+                <div class="materia-card">
+                    <div class="card-header">
+                        <i class="fas fa-database"></i>
+                        <h3>Basi di Dati</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>Le basi di dati sono fondamentali per gestire e organizzare grandi quantità di informazioni. Studio i modelli relazionali, il linguaggio SQL, la progettazione di database e le tecniche di ottimizzazione. Imparo a creare e gestire database efficienti e sicuri.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn">Approfondisci</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Materia 5 -->
+                <div class="materia-card">
+                    <div class="card-header">
+                        <i class="fas fa-globe"></i>
+                        <h3>Inglese Tecnico</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>L'inglese è la lingua universale dell'informatica. Miglioro le mie competenze linguistiche con particolare attenzione al lessico tecnico, alla comprensione di documentazione e manuali, e alla comunicazione professionale in contesti internazionali.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn">Approfondisci</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Materia 6 -->
+                <div class="materia-card">
+                    <div class="card-header">
+                        <i class="fas fa-project-diagram"></i>
+                        <h3>Progettazione</h3>
+                    </div>
+                    <div class="card-body">
+                        <p>La progettazione mi insegna come trasformare un'idea in un prodotto concreto. Seguo tutte le fasi del ciclo di vita del software: dall'analisi dei requisiti alla progettazione, dall'implementazione al testing e alla manutenzione.</p>
+                        <div class="card-footer">
+                            <a href="#" class="btn">Approfondisci</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <!-- Materia: Sistemi e Reti -->
-        <div class="subject">
-          <div class="subject-header">
-            <span data-it="Sistemi e Reti" data-en="Systems and Networks">Sistemi e Reti</span>
-            <span class="arrow">▶</span>
-          </div>
-          <div class="subject-content">
-            <img src="Materie/sistemi e reti.jfif" alt="Sistemi e Reti" />
-            <p data-it="Studio di protocolli di comunicazione, modelli OSI e TCP/IP, e progettazione di reti locali. Approfondimenti su sicurezza informatica e gestione del traffico dati."
-               data-en="Study of communication protocols, OSI and TCP/IP models, and design of local networks. Insights into cybersecurity and data traffic management.">
-              In un contesto digitale sempre più esposto a minacce, la sicurezza dei sistemi informativi rappresenta una delle principali sfide dell’informatica moderna. Essa si fonda su tre pilastri fondamentali: la riservatezza dei dati, che garantisce che solo chi è autorizzato possa accedervi; l’integrità, che assicura che i dati non siano stati alterati; e la disponibilità, ovvero la possibilità di accedere ai dati e ai servizi quando necessario.
-
-Una buona gestione della sicurezza parte dalla valutazione dei rischi, ossia l’individuazione dei punti vulnerabili del sistema e delle possibili minacce, come virus, worm, attacchi DDoS, phishing e tecniche di ingegneria sociale. Per affrontarle, si ricorre a diversi strumenti. Uno tra i più importanti è il firewall, che agisce come filtro tra rete interna ed esterna, decidendo quali pacchetti accettare o rifiutare secondo specifiche regole. Esistono diversi tipi di firewall: da quelli hardware a quelli software, da quelli basati sul contenuto a quelli orientati alla connessione. Le politiche di autorizzazione definiscono il comportamento del firewall in base al tipo di traffico.
-
-Altro strumento essenziale è l’Access Control List (ACL), che permette di filtrare il traffico in base a criteri predefiniti come indirizzi IP, porte e protocolli. Le ACL si distinguono in standard, che analizzano solo l’IP sorgente, e estese, che permettono un filtraggio molto più fine. Il loro uso è fondamentale nei router e nei dispositivi di rete, come si può sperimentare tramite software come Packet Tracer.
-
-Nel campo del mascheramento degli indirizzi, il NAT (Network Address Translation) e il PAT (Port Address Translation) permettono di tradurre indirizzi IP privati in pubblici, contribuendo sia alla sicurezza che all’ottimizzazione delle risorse IP. Tecnologie come proxy e DMZ (Demilitarized Zone) permettono di isolare e filtrare il traffico verso i server accessibili dall’esterno, proteggendo il cuore della rete.
-
-Un ruolo sempre più rilevante è quello delle VPN (Virtual Private Network), che consentono di creare canali di comunicazione cifrati tra dispositivi remoti. Le VPN si dividono in site-to-site, utili per collegare sedi aziendali, e client-to-site, per permettere l’accesso sicuro da remoto. Queste utilizzano protocolli avanzati come IPsec, AH, ESP e IKE, garantendo un’elevata protezione dei dati trasmessi.
-
-Infine, nelle comunicazioni su Internet, i protocolli SSL/TLS offrono cifratura e autenticazione, proteggendo informazioni sensibili come quelle bancarie o di login. Sono alla base di connessioni HTTPS sicure, riconoscibili dall’icona del lucchetto nel browser.
-
-In sintesi, la sicurezza informatica si basa su una serie di tecnologie e metodologie integrate che, combinate, garantiscono la protezione, la privacy e la continuità dei servizi digitali.
-
-            </p>
-          </div>
-        </div>
-
-        <!-- Materia: Storia -->
-        <div class="subject">
-          <div class="subject-header">
-            <span data-it="Storia" data-en="History">Storia</span>
-            <span class="arrow">▶</span>
-          </div>
-          <div class="subject-content">
-            <img src="Materie/storia.jfif" alt="Storia" />
-            <p>----------------storia</p>
-          </div>
-        </div>
-
-        <!-- Materia: TIPSIT -->
-        <div class="subject">
-          <div class="subject-header">
-            <span data-it="TIPSIT" data-en="TIPSIT">TIPSIT</span>
-            <span class="arrow">▶</span>
-          </div>
-          <div class="subject-content">
-            <img src="Materie/tipsit.jfif" alt="TIPSIT" />
-            <p>Testo TIPSIT originale qui...</p>
-          </div>
-        </div>
-
-        <!-- Materia: Informatica -->
-        <div class="subject">
-          <div class="subject-header">
-            <span data-it="Informatica" data-en="Computer Science">Informatica</span>
-            <span class="arrow">▶</span>
-          </div>
-          <div class="subject-content">
-            <img src="Materie/Informaticat.jpg" alt="Informatica" />
-            <p>Testo informatica originale qui...</p>
-          </div>
-        </div>
-
-        <!-- Materia: Intelligenza Artificiale -->
-        <div class="subject">
-          <div class="subject-header">
-            <span data-it="Intelligenza Artificiale" data-en="Artificial Intelligence">Intelligenza Artificiale</span>
-            <span class="arrow">▶</span>
-          </div>
-          <div class="subject-content">
-            <img src="Materie/int art.jfif" alt="Intelligenza Artificiale" />
-            <p>Testo IA originale qui...</p>
-          </div>
-        </div>
-
-        <!-- Materia: Inglese -->
-        <div class="subject">
-          <div class="subject-header">
-            <span data-it="Inglese" data-en="English">Inglese</span>
-            <span class="arrow">▶</span>
-          </div>
-          <div class="subject-content">
-            <img src="Materie/Inglese.jfif" alt="Inglese" />
-            <p>Testo inglese originale qui...</p>
-          </div>
-        </div>
-
-        <!-- Materia: GPOI -->
-        <div class="subject">
-          <div class="subject-header">
-            <span data-it="GPOI" data-en="GPOI">GPOI</span>
-            <span class="arrow">▶</span>
-          </div>
-          <div class="subject-content">
-            <img src="img/GPOI.jpg" alt="GPOI" />
-            <p>Testo GPOI originale qui...</p>
-          </div>
-        </div>
-
-        <!-- Materia: Scienze Motorie -->
-        <div class="subject">
-          <div class="subject-header">
-            <span data-it="Scienze Motorie" data-en="Physical Education">Scienze Motorie</span>
-            <span class="arrow">▶</span>
-          </div>
-          <div class="subject-content">
-            <img src="Materie/gim.jpg" alt="Scienze Motorie" />
-            <p><strong>L'importanza dell'allenamento e del recupero nelle scienze motorie</strong></p>
-            <p>L’allenamento fisico è fondamentale per migliorare la salute, la forma fisica e le prestazioni sportive. Attraverso esercizi mirati, il corpo si adatta, aumentando forza, resistenza, flessibilità e coordinazione. Tuttavia, non basta solo allenarsi: il recupero è una componente altrettanto importante per ottenere risultati ottimali e prevenire infortuni.</p>
-
-<p>Durante l’allenamento, il corpo subisce stress muscolare e microlesioni che stimolano i processi di riparazione e crescita muscolare. Questo processo è chiamato supercompensazione: dopo uno sforzo, il corpo si adatta diventando più forte o più resistente. Se però non si concede il giusto tempo di recupero, il corpo non riesce a rigenerarsi, si accumula fatica e si può andare incontro a sovrallenamento, che porta a cali di prestazione, affaticamento cronico e aumento del rischio di infortuni.</p>
-
-<p>Il recupero comprende diverse strategie: il riposo adeguato tra le sessioni di allenamento, una corretta alimentazione che fornisce i nutrienti necessari per la rigenerazione cellulare, l’idratazione e tecniche specifiche come lo stretching, il massaggio o il sonno di qualità. Anche il recupero attivo, cioè attività leggere come camminare o nuotare a bassa intensità, aiuta a ridurre l’indolenzimento muscolare e favorisce la circolazione sanguigna.</p>
-
-<p>Inoltre, è importante variare gli stimoli di allenamento per non sovraccaricare sempre gli stessi gruppi muscolari e per favorire uno sviluppo armonico del corpo. Un programma ben strutturato tiene conto dell’intensità, del volume e della frequenza degli allenamenti, insieme ai tempi di recupero, per permettere progressi continui.</p>
-
-<p>Infine, l’allenamento regolare e il recupero equilibrato non migliorano solo la performance fisica, ma hanno anche effetti positivi sulla salute mentale, riducendo lo stress, migliorando l’umore e favorendo il benessere generale.
-</p>
-            <p><strong>Conclusione</strong><br>
-            In sintesi, l'allenamento e il recupero sono due aspetti imprescindibili e complementari per migliorare le prestazioni fisiche e mantenere la salute. Allenarsi con criterio e dedicare la giusta attenzione al recupero permette di ottenere risultati duraturi, prevenire infortuni e vivere in modo più sano e equilibrato.</p>
-          </div>
-        </div>
-
-        <!-- Materia: Matematica -->
-        <div class="subject">
-          <div class="subject-header">
-            <span data-it="Matematica" data-en="Mathematics">Matematica</span>
-            <span class="arrow">▶</span>
-          </div>
-          <div class="subject-content">
-            <img src="Materie/matematica.jfif" alt="Matematica" />
-            <p><strong>Il calcolo combinatorio: principi e applicazioni</strong></p>
-            <p>Il calcolo combinatorio è una branca della matematica che studia i modi in cui è possibile combinare, ordinare o selezionare elementi di un insieme secondo precise regole. È fondamentale in molti campi, dalla statistica all'informatica, perché aiuta a determinare il numero di configurazioni possibili in situazioni diverse.</p>
-            <p><strong>Principi base del calcolo combinatorio</strong></p>
-
-<p>Le operazioni fondamentali del calcolo combinatorio sono:</p>
-<ul>
-  <li><strong>Permutazioni:</strong> sono i modi diversi di ordinare tutti gli elementi di un insieme. Se abbiamo n elementi distinti, il numero totale di permutazioni è <em>n!</em> (fattoriale di n), cioè il prodotto di tutti i numeri interi da 1 a n.</li>
-  <li><strong>Permutazioni con ripetizione:</strong> quando alcuni elementi si ripetono, il numero di permutazioni si calcola dividendo <em>n!</em> per il prodotto dei fattoriali delle quantità di elementi ripetuti.</li>
-  <li><strong>Combinazioni:</strong> sono i modi di scegliere k elementi da un insieme di n elementi, senza considerare l’ordine. Il numero di combinazioni si indica con <em>C(n, k)</em> o <em>n choose k</em> ed è calcolato con la formula <em>n! / (k! (n-k)!)</em>.</li>
-  <li><strong>Combinazioni con ripetizione:</strong> si usano quando si possono scegliere elementi più volte. Il numero di combinazioni con ripetizione è dato da <em>C(n + k -1, k)</em>.</li>
-</ul>
-
-<p><strong>Esempi pratici</strong></p>
-
-<p><em>Permutazioni semplici:</em> Se ho 4 libri diversi e voglio sapere in quanti modi posso disporli su uno scaffale, il numero di disposizioni è 4! = 4 × 3 × 2 × 1 = 24.</p>
-
-<p><em>Permutazioni con ripetizione:</em> Supponiamo di avere la parola “ANNA”. Le lettere A si ripetono due volte e le N due volte. Il numero di modi per disporre le lettere è 4! / (2! × 2!) = 24 / 4 = 6.</p>
-
-<p><em>Combinazioni semplici:</em> Se devo scegliere 3 amici da un gruppo di 5 per una squadra, senza considerare l’ordine, il numero di combinazioni è C(5,3) = 5! / (3! × 2!) = 10.</p>
-
-<p><em>Combinazioni con ripetizione:</em> Se devo scegliere 3 caramelle da 5 tipi diversi, e posso prendere più caramelle dello stesso tipo, il numero di combinazioni è C(5+3-1, 3) = C(7,3) = 35.</p>
-
-<p><strong>Applicazioni e importanza</strong></p>
-
-<p>Il calcolo combinatorio è utilizzato in molti ambiti: nella probabilità per calcolare eventi, in informatica per analizzare algoritmi, nella statistica per studiare campioni e distribuzioni. Comprendere come funzionano permutazioni e combinazioni permette di affrontare problemi complessi con metodi precisi e affidabili.</p>
-
-<p><strong>Conclusione</strong><br>
-Il calcolo combinatorio fornisce strumenti fondamentali per contare e organizzare oggetti e eventi in modo efficiente. Grazie a formule e principi semplici, è possibile risolvere problemi pratici e teorici che altrimenti sarebbero difficili da affrontare. La padronanza di questi concetti è essenziale per chi studia matematica, informatica o qualsiasi disciplina che richieda analisi di dati e possibilità.</p>
-          </div>
-        </div>
-
-        <!-- Materia: Educazione Civica -->
-        <div class="subject">
-          <div class="subject-header">
-            <span data-it="Educazione Civica" data-en="Civic Education">Educazione Civica</span>
-            <span class="arrow">▶</span>
-          </div>
-          <div class="subject-content">
-            <img src="Materie/civica.jfif" alt="Educazione Civica" />
-            <button class="toggleLangEnvironment">English</button>
-            <p>data-it="Il nostro pianeta affronta una delle sfide più importanti della sua storia: il cambiamento climatico. Questo fenomeno, ampiamente discusso nelle sezioni “Affrontare il cambiamento climatico” (pp. 60-61), è principalmente causato dall’aumento delle temperature medie della Terra, noto come riscaldamento globale, che modifica profondamente l’equilibrio naturale del pianeta."
-     data-en="Our planet is facing one of the most important challenges in its history: climate change. This phenomenon, extensively discussed in the sections 'Facing Climate Change' (pp. 60-61), is mainly caused by the increase of the Earth’s average temperatures, known as global warming, which deeply changes the natural balance of the planet.">
-  </p>
-
-  <h3 data-it="Cause del riscaldamento globale" data-en="Causes of Global Warming"></h3>
-  <p data-it="Le principali cause del riscaldamento globale sono legate alle attività umane, soprattutto all’emissione di gas serra come l’anidride carbonica (CO₂), il metano e l’ossido di diazoto. Questi gas sono prodotti principalmente dalla combustione di combustibili fossili (carbone, petrolio, gas naturale), dalla deforestazione e da alcune pratiche agricole e industriali. L’accumulo di questi gas nell’atmosfera crea un effetto serra che intrappola il calore, causando l’aumento delle temperature."
-     data-en="The main causes of global warming are linked to human activities, especially the emission of greenhouse gases like carbon dioxide (CO₂), methane, and nitrous oxide. These gases are mainly produced by burning fossil fuels (coal, oil, natural gas), deforestation, and some agricultural and industrial practices. The accumulation of these gases in the atmosphere creates a greenhouse effect that traps heat, causing temperatures to rise.">
-  </p>
-
-  <h3 data-it="Conseguenze del cambiamento climatico" data-en="Consequences of Climate Change"></h3>
-  <p data-it="Gli effetti del cambiamento climatico sono visibili e spesso devastanti: innalzamento del livello del mare, scioglimento dei ghiacciai e eventi meteorologici estremi più frequenti e intensi come uragani, siccità e alluvioni. Questi cambiamenti minacciano gli habitat naturali, la biodiversità e mettono a rischio la sicurezza alimentare e idrica di milioni di persone. Inoltre, il clima instabile può causare migrazioni forzate e conflitti legati alla scarsità di risorse."
-     data-en="The effects of climate change are visible and often devastating: rising sea levels, melting glaciers, and more frequent and intense extreme weather events such as hurricanes, droughts, and floods. These changes threaten natural habitats, biodiversity, and put the food and water security of millions of people at risk. Moreover, unstable climate can cause forced migrations and conflicts related to resource shortages.">
-  </p>
-
-  <h3 data-it="Possibili soluzioni" data-en="Possible Solutions"></h3>
-  <p data-it="Per affrontare questa crisi ambientale, sono necessarie azioni concrete a livello globale e individuale. È essenziale ridurre le emissioni di gas serra puntando su fonti di energia rinnovabile come il solare, l’eolico e l’idroelettrico, e migliorare l’efficienza energetica in tutti i settori. Misure pratiche come “Risparmio energetico a casa” (p. 62) mostrano come piccoli cambiamenti nella vita quotidiana possano contribuire in modo significativo. Proteggere le foreste, promuovere pratiche agricole sostenibili e aumentare la consapevolezza tramite l’educazione ambientale sono altre strategie vitali."
-     data-en="To face this environmental crisis, concrete actions are needed at global and individual levels. It is essential to reduce greenhouse gas emissions by moving towards renewable energy sources like solar, wind, and hydropower, and improving energy efficiency in all sectors. Practical measures such as 'Energy Saving at Home' (p. 62) highlight how small changes in daily life can contribute significantly. Protecting forests, promoting sustainable farming practices, and enhancing public awareness through environmental education are also vital strategies.">
-  </p>
-
-  <h3 data-it="Conclusione" data-en="Conclusion"></h3>
-  <p data-it="Il cambiamento climatico è una sfida complessa e urgente che richiede impegno collettivo e scelte consapevoli. Come riassunto nella sezione “Riepilogo” (p. 63), solo attraverso un’azione coordinata e continua sarà possibile proteggere il nostro pianeta e garantire un futuro sano e stabile per le prossime generazioni."
-     data-en="Climate change is a complex and urgent challenge that requires collective commitment and conscious choices. As summarized in the 'Summing Up' section (p. 63), only through coordinated and continuous action will it be possible to protect our planet and ensure a healthy and stable future for the next generations.">
-</p>
-          </div>
-        </div>
-      </div>
     </section>
-  </main>
-
-  <footer>
-    <p>© 2025 Cristian Ambrosini - Progetto Maturità</p>
-  </footer>
-
-  <script src="script.js"></script>
-  <script>
-    // Script per il cambio lingua (originale preservato)
-    const toggleBtn = document.getElementById('toggleLang');
-    const elementsToTranslate = document.querySelectorAll('[data-it]');
-
-    toggleBtn.addEventListener('click', () => {
-      if(toggleBtn.textContent === 'English') {
-        elementsToTranslate.forEach(el => {
-          if (el.textContent !== el.getAttribute('data-en')) {
-            el.textContent = el.getAttribute('data-en');
-          }
-        });
-        toggleBtn.textContent = 'Italiano';
-      } else {
-        elementsToTranslate.forEach(el => {
-          if (el.textContent !== el.getAttribute('data-it')) {
-            el.textContent = el.getAttribute('data-it');
-          }
-        });
-        toggleBtn.textContent = 'English';
-      }
-    });
-  </script>
 </body>
 </html>
