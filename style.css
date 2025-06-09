@@ -1,54 +1,176 @@
-<!DOCTYPE html>
-<html lang="it">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Italiano</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <div id="navbar-placeholder"></div>
+/* Reset base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  <main class="materia-page">
-    <h1>Italiano</h1>
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f0f4f8;
+  color: #222;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 
-    <p><strong>Italo Svevo</strong></p>
-    <p>Italo Svevo, pseudonimo di Ettore Schmitz, è uno degli autori più originali del Novecento italiano. La sua opera segna una rottura con la narrativa ottocentesca, abbandonando il modello dell’eroe positivo per concentrarsi su personaggi problematici, incerti e inadeguati. Svevo introduce la figura dell’inetto: un individuo incapace di affrontare la vita e di adattarsi al mondo moderno.</p>
+/* Barra di navigazione comune sticky */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #005f73;
+  padding: 15px 10px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
 
-    <p>Nel romanzo <em>La coscienza di Zeno</em>, l’autore adotta una narrazione innovativa. Il protagonista, Zeno Cosini, scrive un diario come terapia psicoanalitica, ma si rivela fin da subito un narratore inaffidabile, che mente a se stesso e al lettore. Le vicende più significative sono cariche di simbolismo: l’“eterna ultima sigaretta” rappresenta l’indecisione e l’autogiustificazione; la morte del padre, accompagnata da uno schiaffo, simboleggia un trauma profondo. Il finale del romanzo, con l’ecatombe causata da un’“arma perfetta”, è una visione amara e ironica che anticipa i disastri del secolo e mette in crisi l’idea di progresso.</p>
+.navbar button {
+  background-color: #0a9396;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  font-weight: 700;
+  font-size: 1.15rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.12);
+}
 
-    <p>Svevo rivoluziona la letteratura italiana portando il romanzo all’interno della psiche umana. Influenze evidenti derivano dalla psicoanalisi freudiana, che l’autore rielabora in modo originale, mostrando le ambiguità e le contraddizioni dell’essere umano.</p>
+.navbar button.active,
+.navbar button:hover {
+  background-color: #94d2bd;
+  color: #005f73;
+}
 
-    <p><strong>Gabriele D’Annunzio</strong></p>
-    <p>Gabriele D’Annunzio è il massimo rappresentante dell’estetismo e del decadentismo in Italia. La sua vita fu concepita come un’opera d’arte, estrema e inimitabile. Incarnò l’ideale del superuomo: colui che si pone al di sopra delle regole morali, dedicandosi al culto del bello, dell’azione e del piacere.</p>
+/* Main container */
+main {
+  flex-grow: 1;
+  max-width: 1100px;
+  margin: 30px auto 60px auto;
+  padding: 0 15px;
+}
 
-    <p>Nel romanzo <em>Il Piacere</em>, il protagonista Andrea Sperelli è l’archetipo dell’esteta: colto, raffinato, sensibile, ma incapace di vivere relazioni autentiche. Vive per l’arte e la bellezza, rimanendo prigioniero delle apparenze.</p>
+/* Pagina materie: griglia bottoni */
+.materie-container h1 {
+  text-align: center;
+  margin-bottom: 35px;
+  font-size: 2.8rem;
+  color: #005f73;
+}
 
-    <p>Con la raccolta <em>Alcyone</em>, D’Annunzio raggiunge l’apice del suo simbolismo poetico. In <em>La pioggia nel pineto</em>, il poeta racconta una fusione mistica con la natura, usando un linguaggio ricchissimo di suoni, immagini e sinestesie. Uomo e ambiente si confondono in un’armonia panica in cui ogni distinzione si annulla. In <em>I pastori</em>, invece, emerge la nostalgia per un mondo arcaico e rurale, in contrasto con l’alienazione della modernità. La figura del pastore diventa simbolo di una saggezza perduta, e la poesia assume toni epici e solenni.</p>
+.materie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 25px;
+  justify-items: center;
+  padding: 0 10px;
+}
 
-    <p>D’Annunzio ha trasformato la letteratura italiana portandola a un livello estetico e simbolico senza precedenti. Tuttavia, se confrontato con Svevo, risulta il suo opposto: dove D’Annunzio esalta la bellezza, Svevo ne svela l’illusorietà; dove il primo celebra l’azione, il secondo riflette sull’inettitudine.</p>
+.materie-grid button {
+  background-color: #ee9b00;
+  border: none;
+  border-radius: 12px;
+  padding: 18px 25px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  width: 180px;
+  box-shadow: 0 5px 7px rgb(0 0 0 / 0.15);
+  transition: background-color 0.3s ease;
+}
 
-    <p><strong>Conclusione</strong></p>
-    <p>Pur seguendo strade diverse, entrambi gli autori rappresentano la crisi dell’uomo moderno, diviso tra desideri e paure, tra impulso e razionalità. Svevo e D’Annunzio offrono due interpretazioni complementari della complessità dell’animo umano nel passaggio dal XIX al XX secolo.</p>
-  </main>
+.materie-grid button:hover {
+  background-color: #ca6702;
+}
 
-  <footer>
-    <p>&copy; 2025 Cristian Ambrosini</p>
-  </footer>
+/* Pagina materia */
+.materia-page h1 {
+  color: #005f73;
+  font-size: 2.7rem;
+  margin-bottom: 25px;
+  text-align: center;
+}
 
-  <script>
-    fetch('navbar.html')
-      .then(response => response.text())
-      .then(data => {
-        document.getElementById('navbar-placeholder').innerHTML = data;
-        const pathname = window.location.pathname.split('/').pop();
-        document.querySelectorAll('.navbar button').forEach(btn => {
-          const href = btn.getAttribute('onclick').match(/'(.*?)'/)[1];
-          if (href === pathname) {
-            btn.classList.add('active');
-          }
-        });
-      });
-  </script>
-</body>
-</html>
+.materia-page p {
+  font-size: 1.2rem;
+  line-height: 1.65;
+  margin-bottom: 20px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+/* Aggiunta spaziatura tra paragrafi */
+.materia-page p + p {
+  margin-top: 16px;
+}
+
+/* Footer */
+footer {
+  background-color: #005f73;
+  color: white;
+  text-align: center;
+  padding: 15px 10px;
+  font-size: 1rem;
+  margin-top: auto;
+}
+
+/* Immagine nella biografia */
+.bio-image {
+  display: block;
+  max-width: 200px;  /* immagine più piccola */
+  width: 100%;
+  height: auto;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 5px 10px rgb(0 0 0 / 0.2);
+}
+
+/* Bottoni generici */
+button {
+  font-family: inherit;
+}
+
+/* Responsive per nav e griglia materie */
+@media (max-width: 480px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .materie-grid {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+  .materie-grid button {
+    width: 140px;
+    padding: 14px 20px;
+    font-size: 1.05rem;
+  }
+}
+
+/* Intestazioni nella home o intro */
+.intro-text {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.intro-text h1,
+.intro-text h2 {
+  font-size: 2.2em;
+  font-weight: 600;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.intro-text h2 {
+  margin-top: 10px;
+  font-size: 1.8em;
+  color: #444;
+}
