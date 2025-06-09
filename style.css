@@ -147,3 +147,23 @@ button {
     font-size: 1.05rem;
   }
 }
+.intro-text {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+.intro-text h1,
+.intro-text h2 {
+  font-size: 2.2em;
+  font-weight: 600;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.intro-text h2 {
+  margin-top: 10px;
+  font-size: 1.8em;
+  color: #444;
+}
