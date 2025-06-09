@@ -182,3 +182,27 @@ button {
   margin: 20px auto;
   border-radius: 15px;
 }
+.bio-gallery-section {
+  max-width: 1000px;
+  margin: 0 auto 40px;
+  padding: 0 1rem;
+}
+
+.bio-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bio-gallery img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.bio-gallery img:hover {
+  transform: scale(1.05);
+}
