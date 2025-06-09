@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistemi e reti</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <main>
+    <h1>Sistemi e reti</h1>
+    <div class="autore-section">
+
+      <div class="autore-content">
+   <section style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem; color: #222;">
+  <h2 style="margin-bottom: 1rem;"><em>Sistemi e reti</em></h2>
+  <img src="img/sistemi_e_reti.jpg" alt="Sistemi e reti" style="max-width: 200px; width: 100%; height: auto; border-radius: 15px; margin: 20px auto; display: block;" />
+     
+  <p>
+    In un mondo sempre più connesso, la sicurezza dei sistemi informativi rappresenta una delle principali sfide dell’informatica moderna. Proteggere i dati, i dispositivi e le reti è diventato essenziale per garantire la fiducia degli utenti e la continuità dei servizi. La sicurezza informatica si basa su tre principi fondamentali: la riservatezza, l’integrità e la disponibilità delle informazioni.
+  </p>
+  <p>
+    La <strong>riservatezza</strong> assicura che solo gli utenti autorizzati possano accedere ai dati sensibili; l’<strong>integrità</strong> garantisce che le informazioni non vengano modificate in modo non autorizzato; infine, la <strong>disponibilità</strong> fa sì che i dati e i servizi siano sempre accessibili quando necessario.
+  </p>
+  <p>
+    Una buona gestione della sicurezza parte dalla valutazione dei rischi, ovvero dall’identificazione delle vulnerabilità e delle possibili minacce. Queste possono includere malware come virus e worm, attacchi DDoS, tecniche di phishing e ingegneria sociale, che puntano a ingannare gli utenti per ottenere accessi non autorizzati.
+  </p>
+  <p>
+    Per proteggere i sistemi, vengono utilizzati strumenti specifici. Uno dei più importanti è il <strong>firewall</strong>, un dispositivo o software che controlla il traffico in entrata e in uscita da una rete, bloccando o consentendo i pacchetti di dati secondo regole definite. I firewall possono essere hardware o software, e funzionano in base a politiche di autorizzazione che classificano il traffico come consentito o bloccato.
+  </p>
+  <p>
+    Un altro strumento essenziale è l’<strong>Access Control List (ACL)</strong>, che consente di filtrare il traffico secondo parametri precisi come indirizzi IP, porte o protocolli. Le ACL standard esaminano solo l’indirizzo IP sorgente, mentre quelle estese permettono un filtraggio più dettagliato, ed è possibile esercitarsi nel loro utilizzo attraverso simulazioni con software come Packet Tracer.
+  </p>
+  <p>
+    Per quanto riguarda la gestione degli indirizzi IP, si utilizzano tecnologie come il <strong>NAT</strong> (Network Address Translation) e il <strong>PAT</strong> (Port Address Translation), che permettono di tradurre gli indirizzi privati della rete interna in indirizzi pubblici. Queste soluzioni aumentano la sicurezza e ottimizzano l’utilizzo degli indirizzi disponibili.
+  </p>
+  <p>
+    Altri strumenti fondamentali sono il <strong>proxy</strong>, che funge da intermediario tra client e server per filtrare le richieste, e la <strong>DMZ</strong> (Demilitarized Zone), una zona isolata della rete in cui vengono collocati i server accessibili dall’esterno, in modo da proteggere la rete interna da possibili attacchi.
+  </p>
+  <p>
+    Le <strong>VPN</strong> (Virtual Private Network) rappresentano un mezzo per creare canali sicuri tra dispositivi distanti. Le VPN site-to-site collegano due reti geograficamente separate, mentre le VPN client-to-site permettono a un singolo utente di accedere in modo sicuro alla rete aziendale. Queste tecnologie utilizzano protocolli come IPsec, AH, ESP e IKE per garantire la cifratura e l’autenticazione dei dati trasmessi.
+  </p>
+  <p>
+    Infine, nelle comunicazioni via web, i protocolli <strong>SSL/TLS</strong> sono essenziali per cifrare le connessioni e proteggere dati sensibili come credenziali di accesso e informazioni bancarie. Sono alla base del protocollo HTTPS, riconoscibile dal lucchetto visibile nei browser.
+  </p>
+</section>
+      </div>
+    </div>
+
+   <!-- Conclusione -->
+<section style="max-width: 800px; margin: 40px auto; line-height: 1.8; font-size: 1.1rem; color: #222;">
+  <h2 style="text-align: center; margin-bottom: 1rem;">Conclusione</h2>
+  <p style="text-align: justify; margin-bottom: 1.2rem;">
+    Ho scelto di approfondire il tema della sicurezza informatica perché lo considero uno degli aspetti più affascinanti e cruciali del mondo digitale. Mi appassiona capire come proteggere i dati e i sistemi da minacce sempre più complesse, e trovo stimolante il continuo aggiornamento che questo ambito richiede. La sicurezza non è solo una questione tecnica, ma anche di responsabilità: garantire un ambiente digitale sicuro significa tutelare le persone e le informazioni che ci riguardano ogni giorno.
+  </p>
+</section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cristian Ambrosini</p>
+  </footer>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        const pathname = window.location.pathname.split('/').pop();
+        document.querySelectorAll('.navbar button').forEach(btn => {
+          const href = btn.getAttribute('onclick').match(/'(.*?)'/)[1];
+          if (href === pathname) {
+            btn.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
