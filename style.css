@@ -174,3 +174,11 @@ button {
   font-size: 1.8em;
   color: #444;
 }
+.autore-img {
+  max-width: 250px;
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+  border-radius: 15px;
+}
