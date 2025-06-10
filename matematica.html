@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Matematica</title>
+  <title>Matematica - Probabilità e Calcolo Combinatorio</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -12,70 +12,102 @@
   <main>
     <h1>Matematica</h1>
 
+    <!-- Probabilità -->
+    <div class="autore-section">
+      <div class="autore-content">
+        <section style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem; color: #222;">
+          <h2 style="text-align: center; margin-bottom: 1.5rem;">Probabilità e Calcolo Combinatorio</h2>
+          <img src="img/probabilita.jpg" alt="Diagrammi di probabilità" style="max-width: 400px; width: 100%; height: auto; border-radius: 15px; margin: 20px auto; display: block;" />
+
+          <h3 style="color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">1. Fondamenti di Probabilità</h3>
+          
+          <h4 style="color: #3498db; margin-top: 1.5rem;">Definizioni di Probabilità</h4>
+          <ul style="margin-left: 1.5rem;">
+            <li><strong>Classica:</strong> P(E) = casi favorevoli / casi possibili</li>
+            <li><strong>Statistica:</strong> Frequenza relativa di un evento in prove ripetute</li>
+            <li><strong>Soggettiva:</strong> Grado di fiducia personale nel verificarsi di un evento</li>
+          </ul>
+
+          <h4 style="color: #3498db; margin-top: 1.5rem;">Concetti chiave</h4>
+          <p>
+            <strong>Spazio campionario:</strong> Insieme di tutti i possibili risultati di un esperimento<br>
+            <strong>Evento:</strong> Sottoinsieme dello spazio campionario<br>
+            <strong>Eventi particolari:</strong><br>
+            - <em>Impossibile:</em> P(E) = 0<br>
+            - <em>Certo:</em> P(E) = 1<br>
+            - <em>Indipendenti:</em> P(A∩B) = P(A)·P(B)<br>
+            - <em>Dipendenti:</em> P(A|B) ≠ P(A)
+          </p>
+
+          <h4 style="color: #3498db; margin-top: 1.5rem;">Operazioni fondamentali</h4>
+          <p>
+            <strong>Probabilità contraria:</strong> P(E') = 1 - P(E)<br>
+            <strong>Probabilità totale:</strong> P(A∪B) = P(A) + P(B) - P(A∩B)<br>
+            <strong>Probabilità condizionata:</strong> P(A|B) = P(A∩B)/P(B)<br>
+            <strong>Teorema di Bayes:</strong> P(A|B) = [P(B|A)·P(A)]/P(B)
+          </p>
+        </section>
+      </div>
+    </div>
+
     <!-- Calcolo Combinatorio -->
     <div class="autore-section">
       <div class="autore-content">
-        <section style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem; color: #222; text-align: center;">
-          
-          <h2 style="margin-bottom: 1rem;">Principi base del calcolo combinatorio</h2>
-          <img src="img/combinatoria.jpg" alt="Diagramma combinatorio" style="max-width: 300px; width: 100%; height: auto; border-radius: 15px; margin: 20px auto; display: block;" />
-          
-          <div style="text-align: left; margin-bottom: 1.2rem;">
-            <h3 style="text-align: center; color: #444;">Operazioni fondamentali</h3>
-            <p>
-              <strong>Permutazioni:</strong> Sono i modi diversi di ordinare <em>tutti</em> gli elementi di un insieme. Se abbiamo <em>n</em> elementi distinti, il numero totale di permutazioni è <em>n!</em> (fattoriale di <em>n</em>), cioè il prodotto di tutti i numeri interi da 1 a <em>n</em>.
-            </p>
-            
-            <p>
-              <strong>Permutazioni con ripetizione:</strong> Quando alcuni elementi si ripetono, il numero di permutazioni si calcola dividendo <em>n!</em> per il prodotto dei fattoriali delle quantità di elementi ripetuti.
-            </p>
-            
-            <p>
-              <strong>Combinazioni:</strong> Sono i modi di scegliere <em>k</em> elementi da un insieme di <em>n</em> elementi, <em>senza considerare l'ordine</em>. Il numero di combinazioni si indica con <em>C(n, k)</em> ed è calcolato con la formula <em>n! / (k! (n-k)!)</em>.
-            </p>
-            
-            <p>
-              <strong>Combinazioni con ripetizione:</strong> Si usano quando si possono scegliere elementi più volte. Il numero è dato da <em>C(n + k - 1, k)</em>.
-            </p>
-          </div>
-          
-          <div style="text-align: left; margin-top: 2rem;">
-            <h3 style="text-align: center; color: #444;">Esempi pratici</h3>
-            <p>
-              <strong>Permutazioni semplici:</strong> Se ho 4 libri diversi e voglio disporli su uno scaffale, il numero di disposizioni è <em>4! = 24</em>.
-            </p>
-            
-            <p>
-              <strong>Permutazioni con ripetizione:</strong> Per la parola "ANNA": <em>4! / (2! × 2!) = 6</em> disposizioni.
-            </p>
-            
-            <p>
-              <strong>Combinazioni semplici:</strong> Scegliere 3 amici da un gruppo di 5: <em>C(5,3) = 10</em>.
-            </p>
-            
-            <p>
-              <strong>Combinazioni con ripetizione:</strong> Scegliere 3 caramelle da 5 tipi (con ripetizione): <em>C(7,3) = 35</em>.
-            </p>
-          </div>
+        <section style="max-width: 800px; margin: 40px auto; line-height: 1.8; font-size: 1.1rem; color: #222;">
+          <h3 style="color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">2. Calcolo Combinatorio</h3>
+          <img src="img/combinatoria.jpg" alt="Strutture combinatorie" style="max-width: 400px; width: 100%; height: auto; border-radius: 15px; margin: 20px auto; display: block;" />
+
+          <h4 style="color: #3498db; margin-top: 1.5rem;">Fattoriale e Coefficiente Binomiale</h4>
+          <p>
+            <strong>Fattoriale:</strong> n! = n×(n-1)×...×1 (con 0! = 1)<br>
+            <strong>Coefficiente binomiale:</strong> C(n,k) = n!/(k!(n-k)!) = "n su k"
+          </p>
+
+          <h4 style="color: #3498db; margin-top: 1.5rem;">Disposizioni</h4>
+          <p>
+            <strong>Semplici:</strong> D(n,k) = n!/(n-k)! (ordine importante, no ripetizioni)<br>
+            <strong>Con ripetizione:</strong> D'(n,k) = n<sup>k</sup> (ordine importante, con ripetizioni)
+          </p>
+
+          <h4 style="color: #3498db; margin-top: 1.5rem;">Permutazioni</h4>
+          <p>
+            <strong>Semplici:</strong> P(n) = n! (ordinamenti di n elementi distinti)<br>
+            <strong>Con ripetizione:</strong> P'(n) = n!/(k<sub>1</sub>!k<sub>2</sub>!...) (elementi ripetuti k volte)
+          </p>
+
+          <h4 style="color: #3498db; margin-top: 1.5rem;">Combinazioni</h4>
+          <p>
+            <strong>Semplici:</strong> C(n,k) = n!/(k!(n-k)!) (ordine irrilevante, no ripetizioni)<br>
+            <strong>Con ripetizione:</strong> C'(n,k) = C(n+k-1,k) (ordine irrilevante, con ripetizioni)
+          </p>
         </section>
       </div>
     </div>
 
     <!-- Applicazioni -->
     <section style="max-width: 800px; margin: 40px auto; line-height: 1.8; font-size: 1.1rem; color: #222; text-align: center;">
-      <h2 style="margin-bottom: 1rem;">Applicazioni e importanza</h2>
-      <p style="text-align: justify; margin-bottom: 1.2rem;">
-        Il calcolo combinatorio è utilizzato in probabilità per calcolare eventi, in informatica per analizzare algoritmi, e in statistica per studiare campioni. Comprendere permutazioni e combinazioni permette di affrontare problemi complessi con metodi precisi.
-      </p>
-      
-      <img src="img/applicazioni.jpg" alt="Applicazioni pratiche" style="max-width: 400px; width: 100%; height: auto; border-radius: 15px; margin: 20px auto; display: block;" />
+      <h2 style="margin-bottom: 1.5rem;">Campi di Applicazione</h2>
+      <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin: 2rem 0;">
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px;">
+          <h4 style="color: #e74c3c;">Crittografia</h4>
+          <p>Generazione di chiavi sicure basate su permutazioni di grandi numeri primi</p>
+        </div>
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px;">
+          <h4 style="color: #e74c3c;">Macchina di Turing</h4>
+          <p>Calcolo della complessità algoritmica attraverso modelli combinatori</p>
+        </div>
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px;">
+          <h4 style="color: #e74c3c;">Sicurezza Informatica</h4>
+          <p>Analisi della robustezza delle password mediante calcolo combinatorio</p>
+        </div>
+      </div>
     </section>
 
     <!-- Conclusione -->
     <section style="max-width: 800px; margin: 40px auto; line-height: 1.8; font-size: 1.1rem; color: #222;">
       <h2 style="text-align: center; margin-bottom: 1rem;">Conclusione</h2>
-      <p style="text-align: justify; margin-bottom: 1.2rem;">
-        Il calcolo combinatorio fornisce strumenti fondamentali per contare e organizzare oggetti in modo efficiente. La padronanza di questi concetti è essenziale per matematica, informatica e qualsiasi disciplina che richieda analisi di dati e possibilità.
+      <p style="text-align: justify;">
+        Lo studio della probabilità e del calcolo combinatorio costituisce la base per comprendere fenomeni casuali e risolvere problemi complessi in ambito scientifico e tecnologico. Dalla crittografia alla teoria degli algoritmi, questi strumenti matematici permettono di modellizzare realtà apparentemente imprevedibili e progettare sistemi efficienti in contesti ad alta complessità.
       </p>
     </section>
   </main>
