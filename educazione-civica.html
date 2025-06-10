@@ -3,8 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Educazione Civica</title>
+  <title>Educazione Civica - Cambiamento Climatico</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .esempio {
+      background-color: #f8f9fa;
+      border-left: 4px solid #3498db;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .formula {
+      font-family: 'Courier New', monospace;
+      background-color: #f0f0f0;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+      font-size: 1.1rem;
+      color: #222;
+    }
+    h2, h3, h4 {
+      color: #2c3e50;
+    }
+    h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+    h3 {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.3rem;
+      margin-top: 1.5rem;
+    }
+    h4 {
+      color: #3498db;
+      margin-top: 1.2rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      margin: 20px auto;
+      display: block;
+    }
+    .language-switch {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .language-switch button {
+      background: #3498db;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      margin: 0 5px;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .language-switch button:hover {
+      background: #2980b9;
+    }
+  </style>
 </head>
 <body>
   <div id="navbar-placeholder"></div>
@@ -19,61 +83,161 @@
 
     <!-- Testo Italiano -->
     <div id="ita" class="text-block">
-      <h2>Educazione Civica – Cambiamento Climatico</h2>
+      <section>
+        <h2>Cambiamento Climatico</h2>
+        <img src="img/clima1.jpg" alt="Grafico cambiamento climatico" style="max-width: 500px;" />
 
-      <p>Il nostro pianeta sta affrontando una delle sfide più importanti della sua storia: il cambiamento climatico. Questo fenomeno, ampiamente trattato nelle sezioni <em>“Affrontare il cambiamento climatico”</em> (pp. 60-61), è causato principalmente dall’aumento delle temperature medie globali, noto come riscaldamento globale, che altera profondamente l’equilibrio naturale della Terra.</p>
+        <h3>Cause del riscaldamento globale</h3>
+        <p>Le principali cause del riscaldamento globale sono riconducibili alle attività umane:</p>
+        
+        <ul>
+          <li><strong>Combustibili fossili:</strong> Combustione di carbone, petrolio e gas naturale</li>
+          <li><strong>Deforestazione:</strong> Riduzione della capacità di assorbimento della CO₂</li>
+          <li><strong>Agricoltura intensiva:</strong> Emissioni di metano e ossido di diazoto</li>
+        </ul>
 
-      <h3>🌍 Cause del riscaldamento globale</h3>
-      <p>Le principali cause del riscaldamento globale sono riconducibili alle attività umane, in particolare all’emissione di gas serra come l’anidride carbonica (CO₂), il metano e l’ossido di diazoto. Questi gas provengono soprattutto dalla combustione di combustibili fossili (carbone, petrolio, gas naturale), dalla deforestazione e da alcune pratiche agricole e industriali. Il loro accumulo nell’atmosfera genera un effetto serra che intrappola il calore, causando l’aumento delle temperature.</p>
+        <div class="esempio">
+          <strong>Dato allarmante:</strong> La concentrazione di CO₂ in atmosfera ha superato le 420 ppm nel 2023, il livello più alto degli ultimi 800.000 anni.
+        </div>
 
-      <div class="image-container">
-        <img src="img/clima1.jpg" alt="Grafico cambiamento climatico">
-      </div>
+        <h3>Conseguenze del cambiamento climatico</h3>
+        <img src="img/conseguenze.jpg" alt="Effetti del cambiamento climatico" style="max-width: 450px;" />
 
-      <h3>🌪️ Conseguenze del cambiamento climatico</h3>
-      <p>Gli effetti del cambiamento climatico sono evidenti e spesso devastanti: innalzamento del livello del mare, scioglimento dei ghiacciai e eventi meteorologici estremi sempre più frequenti e intensi, come uragani, siccità e alluvioni. Questi fenomeni minacciano gli habitat naturali, la biodiversità e mettono a rischio la sicurezza alimentare e idrica di milioni di persone. Inoltre, un clima instabile può provocare migrazioni forzate e conflitti legati alla scarsità delle risorse.</p>
+        <h4>Impatti diretti</h4>
+        <table>
+          <tr>
+            <th>Fenomeno</th>
+            <th>Conseguenza</th>
+          </tr>
+          <tr>
+            <td>Innalzamento mari</td>
+            <td>+3.7 mm/anno (media globale)</td>
+          </tr>
+          <tr>
+            <td>Eventi estremi</td>
+            <td>+40% uragani intensi dal 1980</td>
+          </tr>
+          <tr>
+            <td>Perdita biodiversità</td>
+            <td>1 milione specie a rischio</td>
+          </tr>
+        </table>
 
-      <div class="image-container">
-        <img src="img/conseguenze.jpg" alt="Effetti del cambiamento climatico">
-      </div>
+        <h3>Possibili soluzioni</h3>
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin: 2rem 0;">
+          <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+            <h4 style="color: #e74c3c;">Energia</h4>
+            <p>Transizione a rinnovabili (solare, eolico, idroelettrico)</p>
+          </div>
+          <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+            <h4 style="color: #e74c3c;">Foreste</h4>
+            <p>Riforestazione e lotta alla deforestazione</p>
+          </div>
+          <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+            <h4 style="color: #e74c3c;">Consumi</h4>
+            <p>Economia circolare e riduzione sprechi</p>
+          </div>
+        </div>
 
-      <h3>🔧 Possibili soluzioni</h3>
-      <p>Affrontare questa crisi ambientale richiede azioni concrete sia a livello globale che individuale. È fondamentale ridurre le emissioni di gas serra investendo su fonti di energia rinnovabile, come il solare, l’eolico e l’idroelettrico, e migliorando l’efficienza energetica in tutti i settori. Misure pratiche, come quelle illustrate in <em>“Risparmio energetico a casa”</em> (p. 62), dimostrano come piccoli cambiamenti quotidiani possano fare la differenza. Altre strategie vitali includono la protezione delle foreste, la promozione dell’agricoltura sostenibile e la diffusione della consapevolezza ambientale attraverso l’educazione.</p>
+        <div class="formula">
+          Obiettivo Accordo di Parigi: ≤ +1.5°C rispetto all'era preindustriale
+        </div>
+      </section>
 
-      <h3>✅ Conclusione</h3>
-      <p>Il cambiamento climatico è una sfida complessa e urgente che richiede un impegno collettivo e scelte consapevoli. Come riportato nella sezione <em>“Riepilogo”</em> (p. 63), solo un’azione coordinata e costante potrà garantire la protezione del nostro pianeta e un futuro sano e stabile per le generazioni future.</p>
+      <section style="max-width: 800px; margin: 40px auto 80px; line-height: 1.8; font-size: 1.1rem; color: #222;">
+        <h2 style="text-align: center;">Conclusione: un impegno globale</h2>
+        <p style="text-align: justify;">
+          Il cambiamento climatico rappresenta la sfida più complessa del nostro secolo, che richiede cooperazione internazionale e azioni immediate. Come evidenziato nell'Accordo di Parigi (2015), solo un approccio coordinato che coinvolga governi, imprese e cittadini può garantire risultati significativi.
+        </p>
+        <p style="text-align: justify;">
+          Ogni individuo può contribuire attraverso scelte quotidiane consapevoli, mentre le istituzioni devono promuovere politiche ambientali ambiziose e investire in tecnologie sostenibili. La transizione ecologica, se ben gestita, può diventare un'opportunità per creare nuovi posti di lavoro e costruire una società più equa e resiliente.
+        </p>
+        <div class="esempio">
+          <strong>Iniziativa scolastica:</strong> Il nostro istituto ha ridotto del 25% i consumi energetici attraverso l'installazione di pannelli solari e un sistema di illuminazione a LED.
+        </div>
+      </section>
     </div>
 
     <!-- Testo Inglese -->
     <div id="eng" class="text-block" style="display: none;">
-      <h2>Civic Education – Climate Change</h2>
+      <section>
+        <h2>Climate Change</h2>
+        <img src="img/clima1.jpg" alt="Climate change chart" style="max-width: 500px;" />
 
-      <p>Our planet is facing one of the most critical challenges in its history: climate change. This phenomenon, extensively covered in the sections <em>“Facing Climate Change”</em> (pp. 60–61), is mainly caused by the increase in the Earth’s average temperature, known as global warming, which deeply alters the planet’s natural balance.</p>
+        <h3>Causes of Global Warming</h3>
+        <p>The main causes of global warming are linked to human activities:</p>
+        
+        <ul>
+          <li><strong>Fossil fuels:</strong> Burning of coal, oil and natural gas</li>
+          <li><strong>Deforestation:</strong> Reduced CO₂ absorption capacity</li>
+          <li><strong>Intensive farming:</strong> Methane and nitrous oxide emissions</li>
+        </ul>
 
-      <h3>🌍 Causes of Global Warming</h3>
-      <p>The main causes of global warming are linked to human activities, particularly the emission of greenhouse gases such as carbon dioxide (CO₂), methane, and nitrous oxide. These gases are mainly released by burning fossil fuels (coal, oil, natural gas), deforestation, and certain agricultural and industrial practices. Their accumulation in the atmosphere creates a greenhouse effect that traps heat, leading to rising temperatures.</p>
+        <div class="esempio">
+          <strong>Alarming data:</strong> Atmospheric CO₂ concentration exceeded 420 ppm in 2023, the highest level in 800,000 years.
+        </div>
 
-      <div class="image-container">
-        <img src="img/clima1.jpg" alt="Climate change chart">
-      </div>
+        <h3>Consequences of Climate Change</h3>
+        <img src="img/conseguenze.jpg" alt="Climate impact image" style="max-width: 450px;" />
 
-      <h3>🌪️ Consequences of Climate Change</h3>
-      <p>The effects of climate change are clearly visible and often devastating: rising sea levels, melting glaciers, and increasingly frequent and intense extreme weather events such as hurricanes, droughts, and floods. These changes threaten natural habitats, reduce biodiversity, and jeopardize the food and water security of millions of people. Moreover, climate instability can trigger forced migration and conflicts related to resource scarcity.</p>
+        <h4>Direct impacts</h4>
+        <table>
+          <tr>
+            <th>Phenomenon</th>
+            <th>Consequence</th>
+          </tr>
+          <tr>
+            <td>Sea level rise</td>
+            <td>+3.7 mm/year (global average)</td>
+          </tr>
+          <tr>
+            <td>Extreme events</td>
+            <td>+40% intense hurricanes since 1980</td>
+          </tr>
+          <tr>
+            <td>Biodiversity loss</td>
+            <td>1 million species at risk</td>
+          </tr>
+        </table>
 
-      <div class="image-container">
-        <img src="img/conseguenze.jpg" alt="Climate impact image">
-      </div>
+        <h3>Possible Solutions</h3>
+        <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin: 2rem 0;">
+          <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+            <h4 style="color: #e74c3c;">Energy</h4>
+            <p>Transition to renewables (solar, wind, hydropower)</p>
+          </div>
+          <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+            <h4 style="color: #e74c3c;">Forests</h4>
+            <p>Reforestation and anti-deforestation efforts</p>
+          </div>
+          <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+            <h4 style="color: #e74c3c;">Consumption</h4>
+            <p>Circular economy and waste reduction</p>
+          </div>
+        </div>
 
-      <h3>🔧 Possible Solutions</h3>
-      <p>To face this environmental crisis, concrete actions are required at both global and individual levels. It is essential to reduce greenhouse gas emissions by relying on renewable energy sources—such as solar, wind, and hydropower—and by improving energy efficiency across all sectors. Practical steps, such as those described in <em>“Energy Saving at Home”</em> (p. 62), show how small everyday changes can make a significant difference. Other key strategies include protecting forests, promoting sustainable farming practices, and increasing public awareness through environmental education.</p>
+        <div class="formula">
+          Paris Agreement Goal: ≤ +1.5°C compared to pre-industrial era
+        </div>
+      </section>
 
-      <h3>✅ Conclusion</h3>
-      <p>Climate change is a complex and urgent challenge that demands collective commitment and conscious choices. As summarized in the <em>“Summing Up”</em> section (p. 63), only coordinated and continuous action will make it possible to safeguard our planet and ensure a healthy and stable future for the generations to come.</p>
+      <section style="max-width: 800px; margin: 40px auto 80px; line-height: 1.8; font-size: 1.1rem; color: #222;">
+        <h2 style="text-align: center;">Conclusion: A Global Commitment</h2>
+        <p style="text-align: justify;">
+          Climate change represents the most complex challenge of our century, requiring international cooperation and immediate action. As highlighted in the Paris Agreement (2015), only a coordinated approach involving governments, businesses and citizens can guarantee significant results.
+        </p>
+        <p style="text-align: justify;">
+          Every individual can contribute through daily conscious choices, while institutions must promote ambitious environmental policies and invest in sustainable technologies. The ecological transition, if well managed, can become an opportunity to create new jobs and build a more equitable and resilient society.
+        </p>
+        <div class="esempio">
+          <strong>School initiative:</strong> Our institute has reduced energy consumption by 25% through solar panels and LED lighting systems.
+        </div>
+      </section>
     </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Cristian Ambrosini</p>
+  <footer style="padding-top: 40px;">
+    <p>&copy; 2025 Educazione Civica</p>
   </footer>
 
   <script>
