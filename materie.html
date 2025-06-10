@@ -5,9 +5,68 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Materie</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    main {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+    }
+    .materie-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+      margin: 0 auto;
+    }
+    .materie-grid button {
+      background-color: #3498db;
+      color: white;
+      border: none;
+      padding: 1.2rem;
+      border-radius: 10px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 80px;
+    }
+    .materie-grid button:hover {
+      background-color: #2980b9;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    }
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      padding: 20px;
+    }
+    @media (max-width: 768px) {
+      .materie-grid {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      }
+    }
+    @media (max-width: 480px) {
+      .materie-grid {
+        grid-template-columns: 1fr;
+      }
+      .materie-grid button {
+        padding: 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
   <div id="navbar-placeholder"></div>
+  
   <main class="materie-container">
     <h1>Materie</h1>
     <div class="materie-grid">
@@ -25,23 +84,23 @@
     </div>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Cristian Ambrosini</p>
+  <footer style="padding-top: 40px;">
+    <p>&copy; Maturità 2025 - Cristian Ambrosini</p>
   </footer>
+
   <script>
-  fetch('navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar-placeholder').innerHTML = data;
-      // Imposta classe active sul bottone corrente (opzionale)
-      const pathname = window.location.pathname.split('/').pop();
-      document.querySelectorAll('.navbar button').forEach(btn => {
-        const href = btn.getAttribute('onclick').match(/'(.*?)'/)[1];
-        if (href === pathname) {
-          btn.classList.add('active');
-        }
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        const pathname = window.location.pathname.split('/').pop();
+        document.querySelectorAll('.navbar button').forEach(btn => {
+          const href = btn.getAttribute('onclick').match(/'(.*?)'/)[1];
+          if (href === pathname) {
+            btn.classList.add('active');
+          }
+        });
       });
-    });
-</script>
+  </script>
 </body>
 </html>
