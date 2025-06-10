@@ -206,3 +206,32 @@ button {
 .bio-gallery img:hover {
   transform: scale(1.05);
 }
+.text-block p {
+  text-align: justify;
+  margin-bottom: 1.2rem;
+  line-height: 1.6;
+}
+
+.text-block h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #444;
+}
+
+.text-block em {
+  font-style: italic;
+  color: #555;
+}
+
+.image-container {
+  margin: 1rem 0;
+  text-align: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
