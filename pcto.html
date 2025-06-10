@@ -3,92 +3,115 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>PCTO - Esperienza presso Ariston Group</title>
+  <title>PCTO - Esperienza Ariston</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    .esempio {
-      background-color: #f8f9fa;
-      border-left: 4px solid #3498db;
-      padding: 1rem;
-      margin: 1rem 0;
-      border-radius: 0 8px 8px 0;
-    }
-    main {
-      max-width: 800px;
-      margin: 0 auto;
-      line-height: 1.8;
-      font-size: 1.1rem;
-      color: #222;
-    }
-    h2, h3, h4 {
-      color: #2c3e50;
-    }
-    h2 {
-      border-bottom: 2.5px solid #eee;
-      padding-bottom: 0.5rem;
-      margin-top: 2rem;
+    /* Stili migliorati per titolo e testo */
+    .intro-title {
       text-align: center;
+      margin: 2rem 0;
     }
-    h3 {
-      border-bottom: 1px solid #eee;
-      padding-bottom: 0.3rem;
-      margin-top: 1.5rem;
+    
+    .intro-title h1 {
+      font-size: 2.8rem;
+      color: #2c3e50;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
     }
-    img {
-      max-width: 100%;
+    
+    .periodo-section {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      padding: 1.5rem;
+      background-color: #f8f9fa;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    
+    .periodo-title {
+      color: #3498db;
+      font-size: 1.8rem;
+      margin-bottom: 1.2rem;
+      border-bottom: 2px solid #3498db;
+      padding-bottom: 0.5rem;
+    }
+    
+    .periodo-content {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+    
+    .periodo-content p {
+      margin-bottom: 1.5rem;
+    }
+    
+    .bio-image {
+      max-width: 80%;
       height: auto;
       border-radius: 15px;
       margin: 30px auto;
       display: block;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
-    .periodo-section {
-      background-color: #f8f9fa;
-      padding: 1.5rem;
-      border-radius: 10px;
-      margin: 2rem 0;
+    
+    /* Ottimizzazione mobile */
+    @media (max-width: 768px) {
+      .intro-title h1 {
+        font-size: 2.2rem;
+      }
+      
+      .periodo-title {
+        font-size: 1.6rem;
+      }
+      
+      .periodo-content {
+        font-size: 1.1rem;
+      }
+      
+      .bio-image {
+        max-width: 90%;
+      }
     }
-    .periodo-title {
-      color: #3498db;
-      margin-top: 0;
-    }
-    .language-switch {
-      text-align: center;
-      margin: 20px 0;
-    }
-    .language-switch button {
-      background: #3498db;
-      color: white;
-      border: none;
-      padding: 8px 15px;
-      margin: 0 5px;
-      border-radius: 5px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-    .language-switch button:hover {
-      background: #2980b9;
+    
+    @media (max-width: 480px) {
+      .intro-title h1 {
+        font-size: 1.8rem;
+      }
+      
+      .periodo-title {
+        font-size: 1.4rem;
+      }
+      
+      .periodo-content {
+        font-size: 1rem;
+      }
+      
+      .periodo-section {
+        padding: 1.2rem;
+      }
+      
+      .bio-image {
+        max-width: 95%;
+        border-radius: 10px;
+      }
     }
   </style>
 </head>
 <body>
   <div id="navbar-placeholder"></div>
-
+  
   <main>
-    <h1>Percorso PCTO</h1>
-
-    <div class="language-switch">
-      <button onclick="showItalian()">Italiano</button>
-      <button onclick="showEnglish()">English</button>
+    <div class="intro-title">
+      <h1>Percorso PCTO</h1>
     </div>
-
-    <!-- Testo Italiano -->
-    <div id="ita" class="text-block">
-      <section>
-        <h2>Esperienza presso Ariston Group</h2>
-        
-        <div class="periodo-section">
-          <h3 class="periodo-title">Primo periodo</h3>
+    
+    <section>
+      <h2 style="text-align: center; font-size: 2rem;">Esperienza presso Ariston Group</h2>
+      
+      <div class="periodo-section">
+        <h3 class="periodo-title">Primo periodo</h3>
+        <div class="periodo-content">
           <p>
             Durante il primo periodo del mio percorso PCTO ho avuto l'opportunità di svolgere la mia esperienza presso Ariston Group, un'importante realtà industriale operante nel settore della termotecnica. Ariston è specializzata nella progettazione e produzione di sistemi per il riscaldamento e la produzione di acqua calda sanitaria, tra cui caldaie, scaldacqua e pompe di calore, ed è riconosciuta a livello internazionale per l'attenzione alla qualità, all'innovazione e alla sostenibilità ambientale.
           </p>
@@ -101,11 +124,13 @@
           <p>
             Il progetto ha richiesto un'accurata analisi preliminare dei dati, seguita da una fase di studio e sviluppo dell'algoritmo di parsing, con particolare attenzione all'efficienza e all'affidabilità del codice. In questa fase ho lavorato in autonomia, confrontandomi con problemi reali e imparando a utilizzare logiche di programmazione orientate all'uso professionale.
           </p>
-          <img src="img/azienda.jpg" alt="Lavoro svolto presso Ariston">
         </div>
+        <img src="img/azienda.jpg" alt="Lavoro svolto presso Ariston" class="bio-image">
+      </div>
 
-        <div class="periodo-section">
-          <h3 class="periodo-title">Secondo periodo</h3>
+      <div class="periodo-section">
+        <h3 class="periodo-title">Secondo periodo</h3>
+        <div class="periodo-content">
           <p>
             Nel secondo periodo, il progetto è stato esteso e migliorato: ho implementato una funzionalità aggiuntiva che permetteva, una volta completata l'analisi del file, di generare automaticamente un report in formato Excel. Questo report organizzava in una griglia strutturata i dati ritenuti significativi per l'azienda, rendendoli facilmente consultabili e utili per l'attività degli ingegneri.
           </p>
@@ -115,74 +140,25 @@
           <p>
             Verso la fine del secondo periodo ho partecipato a una presentazione pubblica nella sala comune dell'azienda, durante la quale ho illustrato il mio progetto ai responsabili di reparto. In questa occasione ho descritto sia i punti di forza del software (ad esempio la sua velocità, la precisione nell'estrazione dei dati e la facilità d'uso), sia i punti critici riscontrati durante lo sviluppo (in particolare, la difficoltà nella gestione di file non omogenei o la mancanza di un'interfaccia grafica). Questo momento è stato particolarmente formativo, in quanto mi ha permesso di sintetizzare e comunicare in modo efficace il lavoro svolto, esponendo le scelte tecniche adottate e rispondendo alle domande dei presenti.
           </p>
-          <img src="img/sala_conferenze.jpg" alt="Presentazione in sala conferenze">
         </div>
+        <img src="img/sala_conferenze.jpg" alt="Presentazione in sala conferenze" class="bio-image">
+      </div>
 
-        <section style="max-width: 800px; margin: 40px auto 80px; line-height: 1.8; font-size: 1.1rem; color: #222;">
-          <h2 style="text-align: center;">Conclusioni</h2>
-          <p style="text-align: justify;">
+      <div class="periodo-section" style="background-color: #fff; border-left: 4px solid #2c3e50;">
+        <h3 class="periodo-title" style="color: #2c3e50; border-bottom-color: #2c3e50;">Conclusioni</h3>
+        <div class="periodo-content">
+          <p>
             Nel complesso, questa esperienza di alternanza scuola-lavoro è stata molto significativa dal punto di vista formativo. Mi ha permesso di confrontarmi con un contesto lavorativo reale, di mettermi alla prova nello sviluppo di un progetto concreto, e di applicare competenze informatiche acquisite durante il percorso scolastico.
           </p>
-          <p style="text-align: justify;">
+          <p>
             Tuttavia, non sono mancati momenti di difficoltà e incertezza. In più occasioni mi sono trovato da solo ad affrontare problemi tecnici, senza il supporto costante di un team, condizione che ha rallentato il mio lavoro e creato situazioni di insicurezza. Avrei desiderato far parte di un gruppo di sviluppo collaborativo, per poter condividere idee, confrontarmi con figure più esperte e crescere anche a livello relazionale.
           </p>
-          <p style="text-align: justify;">
+          <p>
             Nonostante ciò, ritengo che l'esperienza sia stata molto utile, perché mi ha aiutato a capire quali sono i miei punti di forza e quali le mie preferenze in ambito lavorativo. In particolare, ho compreso che il lavoro da programmatore in un ambiente statico o da scrivania non è ciò che sento più affine alla mia personalità. Preferisco contesti dinamici, con maggiore interazione tra colleghi, in cui sia possibile un confronto continuo. Questa consapevolezza rappresenta per me un passaggio fondamentale nel mio orientamento professionale futuro.
           </p>
-        </section>
-      </section>
-    </div>
-
-    <!-- Testo Inglese -->
-    <div id="eng" class="text-block" style="display: none;">
-      <section>
-        <h2>Work Experience at Ariston Group</h2>
-        
-        <div class="periodo-section">
-          <h3 class="periodo-title">First Period</h3>
-          <p>
-            During the first period of my PCTO (School-Work Alternation Program), I had the opportunity to undertake my work experience at Ariston Group, an important industrial company operating in the heating sector. Ariston specializes in the design and production of systems for heating and domestic hot water production, including boilers, water heaters, and heat pumps, and is internationally recognized for its attention to quality, innovation, and environmental sustainability.
-          </p>
-          <p>
-            In the first days, I was accompanied on a tour of the company structure, where I could observe the internal organization and learn about the main departments. Immediately, it became clear how well-organized, competent, and technologically advanced the environment was - characteristics that sparked considerable interest in me.
-          </p>
-          <p>
-            Subsequently, I was placed in the technical/IT office, where I had the chance to settle in, familiarize myself with the tools used by the company, and understand the operational dynamics. After an initial observation phase, I was assigned my first individual project: creating a Python software module with parser functionality, a program capable of analyzing large text files containing technical data and automatically extracting relevant information for product optimization.
-          </p>
-          <p>
-            The project required a preliminary data analysis, followed by a phase of studying and developing the parsing algorithm, with particular attention to code efficiency and reliability. During this phase, I worked independently, dealing with real problems and learning to use programming logic oriented toward professional use.
-          </p>
-          <img src="img/azienda.jpg" alt="Work at Ariston">
         </div>
-
-        <div class="periodo-section">
-          <h3 class="periodo-title">Second Period</h3>
-          <p>
-            In the second period, the project was extended and improved: I implemented an additional feature that allowed, once the file analysis was completed, to automatically generate an Excel report. This report organized the data deemed significant for the company in a structured grid, making them easily consultable and useful for the engineers' work.
-          </p>
-          <p>
-            During this phase, I had the opportunity to deepen my understanding of the interaction between Python and Excel format, learning to export data in a clear, orderly, and customizable manner, respecting the company's needs. I also took care of aspects related to the presentation of the result, such as sheet formatting and data arrangement, to facilitate reading by internal technicians.
-          </p>
-          <p>
-            Toward the end of the second period, I participated in a public presentation in the company's common room, where I presented my project to department managers. On this occasion, I described both the software's strengths (such as its speed, data extraction accuracy, and ease of use) and the critical points encountered during development (particularly the difficulty in managing non-homogeneous files or the lack of a graphical interface). This moment was particularly educational, as it allowed me to effectively summarize and communicate the work done, explaining the technical choices made and answering questions from the audience.
-          </p>
-          <img src="img/sala_conferenze.jpg" alt="Presentation in conference room">
-        </div>
-
-        <section style="max-width: 800px; margin: 40px auto 80px; line-height: 1.8; font-size: 1.1rem; color: #222;">
-          <h2 style="text-align: center;">Conclusions</h2>
-          <p style="text-align: justify;">
-            Overall, this school-work alternation experience was very significant from an educational perspective. It allowed me to confront a real work environment, test myself in developing a concrete project, and apply IT skills acquired during my school career.
-          </p>
-          <p style="text-align: justify;">
-            However, there were moments of difficulty and uncertainty. On several occasions, I found myself alone in dealing with technical problems without the constant support of a team, a situation that slowed my work and created insecurity. I would have liked to be part of a collaborative development group to share ideas, compare myself with more experienced figures, and grow relationally as well.
-          </p>
-          <p style="text-align: justify;">
-            Despite this, I believe the experience was very useful because it helped me understand my strengths and my work preferences. In particular, I realized that working as a programmer in a static or desk environment is not what I feel most suited to my personality. I prefer dynamic contexts with more interaction between colleagues, where continuous discussion is possible. This awareness represents a fundamental step in my future professional orientation.
-          </p>
-        </section>
-      </section>
-    </div>
+      </div>
+    </section>
   </main>
 
   <footer style="padding-top: 40px;">
@@ -190,15 +166,6 @@
   </footer>
 
   <script>
-    function showItalian() {
-      document.getElementById("ita").style.display = "block";
-      document.getElementById("eng").style.display = "none";
-    }
-    function showEnglish() {
-      document.getElementById("ita").style.display = "none";
-      document.getElementById("eng").style.display = "block";
-    }
-
     fetch('navbar.html')
       .then(response => response.text())
       .then(data => {
