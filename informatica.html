@@ -99,20 +99,10 @@
       <h4>Interrogazioni avanzate</h4>
       <p>Abbiamo approfondito il linguaggio SQL con:</p>
       <ul>
-        <li><em>Query complesse:</em> JOIN tra tabelle, subquery, funzioni di aggregazione</li>
+        <li><em>Query complesse:</em> JOIN tra tabelle, query annidate, funzioni di aggregazione</li>
         <li><em>Ottimizzazione:</em> Uso appropriato degli indici per migliorare le performance</li>
-        <li><em>Transazioni:</em> Gestione di operazioni atomiche (ACID properties)</li>
       </ul>
-
-      <div class="formula">
-        SELECT p.nome, COUNT(o.id) as num_ordini<br>
-        FROM prodotti p LEFT JOIN ordini o ON p.id = o.prodotto_id<br>
-        WHERE p.prezzo > 100<br>
-        GROUP BY p.nome<br>
-        HAVING COUNT(o.id) > 5<br>
-        ORDER BY num_ordini DESC;
-      </div>
-
+      
       <h4>Sicurezza: prevenzione SQL Injection</h4>
       <p>Particolare attenzione è stata dedicata alle tecniche di sicurezza:</p>
       <div class="esempio">
@@ -148,13 +138,6 @@
         </tr>
       </table>
 
-      <h4>JWT per l'autenticazione</h4>
-      <p>Implementazione di sistemi sicuri di autenticazione tramite token:</p>
-      <div class="formula">
-        Header.Payload.Signature<br>
-        eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
-      </div>
-
       <h3>4. Frontend e integrazione</h3>
       <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin: 2rem 0;">
         <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
@@ -164,10 +147,6 @@
         <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
           <h4 style="color: #e74c3c;">JavaScript</h4>
           <p>Fetch API per comunicare con il backend e gestire i dati JSON</p>
-        </div>
-        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
-          <h4 style="color: #e74c3c;">Framework</h4>
-          <p>Introduzione a React/Vue per applicazioni moderne</p>
         </div>
       </div>
     </section>
@@ -181,13 +160,13 @@
         La capacità di integrare queste tecnologie in un unico flusso di lavoro ci permette di affrontare progetti complessi con approccio professionale, ponendo sempre attenzione a qualità del codice, sicurezza e user experience. Queste competenze rappresentano una solida base per il mondo del lavoro digitale, sempre più orientato verso soluzioni web-based e sistemi distribuiti.
       </p>
       <div class="esempio">
-        <strong>Progetto finale:</strong> Abbiamo realizzato un e-commerce completo con catalogo prodotti, carrello, checkout e area utente, implementando tutte le tecnologie studiate.
+        <strong>Progetto finale:</strong> Abbiamo realizzato un'applicazione web per facilitare gli scout, implementando tutte le tecnologie studiate.
       </div>
     </section>
   </main>
 
   <footer style="padding-top: 40px;">
-    <p>&copy; 2025 Classe di Informatica</p>
+    <p>&copy; 2025 Cristian Ambrosini</p>
   </footer>
 
   <script>
