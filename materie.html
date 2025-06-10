@@ -6,10 +6,16 @@
   <title>Materie</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Stile solo per la griglia dei pulsanti */
+    /* Sovrascrivo solo gli stili necessari per la griglia */
+    .materie-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
     .materie-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      grid-template-columns: repeat(4, 1fr);
       gap: 20px;
       margin: 30px 0;
     }
@@ -24,23 +30,42 @@
       border-radius: 8px;
       cursor: pointer;
       transition: all 0.3s ease;
+      text-align: center;
+      min-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     
     .materie-grid button:hover {
       background-color: #2980b9;
-      transform: translateY(-2px);
+      transform: translateY(-3px);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
     
-    /* Responsive */
+    /* Responsive: 3 colonne su tablet */
+    @media (max-width: 1024px) {
+      .materie-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+    
+    /* 2 colonne su tablet piccolo */
     @media (max-width: 768px) {
       .materie-grid {
         grid-template-columns: repeat(2, 1fr);
       }
     }
     
+    /* 1 colonna su mobile */
     @media (max-width: 480px) {
       .materie-grid {
         grid-template-columns: 1fr;
+      }
+      
+      .materie-grid button {
+        padding: 12px;
+        font-size: 1rem;
       }
     }
   </style>
@@ -65,7 +90,7 @@
     </div>
   </main>
 
-<footer style="padding-top: 40px;">
+  <footer>
     <p>&copy; Maturità 2025 - Cristian Ambrosini</p>
   </footer>
 
