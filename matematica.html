@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Matematica</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
 
+  <main>
+    <h1>Matematica</h1>
+
+    <!-- Calcolo Combinatorio -->
+    <div class="autore-section">
+      <div class="autore-content">
+        <section style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem; color: #222; text-align: center;">
+          
+          <h2 style="margin-bottom: 1rem;">Principi base del calcolo combinatorio</h2>
+          <img src="img/combinatoria.jpg" alt="Diagramma combinatorio" style="max-width: 300px; width: 100%; height: auto; border-radius: 15px; margin: 20px auto; display: block;" />
+          
+          <div style="text-align: left; margin-bottom: 1.2rem;">
+            <h3 style="text-align: center; color: #444;">Operazioni fondamentali</h3>
+            <p>
+              <strong>Permutazioni:</strong> Sono i modi diversi di ordinare <em>tutti</em> gli elementi di un insieme. Se abbiamo <em>n</em> elementi distinti, il numero totale di permutazioni è <em>n!</em> (fattoriale di <em>n</em>), cioè il prodotto di tutti i numeri interi da 1 a <em>n</em>.
+            </p>
+            
+            <p>
+              <strong>Permutazioni con ripetizione:</strong> Quando alcuni elementi si ripetono, il numero di permutazioni si calcola dividendo <em>n!</em> per il prodotto dei fattoriali delle quantità di elementi ripetuti.
+            </p>
+            
+            <p>
+              <strong>Combinazioni:</strong> Sono i modi di scegliere <em>k</em> elementi da un insieme di <em>n</em> elementi, <em>senza considerare l'ordine</em>. Il numero di combinazioni si indica con <em>C(n, k)</em> ed è calcolato con la formula <em>n! / (k! (n-k)!)</em>.
+            </p>
+            
+            <p>
+              <strong>Combinazioni con ripetizione:</strong> Si usano quando si possono scegliere elementi più volte. Il numero è dato da <em>C(n + k - 1, k)</em>.
+            </p>
+          </div>
+          
+          <div style="text-align: left; margin-top: 2rem;">
+            <h3 style="text-align: center; color: #444;">Esempi pratici</h3>
+            <p>
+              <strong>Permutazioni semplici:</strong> Se ho 4 libri diversi e voglio disporli su uno scaffale, il numero di disposizioni è <em>4! = 24</em>.
+            </p>
+            
+            <p>
+              <strong>Permutazioni con ripetizione:</strong> Per la parola "ANNA": <em>4! / (2! × 2!) = 6</em> disposizioni.
+            </p>
+            
+            <p>
+              <strong>Combinazioni semplici:</strong> Scegliere 3 amici da un gruppo di 5: <em>C(5,3) = 10</em>.
+            </p>
+            
+            <p>
+              <strong>Combinazioni con ripetizione:</strong> Scegliere 3 caramelle da 5 tipi (con ripetizione): <em>C(7,3) = 35</em>.
+            </p>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Applicazioni -->
+    <section style="max-width: 800px; margin: 40px auto; line-height: 1.8; font-size: 1.1rem; color: #222; text-align: center;">
+      <h2 style="margin-bottom: 1rem;">Applicazioni e importanza</h2>
+      <p style="text-align: justify; margin-bottom: 1.2rem;">
+        Il calcolo combinatorio è utilizzato in probabilità per calcolare eventi, in informatica per analizzare algoritmi, e in statistica per studiare campioni. Comprendere permutazioni e combinazioni permette di affrontare problemi complessi con metodi precisi.
+      </p>
+      
+      <img src="img/applicazioni.jpg" alt="Applicazioni pratiche" style="max-width: 400px; width: 100%; height: auto; border-radius: 15px; margin: 20px auto; display: block;" />
+    </section>
+
+    <!-- Conclusione -->
+    <section style="max-width: 800px; margin: 40px auto; line-height: 1.8; font-size: 1.1rem; color: #222;">
+      <h2 style="text-align: center; margin-bottom: 1rem;">Conclusione</h2>
+      <p style="text-align: justify; margin-bottom: 1.2rem;">
+        Il calcolo combinatorio fornisce strumenti fondamentali per contare e organizzare oggetti in modo efficiente. La padronanza di questi concetti è essenziale per matematica, informatica e qualsiasi disciplina che richieda analisi di dati e possibilità.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cristian Ambrosini</p>
+  </footer>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        const pathname = window.location.pathname.split('/').pop();
+        document.querySelectorAll('.navbar button').forEach(btn => {
+          const href = btn.getAttribute('onclick').match(/'(.*?)'/)[1];
+          if (href === pathname) {
+            btn.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
