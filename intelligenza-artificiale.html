@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Intelligenza Artificiale - Deep Learning</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .esempio {
+      background-color: #f8f9fa;
+      border-left: 4px solid #3498db;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .formula {
+      font-family: 'Courier New', monospace;
+      background-color: #f0f0f0;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+      font-size: 1.1rem;
+      color: #222;
+    }
+    h2, h3, h4 {
+      color: #2c3e50;
+    }
+    h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+    h3 {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.3rem;
+      margin-top: 1.5rem;
+    }
+    h4 {
+      color: #3498db;
+      margin-top: 1.2rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      margin: 20px auto;
+      display: block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th {
+      background-color: #3498db;
+      color: white;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    td {
+      padding: 0.5rem;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
+
+  <main>
+    <h1>Intelligenza Artificiale</h1>
+
+    <section>
+      <h2>Deep Learning: Rivoluzione nell'Apprendimento Automatico</h2>
+      <img src="img/neural_network.jpg" alt="Rete neurale artificiale" style="max-width: 500px;" />
+
+      <h3>1. Fondamenti del Deep Learning</h3>
+      
+      <h4>Dall'AI al Machine Learning al Deep Learning</h4>
+      <p>Il deep learning rappresenta l'evoluzione più avanzata del machine learning, ispirata alla struttura del cervello umano. Mentre l'AI tradizionale richiedeva regole esplicite, il deep learning apprende direttamente dai dati attraverso:</p>
+      
+      <ul>
+        <li><strong>Reti neurali artificiali</strong> con multiple layer nascosti</li>
+        <li><strong>Backpropagation</strong> per l'ottimizzazione dei pesi</li>
+        <li><strong>Funzioni di attivazione</strong> non lineari (ReLU, Sigmoid, Tanh)</li>
+      </ul>
+
+      <div class="esempio">
+        <strong>Esempio:</strong> Una CNN (Convolutional Neural Network) può identificare gatti nelle immagini dopo l'addestramento su migliaia di esempi, senza essere esplicitamente programmata per riconoscere zampe o baffi.
+      </div>
+
+      <h4>Architetture Principali</h4>
+      <table>
+        <tr>
+          <th>Tipo</th>
+          <th>Applicazione</th>
+          <th>Caratteristica</th>
+        </tr>
+        <tr>
+          <td>CNN</td>
+          <td>Computer Vision</td>
+          <td>Filtri convoluzionali per pattern spaziali</td>
+        </tr>
+        <tr>
+          <td>RNN</td>
+          <td>Elaborazione linguaggio</td>
+          <td>Memoria per sequenze temporali</td>
+        </tr>
+        <tr>
+          <td>Transformer</td>
+          <td>NLP avanzato</td>
+          <td>Meccanismi di attention</td>
+        </tr>
+      </table>
+
+      <h3>2. Addestramento delle Reti Neurali</h3>
+      <img src="img/training_process.jpg" alt="Processo di addestramento" style="max-width: 450px;" />
+
+      <h4>La Matematica del Learning</h4>
+      <p>L'addestramento avviene attraverso la minimizzazione di una funzione di loss:</p>
+      <div class="formula">
+        L(θ) = 1/N ∑ L(y<sub>i</sub>, f(x<sub>i</sub>; θ)) + λR(θ)
+      </div>
+      <p>Dove θ rappresenta i parametri del modello e λ il tasso di regolarizzazione.</p>
+
+      <h4>Sfide nell'Addestramento</h4>
+      <ul>
+        <li><em>Overfitting:</em> Il modello memorizza i dati invece di generalizzare</li>
+        <li><em>Vanishing Gradients:</em> Problema nelle reti molto profonde</li>
+        <li><em>Bisogno di Big Data:</em> Milioni di esempi per prestazioni ottimali</li>
+      </ul>
+
+      <h3>3. Applicazioni Reali</h3>
+      <img src="img/ai_applications.jpg" alt="Applicazioni AI" style="max-width: 400px;" />
+
+      <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin: 2rem 0;">
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+          <h4 style="color: #e74c3c;">Medicina</h4>
+          <p>Diagnosi mediche da immagini radiologiche con accuratezza superiore a molti specialisti umani</p>
+        </div>
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+          <h4 style="color: #e74c3c;">Automotive</h4>
+          <p>Veicoli autonomi che processano in tempo reale dati da sensori e camere</p>
+        </div>
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+          <h4 style="color: #e74c3c;">Finanza</h4>
+          <p>Rilevamento frodi e trading algoritmico basato su pattern complessi</p>
+        </div>
+      </div>
+
+      <h3>4. Etica e Sfide Future</h3>
+      <h4>Problemi Aperti</h4>
+      <ul>
+        <li><strong>Bias algoritmici:</strong> I modelli riflettono i bias presenti nei dati di training</li>
+        <li><strong>Explainability:</strong> Difficoltà di interpretare le decisioni delle "black box"</li>
+        <li><strong>Sostenibilità:</strong> Enorme consumo energetico dei modelli large-scale</li>
+      </ul>
+
+      <div class="esempio">
+        <strong>Caso studio:</strong> GPT-4 richiede milioni di dollari in costi di addestramento e migliaia di GPU ad alta potenza.
+      </div>
+    </section>
+
+    <section style="margin-top: 3rem;">
+      <h2>Conclusioni</h2>
+      <p style="text-align: justify;">
+        Il deep learning ha rivoluzionato il campo dell'intelligenza artificiale, permettendo progressi impensabili solo un decennio fa. Tuttavia, con grande potere derivano grandi responsabilità: la comunità scientifica deve affrontare non solo sfide tecniche ma anche etiche. Il futuro vedrà probabilmente un'integrazione ancora più profonda tra capacità umane e artificiali, con sistemi che combinano l'efficienza del machine learning con l'intuizione e la creatività umana.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cristian Ambrosini</p>
+  </footer>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        const pathname = window.location.pathname.split('/').pop();
+        document.querySelectorAll('.navbar button').forEach(btn => {
+          const href = btn.getAttribute('onclick').match(/'(.*?)'/)[1];
+          if (href === pathname) {
+            btn.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
