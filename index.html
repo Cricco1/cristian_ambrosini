@@ -6,24 +6,66 @@
   <title>Biografia</title>
   <link rel="stylesheet" href="style.css" />
   <style>
-    /* Stile solo per l'immagine e miglioramenti responsive */
+    /* Stili migliorati per titolo e testo */
+    .intro-text {
+      text-align: center;
+      margin: 2rem 0;
+    }
+    
+    .intro-text h1 {
+      font-size: 2.8rem;
+      color: #2c3e50;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      letter-spacing: 0.5px;
+    }
+    
+    .bio-content {
+      font-size: 1.2rem;
+      line-height: 1.8;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+    
+    .bio-content p {
+      margin-bottom: 1.5rem;
+    }
+    
     .bio-image {
       max-width: 80%;
       height: auto;
       border-radius: 15px;
-      margin: 20px auto;
+      margin: 30px auto;
       display: block;
       box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
     
     /* Ottimizzazione mobile */
     @media (max-width: 768px) {
+      .intro-text h1 {
+        font-size: 2.2rem;
+      }
+      
+      .bio-content {
+        font-size: 1.1rem;
+      }
+      
       .bio-image {
         max-width: 90%;
       }
     }
     
     @media (max-width: 480px) {
+      .intro-text h1 {
+        font-size: 1.8rem;
+      }
+      
+      .bio-content {
+        font-size: 1rem;
+        padding: 0 15px;
+      }
+      
       .bio-image {
         max-width: 95%;
         border-radius: 10px;
@@ -35,7 +77,9 @@
   <div id="navbar-placeholder"></div>
   
   <main>
-    <h1>Benvenuti nel mio sito personale</h1>
+    <div class="intro-text">
+      <h1>Benvenuti nel mio sito personale</h1>
+    </div>
     
     <img src="img/amici.jpg" alt="Gita Milano" class="bio-image">
     
@@ -60,7 +104,7 @@
       </div>
     </section>
   </main>
-
+  
 <footer style="padding-top: 40px;">
     <p>&copy; Maturità 2025 - Cristian Ambrosini</p>
   </footer>
