@@ -1,1 +1,154 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sistemi Operativi - Programmazione Concorrente</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .esempio {
+      background-color: #f8f9fa;
+      border-left: 4px solid #3498db;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .formula {
+      font-family: 'Courier New', monospace;
+      background-color: #f0f0f0;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div id="navbar-placeholder"></div>
 
+  <main>
+    <h1>Sistemi Operativi</h1>
+
+    <!-- Programmazione Concorrente -->
+    <div class="autore-section">
+      <div class="autore-content">
+        <section style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem; color: #222;">
+          <h2 style="text-align: center; margin-bottom: 1.5rem;">Programmazione Concorrente</h2>
+          <img src="img/concorrenza.jpg" alt="Diagramma di processi concorrenti" style="max-width: 400px; width: 100%; height: auto; border-radius: 15px; margin: 20px auto; display: block;" />
+
+          <h3 style="color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-top: 2rem;">1. Fondamenti di Concorrenza</h3>
+          
+          <h4 style="color: #3498db; margin-top: 1.5rem;">Definizione di Concorrenza</h4>
+          <p>La concorrenza è la capacità di un sistema di gestire più processi o thread in esecuzione apparentemente simultanea. Nei sistemi moderni si distinguono due scenari:</p>
+          
+          <ul style="margin-left: 1.5rem;">
+            <li><strong>Sistemi monoprocessore:</strong> 
+              La concorrenza è simulata attraverso tecniche di time-sharing, dove il processore alterna rapidamente l'esecuzione tra diversi processi</li>
+            
+            <li><strong>Sistemi multiprocessore/multicore:</strong> 
+              Possibilità di esecuzione parallela effettiva, con processi eseguiti contemporaneamente su core distinti</li>
+          </ul>
+
+          <h4 style="color: #3498db; margin-top: 1.5rem;">Classificazione dei Processi</h4>
+          <p><strong>Processi disgiunti:</strong> Non condividono risorse e possono essere eseguiti indipendentemente</p>
+          <div class="esempio">
+            <strong>Esempio:</strong> Due applicazioni separate che non comunicano tra loro
+          </div>
+          
+          <p><strong>Processi congiunti:</strong> Condividono risorse di sistema e richiedono meccanismi di coordinamento</p>
+          <div class="esempio">
+            <strong>Esempio:</strong> Processi che accedono allo stesso file di configurazione o area di memoria condivisa
+          </div>
+
+          <h4 style="color: #3498db; margin-top: 1.5rem;">Modelli di Interazione</h4>
+          <ul>
+            <li><em>Competizione:</em> Processi in conflitto per l'accesso a risorse esclusive</li>
+            <li><em>Cooperazione:</em> Processi che collaborano al completamento di un compito comune</li>
+          </ul>
+
+          <h3 style="color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-top: 2rem;">2. Problemi e Soluzioni</h3>
+          <img src="img/race_condition.jpg" alt="Esempio di race condition" style="max-width: 400px; width: 100%; height: auto; border-radius: 15px; margin: 20px auto; display: block;" />
+
+          <h4 style="color: #3498db; margin-top: 1.5rem;">Race Condition</h4>
+          <p>Si verifica quando il risultato finale dipende dall'ordine temporale in cui i processi accedono a risorse condivise. Questo può portare a:</p>
+          <ul>
+            <li>Inconsistenze nei dati</li>
+            <li>Comportamenti imprevedibili</li>
+            <li>Errori difficili da riprodurre</li>
+          </ul>
+
+          <h4 style="color: #3498db; margin-top: 1.5rem;">Meccanismi di Sincronizzazione</h4>
+          <p><strong>Semafori:</strong> Strutture dati che controllano l'accesso a risorse attraverso operazioni atomiche wait() e signal()</p>
+          <div class="formula">sem_wait(sem_t *s);<br>sem_post(sem_t *s);</div>
+
+          <p><strong>Mutex:</strong> Meccanismo di esclusione mutua che garantisce accesso esclusivo a una risorsa</p>
+          <div class="formula">pthread_mutex_lock(&mutex);<br>pthread_mutex_unlock(&mutex);</div>
+
+          <h3 style="color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-top: 2rem;">3. Problemi Classici</h3>
+
+          <h4 style="color: #3498db; margin-top: 1.5rem;">Problema dei Filosofi a Cena</h4>
+          <img src="img/filosofi.jpg" alt="Problema dei filosofi a cena" style="max-width: 300px; width: 100%; height: auto; border-radius: 15px; margin: 15px auto; display: block;" />
+          <p>Cinque filosofi alternano tra pensare e mangiare, utilizzando due bacchette condivise. Le sfide principali includono:</p>
+          <ul>
+            <li>Prevenzione di deadlock</li>
+            <li>Evitare starvation</li>
+            <li>Massimizzare il parallelismo</li>
+          </ul>
+
+          <h4 style="color: #3498db; margin-top: 1.5rem;">Problema Produttore-Consumatore</h4>
+          <p>Modello di cooperazione tra processi che condividono un buffer di dimensione limitata:</p>
+          <div class="esempio">
+            <strong>Produttore:</strong> Genera dati e li inserisce nel buffer<br>
+            <strong>Consumatore:</strong> Preleva e processa i dati dal buffer<br>
+            <strong>Sfide:</strong> Sincronizzazione, gestione buffer pieno/vuoto
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <!-- Applicazioni Pratiche -->
+    <section style="max-width: 800px; margin: 40px auto; line-height: 1.8; font-size: 1.1rem; color: #222; text-align: center;">
+      <h2 style="margin-bottom: 1.5rem;">Applicazioni Pratiche</h2>
+      <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin: 2rem 0;">
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+          <h4 style="color: #e74c3c;">Sistemi Operativi</h4>
+          <p>Gestione di processi multipli, scheduling delle CPU, e accesso concorrente alle periferiche di I/O</p>
+        </div>
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+          <h4 style="color: #e74c3c;">Database</h4>
+          <p>Controllo della concorrenza nelle transazioni, gestione dei lock, e isolamento delle operazioni</p>
+        </div>
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+          <h4 style="color: #e74c3c;">Applicazioni Web</h4>
+          <p>Gestione di richieste simultanee, sessioni utente, e accesso a risorse condivise</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Conclusione -->
+    <section style="max-width: 800px; margin: 40px auto; line-height: 1.8; font-size: 1.1rem; color: #222;">
+      <h2 style="text-align: center; margin-bottom: 1rem;">Considerazioni Finali</h2>
+      <p style="text-align: justify;">
+        La programmazione concorrente rappresenta una delle sfide più complesse nello sviluppo software moderno. La corretta gestione delle risorse condivise e dei meccanismi di sincronizzazione è fondamentale per garantire non solo l'efficienza del sistema, ma soprattutto la sua correttezza e affidabilità. Lo studio dei problemi classici e delle relative soluzioni fornisce un bagaglio metodologico essenziale per affrontare scenari reali in ambiti critici come i sistemi distribuiti, il real-time computing e le applicazioni ad alta disponibilità.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cristian Ambrosini</p>
+  </footer>
+
+  <script>
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        const pathname = window.location.pathname.split('/').pop();
+        document.querySelectorAll('.navbar button').forEach(btn => {
+          const href = btn.getAttribute('onclick').match(/'(.*?)'/)[1];
+          if (href === pathname) {
+            btn.classList.add('active');
+          }
+        });
+      });
+  </script>
+</body>
+</html>
