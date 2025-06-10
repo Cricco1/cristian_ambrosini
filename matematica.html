@@ -5,6 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Matematica - Probabilità e Calcolo Combinatorio</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .esempio {
+      background-color: #f8f9fa;
+      border-left: 4px solid #3498db;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .formula {
+      font-family: 'Courier New', monospace;
+      background-color: #f0f0f0;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 <body>
   <div id="navbar-placeholder"></div>
@@ -19,33 +34,74 @@
           <h2 style="text-align: center; margin-bottom: 1.5rem;">Probabilità e Calcolo Combinatorio</h2>
           <img src="img/probabilita.jpg" alt="Diagrammi di probabilità" style="max-width: 400px; width: 100%; height: auto; border-radius: 15px; margin: 20px auto; display: block;" />
 
-          <h3 style="color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">1. Fondamenti di Probabilità</h3>
+          <h3 style="color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-top: 2rem;">1. Fondamenti di Probabilità</h3>
           
           <h4 style="color: #3498db; margin-top: 1.5rem;">Definizioni di Probabilità</h4>
+          <p>La probabilità misura quanto è verosimile il verificarsi di un evento. Esistono tre approcci fondamentali:</p>
+          
           <ul style="margin-left: 1.5rem;">
-            <li><strong>Classica:</strong> P(E) = casi favorevoli / casi possibili</li>
-            <li><strong>Statistica:</strong> Frequenza relativa di un evento in prove ripetute</li>
-            <li><strong>Soggettiva:</strong> Grado di fiducia personale nel verificarsi di un evento</li>
+            <li><strong>Classica (Laplace):</strong> 
+              <span class="formula">P(E) = numero casi favorevoli / numero casi possibili</span><br>
+              <div class="esempio">
+                <strong>Esempio:</strong> Nel lancio di un dado, la probabilità di ottenere un 3 è 1/6, perché c'è un solo caso favorevole (uscita del 3) su 6 possibili.
+              </div>
+            </li>
+            
+            <li><strong>Statistica (frequentista):</strong> 
+              Si basa sulla frequenza relativa osservata in molte prove ripetute.<br>
+              <div class="esempio">
+                <strong>Esempio:</strong> Se lanciamo una moneta 1000 volte e otteniamo 520 teste, la probabilità statistica è 520/1000 = 0.52.
+              </div>
+            </li>
+            
+            <li><strong>Soggettiva:</strong> 
+              Grado di fiducia personale basato su informazioni disponibili.<br>
+              <div class="esempio">
+                <strong>Esempio:</strong> Un meteorologo potrebbe stimare al 70% la probabilità di pioggia domani basandosi su modelli climatici e dati storici.
+              </div>
+            </li>
           </ul>
 
-          <h4 style="color: #3498db; margin-top: 1.5rem;">Concetti chiave</h4>
-          <p>
-            <strong>Spazio campionario:</strong> Insieme di tutti i possibili risultati di un esperimento<br>
-            <strong>Evento:</strong> Sottoinsieme dello spazio campionario<br>
-            <strong>Eventi particolari:</strong><br>
-            - <em>Impossibile:</em> P(E) = 0<br>
-            - <em>Certo:</em> P(E) = 1<br>
-            - <em>Indipendenti:</em> P(A∩B) = P(A)·P(B)<br>
-            - <em>Dipendenti:</em> P(A|B) ≠ P(A)
-          </p>
+          <h4 style="color: #3498db; margin-top: 1.5rem;">Concetti fondamentali</h4>
+          <p><strong>Spazio campionario (Ω):</strong> L'insieme di tutti i possibili risultati di un esperimento.</p>
+          <div class="esempio">
+            <strong>Esempio:</strong> Nel lancio di un dado: Ω = {1, 2, 3, 4, 5, 6}
+          </div>
+          
+          <p><strong>Evento:</strong> Un sottoinsieme dello spazio campionario.</p>
+          <div class="esempio">
+            <strong>Esempio:</strong> "Esce un numero pari" è l'evento A = {2, 4, 6}
+          </div>
+          
+          <p><strong>Tipi di eventi:</strong></p>
+          <ul>
+            <li><em>Impossibile:</em> P(∅) = 0 (es: "esce 7" nel lancio di un dado)</li>
+            <li><em>Certo:</em> P(Ω) = 1 (es: "esce un numero tra 1 e 6")</li>
+            <li><em>Indipendenti:</em> P(A∩B) = P(A)·P(B) (es: due lanci consecutivi di monete)</li>
+            <li><em>Dipendenti:</em> P(A|B) ≠ P(A) (es: estrazione senza reinserimento)</li>
+          </ul>
 
-          <h4 style="color: #3498db; margin-top: 1.5rem;">Operazioni fondamentali</h4>
-          <p>
-            <strong>Probabilità contraria:</strong> P(E') = 1 - P(E)<br>
-            <strong>Probabilità totale:</strong> P(A∪B) = P(A) + P(B) - P(A∩B)<br>
-            <strong>Probabilità condizionata:</strong> P(A|B) = P(A∩B)/P(B)<br>
-            <strong>Teorema di Bayes:</strong> P(A|B) = [P(B|A)·P(A)]/P(B)
-          </p>
+          <h4 style="color: #3498db; margin-top: 1.5rem;">Operazioni e teoremi</h4>
+          <p><strong>Probabilità contraria:</strong> <span class="formula">P(E') = 1 - P(E)</span></p>
+          <div class="esempio">
+            Se la probabilità di pioggia è 30%, la probabilità che non piova è 70%.
+          </div>
+          
+          <p><strong>Probabilità totale:</strong> <span class="formula">P(A∪B) = P(A) + P(B) - P(A∩B)</span></p>
+          <div class="esempio">
+            In un mazzo di carte, P(Cuori∪Re) = P(Cuori) + P(Re) - P(Re di Cuori) = 13/52 + 4/52 - 1/52 = 16/52
+          </div>
+          
+          <p><strong>Probabilità condizionata:</strong> <span class="formula">P(A|B) = P(A∩B)/P(B)</span></p>
+          <div class="esempio">
+            Se estraggo una carta rossa da un mazzo, la probabilità che sia un Re è P(Re|Rossa) = P(Re∩Rossa)/P(Rossa) = (2/52)/(26/52) = 2/26
+          </div>
+          
+          <p><strong>Teorema di Bayes:</strong> <span class="formula">P(A|B) = [P(B|A)·P(A)]/P(B)</span></p>
+          <div class="esempio">
+            Se un test medico ha 99% di accuratezza e la malattia colpisce 1% della popolazione, la probabilità di essere malato con test positivo è:<br>
+            P(Malato|Positivo) = [P(Positivo|Malato)·P(Malato)]/P(Positivo) = (0.99×0.01)/(0.99×0.01 + 0.01×0.99) ≈ 50%
+          </div>
         </section>
       </div>
     </div>
@@ -54,32 +110,66 @@
     <div class="autore-section">
       <div class="autore-content">
         <section style="max-width: 800px; margin: 40px auto; line-height: 1.8; font-size: 1.1rem; color: #222;">
-          <h3 style="color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 0.5rem;">2. Calcolo Combinatorio</h3>
+          <h3 style="color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-top: 2rem;">2. Calcolo Combinatorio</h3>
           <img src="img/combinatoria.jpg" alt="Strutture combinatorie" style="max-width: 400px; width: 100%; height: auto; border-radius: 15px; margin: 20px auto; display: block;" />
 
           <h4 style="color: #3498db; margin-top: 1.5rem;">Fattoriale e Coefficiente Binomiale</h4>
-          <p>
-            <strong>Fattoriale:</strong> n! = n×(n-1)×...×1 (con 0! = 1)<br>
-            <strong>Coefficiente binomiale:</strong> C(n,k) = n!/(k!(n-k)!) = "n su k"
-          </p>
+          <p><strong>Fattoriale:</strong> <span class="formula">n! = n×(n-1)×...×1</span> (con 0! = 1 per definizione)</p>
+          <div class="esempio">
+            4! = 4×3×2×1 = 24<br>
+            Il numero di modi per ordinare 4 libri diversi su uno scaffale è 4! = 24
+          </div>
+          
+          <p><strong>Coefficiente binomiale:</strong> <span class="formula">C(n,k) = n!/(k!(n-k)!)</span> ("n su k")</p>
+          <div class="esempio">
+            C(5,3) = 5!/(3!2!) = 120/(6×2) = 10<br>
+            Il numero di modi per scegliere 3 studenti da un gruppo di 5 è 10
+          </div>
 
           <h4 style="color: #3498db; margin-top: 1.5rem;">Disposizioni</h4>
-          <p>
-            <strong>Semplici:</strong> D(n,k) = n!/(n-k)! (ordine importante, no ripetizioni)<br>
-            <strong>Con ripetizione:</strong> D'(n,k) = n<sup>k</sup> (ordine importante, con ripetizioni)
-          </p>
+          <p><strong>Semplici:</strong> <span class="formula">D(n,k) = n!/(n-k)!</span><br>
+          <em>Ordine importante, senza ripetizioni</em></p>
+          <div class="esempio">
+            D(5,3) = 5!/(5-3)! = 60<br>
+            Numero di podi possibili (1°, 2°, 3°) con 5 atleti: 60
+          </div>
+          
+          <p><strong>Con ripetizione:</strong> <span class="formula">D'(n,k) = n<sup>k</sup></span><br>
+          <em>Ordine importante, con ripetizioni</em></p>
+          <div class="esempio">
+            D'(10,4) = 10<sup>4</sup> = 10.000<br>
+            Numero di PIN bancari a 4 cifre (da 0000 a 9999)
+          </div>
 
           <h4 style="color: #3498db; margin-top: 1.5rem;">Permutazioni</h4>
-          <p>
-            <strong>Semplici:</strong> P(n) = n! (ordinamenti di n elementi distinti)<br>
-            <strong>Con ripetizione:</strong> P'(n) = n!/(k<sub>1</sub>!k<sub>2</sub>!...) (elementi ripetuti k volte)
-          </p>
+          <p><strong>Semplici:</strong> <span class="formula">P(n) = n!</span><br>
+          <em>Ordinamenti di n elementi distinti</em></p>
+          <div class="esempio">
+            P(4) = 24<br>
+            Anagrammi della parola "ROMA": ROMA, ROAM, RAOM, ecc.
+          </div>
+          
+          <p><strong>Con ripetizione:</strong> <span class="formula">P'(n) = n!/(k<sub>1</sub>!k<sub>2</sub>!...)</span><br>
+          <em>Elementi ripetuti k volte</em></p>
+          <div class="esempio">
+            P'(4) per "ANNA" = 4!/(2!2!) = 6<br>
+            Anagrammi: ANNA, AANN, NNAA, NANA, NAAN, ANAN
+          </div>
 
           <h4 style="color: #3498db; margin-top: 1.5rem;">Combinazioni</h4>
-          <p>
-            <strong>Semplici:</strong> C(n,k) = n!/(k!(n-k)!) (ordine irrilevante, no ripetizioni)<br>
-            <strong>Con ripetizione:</strong> C'(n,k) = C(n+k-1,k) (ordine irrilevante, con ripetizioni)
-          </p>
+          <p><strong>Semplici:</strong> <span class="formula">C(n,k) = n!/(k!(n-k)!)</span><br>
+          <em>Ordine irrilevante, senza ripetizioni</em></p>
+          <div class="esempio">
+            C(6,2) = 15<br>
+            Numero di coppie che si possono formare con 6 persone
+          </div>
+          
+          <p><strong>Con ripetizione:</strong> <span class="formula">C'(n,k) = C(n+k-1,k)</span><br>
+          <em>Ordine irrilevante, con ripetizioni</em></p>
+          <div class="esempio">
+            C'(5,3) = C(7,3) = 35<br>
+            Modi per comprare 3 gelati scegliendo tra 5 gusti (potendo prendere gusti ripetuti)
+          </div>
         </section>
       </div>
     </div>
@@ -88,17 +178,17 @@
     <section style="max-width: 800px; margin: 40px auto; line-height: 1.8; font-size: 1.1rem; color: #222; text-align: center;">
       <h2 style="margin-bottom: 1.5rem;">Campi di Applicazione</h2>
       <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin: 2rem 0;">
-        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px;">
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
           <h4 style="color: #e74c3c;">Crittografia</h4>
-          <p>Generazione di chiavi sicure basate su permutazioni di grandi numeri primi</p>
+          <p>La sicurezza RSA si basa sulla difficoltà di fattorizzare grandi numeri primi (problema combinatorio). Un sistema a 2048 bit ha circa 2<sup>2048</sup> chiavi possibili.</p>
         </div>
-        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px;">
-          <h4 style="color: #e74c3c;">Macchina di Turing</h4>
-          <p>Calcolo della complessità algoritmica attraverso modelli combinatori</p>
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+          <h4 style="color: #e74c3c;">Machine Learning</h4>
+          <p>Il teorema di Bayes è fondamentale per gli algoritmi di classificazione come il Naive Bayes, usato per filtri antispam e diagnosi mediche.</p>
         </div>
-        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px;">
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
           <h4 style="color: #e74c3c;">Sicurezza Informatica</h4>
-          <p>Analisi della robustezza delle password mediante calcolo combinatorio</p>
+          <p>Una password di 8 caratteri con maiuscole, minuscole, numeri e simboli ha 94<sup>8</sup> ≈ 6×10<sup>15</sup> combinazioni possibili.</p>
         </div>
       </div>
     </section>
@@ -107,7 +197,7 @@
     <section style="max-width: 800px; margin: 40px auto; line-height: 1.8; font-size: 1.1rem; color: #222;">
       <h2 style="text-align: center; margin-bottom: 1rem;">Conclusione</h2>
       <p style="text-align: justify;">
-        Lo studio della probabilità e del calcolo combinatorio costituisce la base per comprendere fenomeni casuali e risolvere problemi complessi in ambito scientifico e tecnologico. Dalla crittografia alla teoria degli algoritmi, questi strumenti matematici permettono di modellizzare realtà apparentemente imprevedibili e progettare sistemi efficienti in contesti ad alta complessità.
+        La probabilità e il calcolo combinatorio costituiscono il linguaggio matematico dell'incertezza e della complessità. Dagli algoritmi crittografici che proteggono le nostre comunicazioni digitali, ai modelli predittivi in meteorologia o finanza, questi strumenti ci permettono di quantificare il caso e gestire sistemi con un enorme numero di variabili. Comprenderne i principi non è solo essenziale per lo studio avanzato della matematica, ma rappresenta una competenza trasversale sempre più rilevante nell'era dei big data e dell'intelligenza artificiale.
       </p>
     </section>
   </main>
