@@ -4,65 +4,34 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Materie</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
-    /* RESET per evitare conflitti */
-    .materie-container, .materie-grid, .materie-grid * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    
-    main {
-      max-width: 1000px;
-      margin: 2rem auto;
-      padding: 0 20px;
-    }
-    
-    h1 {
-      text-align: center;
-      color: #2c3e50;
-      margin-bottom: 2rem;
-      font-size: 2.5rem;
-    }
-    
+    /* Stile solo per la griglia dei pulsanti */
     .materie-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 20px;
-      width: 100%;
+      margin: 30px 0;
     }
     
     .materie-grid button {
+      width: 100%;
+      padding: 15px;
+      font-size: 1.1rem;
       background-color: #3498db;
       color: white;
       border: none;
-      padding: 1.5rem 1rem;
-      border-radius: 10px;
-      font-size: 1.1rem;
+      border-radius: 8px;
       cursor: pointer;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      min-height: 80px;
-      width: 100%; /* Importante per evitare spazi vuoti */
     }
     
     .materie-grid button:hover {
       background-color: #2980b9;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+      transform: translateY(-2px);
     }
     
-    footer {
-      margin-top: 3rem;
-      text-align: center;
-      padding: 20px;
-    }
-    
-    /* Ottimizzazione mobile */
+    /* Responsive */
     @media (max-width: 768px) {
       .materie-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -96,7 +65,7 @@
     </div>
   </main>
 
-  <footer>
+<footer style="padding-top: 40px;">
     <p>&copy; Maturità 2025 - Cristian Ambrosini</p>
   </footer>
 
