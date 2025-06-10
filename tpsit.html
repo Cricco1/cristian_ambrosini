@@ -103,7 +103,57 @@
         </section>
       </div>
     </div>
+    <!-- Aggiungere dopo la sezione "3. Problemi Classici" e prima di "Applicazioni Pratiche" -->
+<section style="max-width: 800px; margin: 40px auto; line-height: 1.8; font-size: 1.1rem; color: #222;">
+  <h3 style="color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 0.5rem; margin-top: 2rem;">4. Deadlock e Starvation</h3>
+  <img src="img/deadlock.jpg" alt="Diagramma di deadlock" style="max-width: 400px; width: 100%; height: auto; border-radius: 15px; margin: 20px auto; display: block;" />
 
+  <h4 style="color: #3498db; margin-top: 1.5rem;">Condizioni per il Deadlock</h4>
+  <p>Secondo il modello di Coffman, sono necessarie e sufficienti quattro condizioni contemporaneamente:</p>
+  <ol>
+    <li><strong>Mutua esclusione:</strong> Le risorse sono non condivisibili</li>
+    <li><strong>Hold and wait:</strong> Processi mantengono risorse acquisite mentre ne attendono altre</li>
+    <li><strong>No prelazione:</strong> Le risorse non possono essere forzatamente sottratte</li>
+    <li><strong>Attesa circolare:</strong> Esiste un ciclo di processi in attesa di risorse</li>
+  </ol>
+
+  <div class="esempio">
+    <strong>Caso tipico:</strong> Processo P1 tiene la risorsa R1 e richiede R2, mentre P2 tiene R2 e richiede R1
+  </div>
+
+  <h4 style="color: #3498db; margin-top: 1.5rem;">Strategie di Gestione</h4>
+  <table style="width: 100%; border-collapse: collapse; margin: 1rem 0;">
+    <tr style="background-color: #3498db; color: white;">
+      <th style="padding: 0.5rem; text-align: left;">Approccio</th>
+      <th style="padding: 0.5rem; text-align: left;">Descrizione</th>
+    </tr>
+    <tr style="border-bottom: 1px solid #ddd;">
+      <td style="padding: 0.5rem;"><strong>Prevenzione</strong></td>
+      <td style="padding: 0.5rem;">Eliminazione sistematica di almeno una delle 4 condizioni</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #ddd;">
+      <td style="padding: 0.5rem;"><strong>Evitamento</strong></td>
+      <td style="padding: 0.5rem;">Uso dell'algoritmo del banchiere per allocazioni sicure</td>
+    </tr>
+    <tr style="border-bottom: 1px solid #ddd;">
+      <td style="padding: 0.5rem;"><strong>Rilevamento</strong></td>
+      <td style="padding: 0.5rem;">Costruzione del grafo di attesa e ricerca di cicli</td>
+    </tr>
+    <tr>
+      <td style="padding: 0.5rem;"><strong>Recupero</strong></td>
+      <td style="padding: 0.5rem;">Terminazione processi o prelazione risorse</td>
+    </tr>
+  </table>
+
+  <h4 style="color: #3498db; margin-top: 1.5rem;">Starvation</h4>
+  <p>Fenomeno correlato in cui un processo non ottiene mai le risorse necessarie, pur non essendo in deadlock. Soluzioni includono:</p>
+  <ul>
+    <li>Fair scheduling (aging dei processi)</li>
+    <li>Priority inheritance</li>
+    <li>Random selection</li>
+  </ul>
+</section>
+  
     <!-- Applicazioni Pratiche -->
     <section style="max-width: 800px; margin: 40px auto; line-height: 1.8; font-size: 1.1rem; color: #222; text-align: center;">
       <h2 style="margin-bottom: 1.5rem;">Applicazioni Pratiche</h2>
