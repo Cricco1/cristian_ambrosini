@@ -4,30 +4,39 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Materie</title>
-  <link rel="stylesheet" href="style.css" />
   <style>
+    /* RESET per evitare conflitti */
+    .materie-container, .materie-grid, .materie-grid * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
     main {
       max-width: 1000px;
-      margin: 0 auto;
-      padding: 20px;
+      margin: 2rem auto;
+      padding: 0 20px;
     }
+    
     h1 {
       text-align: center;
       color: #2c3e50;
       margin-bottom: 2rem;
       font-size: 2.5rem;
     }
+    
     .materie-grid {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
       gap: 20px;
-      margin: 0 auto;
+      width: 100%;
     }
+    
     .materie-grid button {
       background-color: #3498db;
       color: white;
       border: none;
-      padding: 1.2rem;
+      padding: 1.5rem 1rem;
       border-radius: 10px;
       font-size: 1.1rem;
       cursor: pointer;
@@ -38,28 +47,31 @@
       justify-content: center;
       text-align: center;
       min-height: 80px;
+      width: 100%; /* Importante per evitare spazi vuoti */
     }
+    
     .materie-grid button:hover {
       background-color: #2980b9;
       transform: translateY(-3px);
       box-shadow: 0 6px 12px rgba(0,0,0,0.15);
     }
+    
     footer {
       margin-top: 3rem;
       text-align: center;
       padding: 20px;
     }
+    
+    /* Ottimizzazione mobile */
     @media (max-width: 768px) {
       .materie-grid {
-        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        grid-template-columns: repeat(2, 1fr);
       }
     }
+    
     @media (max-width: 480px) {
       .materie-grid {
         grid-template-columns: 1fr;
-      }
-      .materie-grid button {
-        padding: 1rem;
       }
     }
   </style>
@@ -84,7 +96,7 @@
     </div>
   </main>
 
-  <footer style="padding-top: 40px;">
+  <footer>
     <p>&copy; Maturità 2025 - Cristian Ambrosini</p>
   </footer>
 
