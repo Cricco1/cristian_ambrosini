@@ -3,84 +3,202 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Sistemi e reti</title>
+  <title>Sistemi e Reti - Sicurezza Informatica</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .esempio {
+      background-color: #f8f9fa;
+      border-left: 4px solid #3498db;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .formula {
+      font-family: 'Courier New', monospace;
+      background-color: #f0f0f0;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+      font-size: 1.1rem;
+      color: #222;
+    }
+    h2, h3, h4 {
+      color: #2c3e50;
+    }
+    h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+    h3 {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.3rem;
+      margin-top: 1.5rem;
+    }
+    h4 {
+      color: #3498db;
+      margin-top: 1.2rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      margin: 20px auto;
+      display: block;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin: 2rem 0;
+    }
+    .gallery-item {
+      max-width: 300px;
+      text-align: center;
+    }
+    .gallery img {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    .gallery img:hover {
+      transform: scale(1.03);
+    }
+    .gallery-caption {
+      font-size: 0.95rem;
+      color: #555;
+      margin-top: 0.5rem;
+    }
+  </style>
 </head>
 <body>
   <div id="navbar-placeholder"></div>
 
   <main>
-    <div class="autore-section">
+    <h1>Sistemi e Reti</h1>
 
-      <div class="autore-content">
-</section>
-        
-   <section style="max-width: 800px; margin: 0 auto; line-height: 1.8; font-size: 1.1rem; color: #222;">
-  <h2 style="margin-bottom: 1rem;"><em>Sistemi e reti</em></h2>
-  <img src="img/sistemi_e_reti.jpg" alt="Sistemi e reti" style="max-width: 200px; width: 100%; height: auto; border-radius: 15px; margin: 20px auto; display: block;" />
-     
-  <p>
-    In un mondo sempre più connesso, la sicurezza dei sistemi informativi rappresenta una delle principali sfide dell’informatica moderna. Proteggere i dati, i dispositivi e le reti è diventato essenziale per garantire la fiducia degli utenti e la continuità dei servizi. La sicurezza informatica si basa su tre principi fondamentali: la riservatezza, l’integrità e la disponibilità delle informazioni.
-  </p>
-  <p>
-    La <strong>riservatezza</strong> assicura che solo gli utenti autorizzati possano accedere ai dati sensibili; l’<strong>integrità</strong> garantisce che le informazioni non vengano modificate in modo non autorizzato; infine, la <strong>disponibilità</strong> fa sì che i dati e i servizi siano sempre accessibili quando necessario.
-  </p>
-  <p>
-    Una buona gestione della sicurezza parte dalla valutazione dei rischi, ovvero dall’identificazione delle vulnerabilità e delle possibili minacce. Queste possono includere malware come virus e worm, attacchi DDoS, tecniche di phishing e ingegneria sociale, che puntano a ingannare gli utenti per ottenere accessi non autorizzati.
-  </p>
-  <p>
-    Per proteggere i sistemi, vengono utilizzati strumenti specifici. Uno dei più importanti è il <strong>firewall</strong>, un dispositivo o software che controlla il traffico in entrata e in uscita da una rete, bloccando o consentendo i pacchetti di dati secondo regole definite. I firewall possono essere hardware o software, e funzionano in base a politiche di autorizzazione che classificano il traffico come consentito o bloccato.
-  </p>
-  <p>
-    Un altro strumento essenziale è l’<strong>Access Control List (ACL)</strong>, che consente di filtrare il traffico secondo parametri precisi come indirizzi IP, porte o protocolli. Le ACL standard esaminano solo l’indirizzo IP sorgente, mentre quelle estese permettono un filtraggio più dettagliato, ed è possibile esercitarsi nel loro utilizzo attraverso simulazioni con software come Packet Tracer.
-  </p>
-  <p>
-    Per quanto riguarda la gestione degli indirizzi IP, si utilizzano tecnologie come il <strong>NAT</strong> (Network Address Translation) e il <strong>PAT</strong> (Port Address Translation), che permettono di tradurre gli indirizzi privati della rete interna in indirizzi pubblici. Queste soluzioni aumentano la sicurezza e ottimizzano l’utilizzo degli indirizzi disponibili.
-  </p>
-  <p>
-    Altri strumenti fondamentali sono il <strong>proxy</strong>, che funge da intermediario tra client e server per filtrare le richieste, e la <strong>DMZ</strong> (Demilitarized Zone), una zona isolata della rete in cui vengono collocati i server accessibili dall’esterno, in modo da proteggere la rete interna da possibili attacchi.
-  </p>
-  <p>
-    Le <strong>VPN</strong> (Virtual Private Network) rappresentano un mezzo per creare canali sicuri tra dispositivi distanti. Le VPN site-to-site collegano due reti geograficamente separate, mentre le VPN client-to-site permettono a un singolo utente di accedere in modo sicuro alla rete aziendale. Queste tecnologie utilizzano protocolli come IPsec, AH, ESP e IKE per garantire la cifratura e l’autenticazione dei dati trasmessi.
-  </p>
-  <p>
-    Infine, nelle comunicazioni via web, i protocolli <strong>SSL/TLS</strong> sono essenziali per cifrare le connessioni e proteggere dati sensibili come credenziali di accesso e informazioni bancarie. Sono alla base del protocollo HTTPS, riconoscibile dal lucchetto visibile nei browser.
-  </p>
-</section>
+    <section>
+      <h2>Sicurezza Informatica: Principi e Strumenti</h2>
+      <img src="img/sistemi_e_reti.jpg" alt="Sicurezza informatica" style="max-width: 400px;" />
+
+      <h3>1. I Tre Pilastri della Sicurezza</h3>
+      <p>La sicurezza informatica si fonda su tre principi fondamentali:</p>
+      
+      <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin: 1.5rem 0;">
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 220px; text-align: center;">
+          <h4 style="color: #e74c3c;">Riservatezza</h4>
+          <p>Accesso ai dati solo per utenti autorizzati</p>
+        </div>
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 220px; text-align: center;">
+          <h4 style="color: #e74c3c;">Integrità</h4>
+          <p>Dati non alterabili senza autorizzazione</p>
+        </div>
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 220px; text-align: center;">
+          <h4 style="color: #e74c3c;">Disponibilità</h4>
+          <p>Accesso garantito quando necessario</p>
+        </div>
       </div>
-    </div>
 
-            <!-- Galleria immagini con didascalie -->
-<section class="bio-gallery-section" style="max-width: 1000px; margin: 0 auto 40px; padding: 0 1rem;">
-  <div class="bio-gallery" style="display: flex; justify-content: center; flex-wrap: wrap; gap: 30px; text-align: center;">
-    
-    <div style="max-width: 300px;">
-      <img src="img/piramide.jpg" alt="Foto 1" style="width: 100%; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); margin-bottom: 0.5rem;" />
-      <p style="font-size: 0.95rem; color: #444;">Disponibilità, integrità e riservatezza</p>
-    </div>
+      <h3>2. Minacce e Vulnerabilità</h3>
+      <p>Principali categorie di minacce alla sicurezza:</p>
+      <ul>
+        <li><strong>Malware:</strong> Virus, worm, trojan, ransomware</li>
+        <li><strong>Attacchi DDoS:</strong> Sovraccarico dei servizi</li>
+        <li><strong>Phishing:</strong> Frodi per ottenere credenziali</li>
+        <li><strong>Ing. Sociale:</strong> Manipolazione psicologica</li>
+      </ul>
 
-    <div style="max-width: 300px;">
-      <img src="img/firewall.jpg" alt="Foto 2" style="width: 100%; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); margin-bottom: 0.5rem;" />
-      <p style="font-size: 0.95rem; color: #444;">Firewall</p>
-    </div>
+      <div class="esempio">
+        <strong>Esempio:</strong> L'attacco WannaCry del 2017 ha infettato 200.000 computer in 150 paesi, cifrando i dati e chiedendo riscatto in Bitcoin.
+      </div>
 
-    <div style="max-width: 300px;">
-      <img src="img/vpn.png" alt="Foto 3" style="width: 100%; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.2); margin-bottom: 0.5rem;" />
-      <p style="font-size: 0.95rem; color: #444;">Meccanismo delle vpn</p>
-    </div>
+      <h3>3. Strumenti di Protezione</h3>
+      
+      <h4>Firewall e ACL</h4>
+      <p>Dispositivi per il controllo del traffico di rete:</p>
+      <table>
+        <tr>
+          <th>Strumento</th>
+          <th>Funzione</th>
+          <th>Tipo</th>
+        </tr>
+        <tr>
+          <td>Firewall</td>
+          <td>Filtra traffico in/out</td>
+          <td>Hardware/Software</td>
+        </tr>
+        <tr>
+          <td>ACL Standard</td>
+          <td>Filtra per IP sorgente</td>
+          <td>Regole base</td>
+        </tr>
+        <tr>
+          <td>ACL Estesa</td>
+          <td>Filtra per IP, porta, protocollo</td>
+          <td>Regole avanzate</td>
+        </tr>
+      </table>
 
-  </div>
-  
-   <!-- Conclusione -->
-<section style="max-width: 800px; margin: 40px auto; line-height: 1.8; font-size: 1.1rem; color: #222;">
-  <h2 style="text-align: center; margin-bottom: 1rem;">Conclusione</h2>
-  <p style="text-align: justify; margin-bottom: 1.2rem;">
-    Ho scelto di approfondire il tema della sicurezza informatica perché lo considero uno degli aspetti più affascinanti e cruciali del mondo digitale. Mi appassiona capire come proteggere i dati e i sistemi da minacce sempre più complesse, e trovo stimolante il continuo aggiornamento che questo ambito richiede. La sicurezza non è solo una questione tecnica, ma anche di responsabilità: garantire un ambiente digitale sicuro significa tutelare le persone e le informazioni che ci riguardano ogni giorno.
-  </p>
-</section>
+      <h4>NAT e PAT</h4>
+      <p>Tecnologie per la gestione degli indirizzi IP:</p>
+      <div class="formula">
+        NAT: 192.168.1.10 → 203.0.113.5
+        PAT: 192.168.1.10:3456 → 203.0.113.5:4500
+      </div>
+
+      <h3>4. Galleria Tecnologie</h3>
+      <div class="gallery">
+        <div class="gallery-item">
+          <img src="img/piramide.jpg" alt="Triade CIA">
+          <p class="gallery-caption">Disponibilità, integrità e riservatezza</p>
+        </div>
+        <div class="gallery-item">
+          <img src="img/firewall.jpg" alt="Firewall">
+          <p class="gallery-caption">Architettura firewall</p>
+        </div>
+        <div class="gallery-item">
+          <img src="img/vpn.png" alt="VPN">
+          <p class="gallery-caption">Funzionamento VPN</p>
+        </div>
+      </div>
+
+      <h3>5. Protocolli Sicuri</h3>
+      <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin: 1.5rem 0;">
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+          <h4 style="color: #e74c3c;">IPsec</h4>
+          <p>Suite protocolli per sicurezza IP</p>
+        </div>
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+          <h4 style="color: #e74c3c;">SSL/TLS</h4>
+          <p>Crittografia per HTTPS</p>
+        </div>
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+          <h4 style="color: #e74c3c;">IKE</h4>
+          <p>Scambio chiavi crittografiche</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="max-width: 800px; margin: 40px auto 80px; line-height: 1.8; font-size: 1.1rem; color: #222;">
+      <h2 style="text-align: center;">Conclusione: L'importanza della Sicurezza</h2>
+      <p style="text-align: justify;">
+        Lo studio della sicurezza informatica mi ha rivelato un mondo in costante evoluzione, dove la protezione dei sistemi richiede sia competenze tecniche avanzate che una profonda comprensione delle minacce emergenti. La mia passione per questo settore nasce dalla sua natura dinamica e dalla sua importanza critica nella società digitale.
+      </p>
+      <p style="text-align: justify;">
+        Attraverso l'analisi di firewall, VPN e protocolli di cifratura, ho compreso come la sicurezza non sia un prodotto finito ma un processo continuo. Ogni strumento analizzato rappresenta un tassello fondamentale nella costruzione di sistemi resilienti, capaci di proteggere dati sensibili e garantire la continuità operativa.
+      </p>
+      <div class="esempio">
+        <strong>Progetto pratico:</strong> Ho simulato una rete aziendale sicura su Packet Tracer, implementando firewall, ACL e VPN, verificando la resistenza a diversi tipi di attacchi.
+      </div>
+    </section>
   </main>
 
-  <footer>
+  <footer style="padding-top: 40px;">
     <p>&copy; 2025 Cristian Ambrosini</p>
   </footer>
 
