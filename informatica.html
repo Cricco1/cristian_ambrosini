@@ -3,39 +3,206 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Informatica</title>
+  <title>Informatica - Dalla progettazione al web</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    .esempio {
+      background-color: #f8f9fa;
+      border-left: 4px solid #3498db;
+      padding: 1rem;
+      margin: 1rem 0;
+      border-radius: 0 8px 8px 0;
+    }
+    .formula {
+      font-family: 'Courier New', monospace;
+      background-color: #f0f0f0;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+    }
+    main {
+      max-width: 800px;
+      margin: 0 auto;
+      line-height: 1.8;
+      font-size: 1.1rem;
+      color: #222;
+    }
+    h2, h3, h4 {
+      color: #2c3e50;
+    }
+    h2 {
+      border-bottom: 2px solid #eee;
+      padding-bottom: 0.5rem;
+      margin-top: 2rem;
+      text-align: center;
+    }
+    h3 {
+      border-bottom: 1px solid #eee;
+      padding-bottom: 0.3rem;
+      margin-top: 1.5rem;
+    }
+    h4 {
+      color: #3498db;
+      margin-top: 1.2rem;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 15px;
+      margin: 20px auto;
+      display: block;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0;
+    }
+    th {
+      background-color: #3498db;
+      color: white;
+      padding: 0.5rem;
+      text-align: left;
+    }
+    td {
+      padding: 0.5rem;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
 </head>
 <body>
   <div id="navbar-placeholder"></div>
+
   <main>
     <h1>Informatica</h1>
-    <p>
-      Qui scrivi tutto il testo e contenuto specifico sull'informatica.  
-      Puoi fare paragrafi, liste, immagini, tutto quello che vuoi.
-    </p>
-    <p>
-      Ad esempio, storia dell'informatica, linguaggi di programmazione, ecc.
-    </p>
+
+    <section>
+      <h2>Dalla progettazione al web: il ciclo completo dello sviluppo software</h2>
+      <img src="img/web_development.jpg" alt="Sviluppo web completo" style="max-width: 500px;" />
+
+      <h3>1. Progettazione del database</h3>
+      
+      <h4>Dall'analisi alla realizzazione</h4>
+      <p>Il percorso di sviluppo inizia con un'attenta progettazione del database, fase fondamentale per garantire scalabilità e performance:</p>
+      
+      <ul>
+        <li><strong>Schema ER (Entità-Relazioni):</strong> Rappresentazione grafica delle entità e delle loro relazioni</li>
+        <li><strong>Modello logico:</strong> Traduzione dello schema ER in tabelle, attributi e chiavi</li>
+        <li><strong>Normalizzazione:</strong> Processo per eliminare ridondanze e anomalie nei dati</li>
+      </ul>
+
+      <div class="esempio">
+        <strong>Esempio pratico:</strong> Per un e-commerce abbiamo modellato utenti, prodotti, ordini e pagamenti, definendo le relazioni uno-a-molti e molti-a-molti con apposite tabelle di collegamento.
+      </div>
+
+      <h3>2. Implementazione con SQL</h3>
+      <img src="img/sql_code.jpg" alt="Esempio di codice SQL" style="max-width: 450px;" />
+
+      <h4>Interrogazioni avanzate</h4>
+      <p>Abbiamo approfondito il linguaggio SQL con:</p>
+      <ul>
+        <li><em>Query complesse:</em> JOIN tra tabelle, subquery, funzioni di aggregazione</li>
+        <li><em>Ottimizzazione:</em> Uso appropriato degli indici per migliorare le performance</li>
+        <li><em>Transazioni:</em> Gestione di operazioni atomiche (ACID properties)</li>
+      </ul>
+
+      <div class="formula">
+        SELECT p.nome, COUNT(o.id) as num_ordini<br>
+        FROM prodotti p LEFT JOIN ordini o ON p.id = o.prodotto_id<br>
+        WHERE p.prezzo > 100<br>
+        GROUP BY p.nome<br>
+        HAVING COUNT(o.id) > 5<br>
+        ORDER BY num_ordini DESC;
+      </div>
+
+      <h4>Sicurezza: prevenzione SQL Injection</h4>
+      <p>Particolare attenzione è stata dedicata alle tecniche di sicurezza:</p>
+      <div class="esempio">
+        <strong>Parametri preparati:</strong> Invece di concatenare stringhe SQL, usiamo prepared statements:<br>
+        <span class="formula">"SELECT * FROM utenti WHERE username = ? AND password = ?"</span>
+      </div>
+
+      <h3>3. Architettura web e API</h3>
+      <img src="img/api_architecture.jpg" alt="Architettura API REST" style="max-width: 400px;" />
+
+      <h4>Web Service e comunicazione client-server</h4>
+      <p>Lo studio delle API RESTful ci ha permesso di comprendere:</p>
+      <table>
+        <tr>
+          <th>Componente</th>
+          <th>Funzione</th>
+          <th>Esempio</th>
+        </tr>
+        <tr>
+          <td>Endpoint</td>
+          <td>Punto di accesso alle risorse</td>
+          <td>/api/prodotti</td>
+        </tr>
+        <tr>
+          <td>Metodi HTTP</td>
+          <td>Operazioni CRUD</td>
+          <td>GET, POST, PUT, DELETE</td>
+        </tr>
+        <tr>
+          <td>JSON</td>
+          <td>Formato scambio dati</td>
+          <td>{"id":1,"nome":"Prodotto"}</td>
+        </tr>
+      </table>
+
+      <h4>JWT per l'autenticazione</h4>
+      <p>Implementazione di sistemi sicuri di autenticazione tramite token:</p>
+      <div class="formula">
+        Header.Payload.Signature<br>
+        eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiaWF0IjoxNTE2MjM5MDIyfQ.SflKxwRJSMeKKF2QT4fwpMeJf36POk6yJV_adQssw5c
+      </div>
+
+      <h3>4. Frontend e integrazione</h3>
+      <div style="display: flex; justify-content: space-around; flex-wrap: wrap; margin: 2rem 0;">
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+          <h4 style="color: #e74c3c;">HTML5/CSS3</h4>
+          <p>Struttura semantica e design responsive per ogni dispositivo</p>
+        </div>
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+          <h4 style="color: #e74c3c;">JavaScript</h4>
+          <p>Fetch API per comunicare con il backend e gestire i dati JSON</p>
+        </div>
+        <div style="background: #f8f9fa; border-radius: 10px; padding: 1.5rem; margin: 0.5rem; width: 250px; text-align: left;">
+          <h4 style="color: #e74c3c;">Framework</h4>
+          <p>Introduzione a React/Vue per applicazioni moderne</p>
+        </div>
+      </div>
+    </section>
+
+    <section style="max-width: 800px; margin: 40px auto 80px; line-height: 1.8; font-size: 1.1rem; color: #222;">
+      <h2 style="text-align: center;">Conclusione: un percorso completo</h2>
+      <p style="text-align: justify;">
+        Questo percorso ci ha permesso di comprendere l'intero ciclo di vita dello sviluppo software, dall'idea astratta alla realizzazione concreta. Abbiamo acquisito competenze trasversali che spaziano dalla progettazione del database alla sicurezza informatica, dall'implementazione del backend alla creazione di interfacce utente moderne.
+      </p>
+      <p style="text-align: justify;">
+        La capacità di integrare queste tecnologie in un unico flusso di lavoro ci permette di affrontare progetti complessi con approccio professionale, ponendo sempre attenzione a qualità del codice, sicurezza e user experience. Queste competenze rappresentano una solida base per il mondo del lavoro digitale, sempre più orientato verso soluzioni web-based e sistemi distribuiti.
+      </p>
+      <div class="esempio">
+        <strong>Progetto finale:</strong> Abbiamo realizzato un e-commerce completo con catalogo prodotti, carrello, checkout e area utente, implementando tutte le tecnologie studiate.
+      </div>
+    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Cristian Ambrosini</p>
+  <footer style="padding-top: 40px;">
+    <p>&copy; 2025 Classe di Informatica</p>
   </footer>
+
   <script>
-  fetch('navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar-placeholder').innerHTML = data;
-      // Imposta classe active sul bottone corrente (opzionale)
-      const pathname = window.location.pathname.split('/').pop();
-      document.querySelectorAll('.navbar button').forEach(btn => {
-        const href = btn.getAttribute('onclick').match(/'(.*?)'/)[1];
-        if (href === pathname) {
-          btn.classList.add('active');
-        }
+    fetch('navbar.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('navbar-placeholder').innerHTML = data;
+        const pathname = window.location.pathname.split('/').pop();
+        document.querySelectorAll('.navbar button').forEach(btn => {
+          const href = btn.getAttribute('onclick').match(/'(.*?)'/)[1];
+          if (href === pathname) {
+            btn.classList.add('active');
+          }
+        });
       });
-    });
-</script>
+  </script>
 </body>
 </html>
